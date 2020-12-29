@@ -20,9 +20,12 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.post('/new', (req, res) => {
+  let filteredChallenges = challenges.filter(el => el.topic == req.body.topic)
+  let challenge = filteredChallenges[Math.floor(Math.random() * filteredChallenges.length)]
   pusher.trigger("my-channel", "my-event", {
     id: req.body.id,
-    challenge: challenges[Math.floor(Math.random() * challenges.length)],
+    challenge: challenge.code,
+    topic: challenge.topic,
     instructions: null,
     teammate: false,
     submission: null,
