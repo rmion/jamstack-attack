@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusher Test</title>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <style>
+      .is-hidden { display: none; }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Jamstack Attack!</h1>
+    <p>
+      Practice Frontend Development together!
+    </p>
+    <button id="start">Start a new mini-game</button>
+  </header>
+  <section id="game" class="is-hidden">
+    <h2>Mini-game: Coding Telefone!</h2>
+    <pre><code id="prompt"></code></pre>
+    <div id="player-1">
+      <h3>How to play</h3>
+      <p>Describe the code snippet using the textarea below. Your teammate must use your description when attempting to match it.</p>  
+      <textarea name="instructions" id="instructions" cols="30" rows="10" placeholder="Describe the code so that another player could re-create it using only the instructions you type here"></textarea>
+      <button id="share">Pass to another player</button>
+    </div>
+    <div id="player-2" class="is-hidden">
+      <h3>How to play</h3>
+      <p>Write code based on the description you see.</p>  
+      <label for="submission">Your code solution goes here</label>
+      <input type="text" name="submission" id="submission" width="200" />
+      <button id="solve">Submit your answer</button>
+    </div>
+  </section>
+  <aside>
+    <h3>Games started</h3>
+    <ul id="games-started"></ul>
+    <h3>Games joined</h3>
+    <ul id="games-joined"></ul>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>
