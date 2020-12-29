@@ -5,7 +5,7 @@ const path = require('path');
 const Pusher = require("pusher");
 const challenges = require('./challenges.js')
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 const pusher = new Pusher({
   appId: "1120717",
