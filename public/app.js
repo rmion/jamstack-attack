@@ -49,16 +49,25 @@ channel.bind('my-event', function(data) {
       })
       document.getElementsByTagName('header')[0].appendChild(button)
     }
+    // Notify game creator that another player joined their game
     if (games[game].creator == true && games[game].teammate == true && games[game].submission == null) {
         currentGame = games[game]
         document.getElementById(`game-${currentGame.id}`).textContent = "Teammate is attempting to solve"
     }
+    // Disable 'join' button after non-creator player joins a game
+    if (games[game].creator == false && games[game].teammate == true) {
+      currentGame = games[game]
+      document.getElementById(`join-${currentGame.id}`).setAttribute('disabled', 'disabled')
+    }
+    // Once game is solved, notify both players and delete 'join' button for all players
     if (games[game].submission !== null) {
-        if (games[game].solved) {
-            document.getElementById(`game-${currentGame.id}`).textContent = "Nice! You and your teammate won!"
-        } else {
-            document.getElementById(`game-${currentGame.id}`).textContent = "Sorry, You and your teammate lost!"
-        }
+      currentGame = games[game]
+      document.getElementsByTagName('header')[0].removeChild(document.getElementById(`join-${currentGame.id}`))
+      if (games[game].solved) {
+          document.getElementById(`game-${currentGame.id}`).textContent = "Nice! You and your teammate won!"
+      } else {
+          document.getElementById(`game-${currentGame.id}`).textContent = "Sorry, You and your teammate lost!"
+      }
     }
   } else {
     games.push({
