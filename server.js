@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -9,7 +10,7 @@ const port = 5000
 const pusher = new Pusher({
   appId: "1120717",
   key: "a0a317b210ac3be6457d",
-  secret: "4e22a6f5f7eea49d92df",
+  secret: process.env.PUSHER_KEY,
   cluster: "mt1",
   useTLS: true
 });
