@@ -1,9 +1,6 @@
 var games = [];
 var currentGame = null;
 
-// Enable pusher logging - don't include this in production
-Pusher.logToConsole = true;
-
 var pusher = new Pusher('a0a317b210ac3be6457d', {
   cluster: 'mt1'
 });
