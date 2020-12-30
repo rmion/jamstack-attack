@@ -93,7 +93,6 @@ function newGame(event, topic) {
         },
         body: JSON.stringify({
           id: timestamp,
-          topic: topic
         })
     })
     .then(response => {
@@ -110,15 +109,7 @@ function newGame(event, topic) {
       document.getElementById('games-started').appendChild(li)
     })
 }
-document.getElementById('start-js').addEventListener('click', (e) => {
-  newGame(e, 'js')
-})
-document.getElementById('start-css').addEventListener('click', (e) => {
-  newGame(e, 'css')
-})
-document.getElementById('start-html').addEventListener('click', (e) => {
-  newGame(e, 'html')
-})
+document.getElementById('start').addEventListener('click', newGame)
 document.getElementById('share').addEventListener('click', (e) => {
   Array.from(document.getElementById('start-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
   fetch('/described', {
