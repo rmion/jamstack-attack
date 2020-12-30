@@ -27,25 +27,30 @@ channel.bind('my-event', function(data) {
       button.textContent = `Join ${currentGame.topic} game ${currentGame.id}`
       button.setAttribute('id', `join-${currentGame.id}`)
       button.addEventListener('click', (e) => {
+        document.getElementById('submission').value = ""
+        Array.from(document.getElementById('start-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
+        Array.from(document.getElementById('join-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
+        let joinedGame = games[games.findIndex(el => el.id == e.target.id.split('-')[1])]
+        console.log(joinedGame)
         fetch('/joined', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(currentGame)
+            body: JSON.stringify(joinedGame)
           })
           .then(response => {
-            games[game].participated = true
+            joinedGame.participated = true
             let li = document.createElement('li')
-            li.setAttribute('id', `game-${currentGame.id}`)
+            li.setAttribute('id', `game-${joinedGame.id}`)
             li.textContent = "Game joined"
             document.getElementById('games-joined').appendChild(li)
-            document.getElementById('prompt').textContent = currentGame.instructions
-            document.getElementById('topic').textContent = currentGame.topic.toUpperCase() + " "
+            document.getElementById('prompt').textContent = joinedGame.instructions
+            document.getElementById('topic').textContent = joinedGame.topic.toUpperCase() + " "
             document.getElementById('game').classList.remove('is-hidden')
             document.getElementById('player-1').classList.add('is-hidden')
             document.getElementById('player-2').classList.remove('is-hidden')
-            document.getElementById(`game-${currentGame.id}`).textContent = "You're attempting to solve"
+            document.getElementById(`game-${joinedGame.id}`).textContent = "You're attempting to solve"
           })
       })
       document.getElementById('join-buttons').appendChild(button)
@@ -78,7 +83,8 @@ channel.bind('my-event', function(data) {
   }
 });
 function newGame(event, topic) {
-  document.getElementById('start-buttons').classList.add('is-hidden')
+  document.getElementById('instructions').value = ''
+  Array.from(document.getElementById('start-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
   let timestamp = new Date().getTime()
   fetch('/new', {
       method: 'POST',
@@ -114,6 +120,7 @@ document.getElementById('start-html').addEventListener('click', (e) => {
   newGame(e, 'html')
 })
 document.getElementById('share').addEventListener('click', (e) => {
+  Array.from(document.getElementById('start-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
   fetch('/described', {
       method: 'POST',
       headers: {
@@ -126,13 +133,14 @@ document.getElementById('share').addEventListener('click', (e) => {
       })
     })
     .then(response => {
-      document.getElementById('start-buttons').classList.remove('is-hidden')
       document.getElementById('prompt').textContent = ""
       document.getElementById('game').classList.add('is-hidden')
       document.getElementById(`game-${currentGame.id}`).textContent = "Awaiting a teammate"
     })
 })
 document.getElementById('solve').addEventListener('click', (e) => {
+  Array.from(document.getElementById('start-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
+  Array.from(document.getElementById('join-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
   fetch('/solved', {
       method: 'POST',
       headers: {
