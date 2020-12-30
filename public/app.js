@@ -35,11 +35,11 @@ channel.bind('my-event', function(data) {
             body: JSON.stringify(currentGame)
           })
           .then(response => {
+            games[game].participated = true
             let li = document.createElement('li')
             li.setAttribute('id', `game-${currentGame.id}`)
             li.textContent = "Game joined"
             document.getElementById('games-joined').appendChild(li)
-            document.getElementById('join-buttons').removeChild(button)
             document.getElementById('prompt').textContent = currentGame.instructions
             document.getElementById('topic').textContent = currentGame.topic.toUpperCase() + " "
             document.getElementById('game').classList.remove('is-hidden')
@@ -55,8 +55,12 @@ channel.bind('my-event', function(data) {
         currentGame = games[game]
         document.getElementById(`game-${currentGame.id}`).textContent = "Teammate is attempting to solve"
     }
+    if (games[game].creator == false && games[game].teammate == true && games[game].submission == null) {
+      currentGame = games[game]
+      document.getElementById(`join-buttons`).removeChild(document.getElementById(`join-${currentGame.id}`))
+    }
     // Once game is solved, notify both players and delete 'join' button for all players
-    if (games[game].submission !== null) {
+    if (games[game].submission !== null && (games[game].creator == true || games[game].participated == true)) {
       currentGame = games[game]
       document.getElementById('instructions').value = ''
       document.getElementById('submission').value = ''
