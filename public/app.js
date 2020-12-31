@@ -1,12 +1,40 @@
 var games = [];
 var currentGame = null;
 
-var pusher = new Pusher('a0a317b210ac3be6457d', {
-  cluster: 'mt1'
+Pusher.logToConsole = true;
+const pusher = new Pusher('a0a317b210ac3be6457d', { // Replace with 'key' from dashboard
+  cluster: 'mt1',              // Replace with 'cluster' from dashboard
+  forceTLS: true,
+  authEndpoint: "/pusher/auth"
+});
+if (!document.cookie.match('(^|;) ?user_id=([^;]*)(;|$)')) {
+  // Primitive auth! This 'user_id' cookie is read by your auth endpoint,
+  // and used as the user_id in the subscription to the 'presence-quickstart' 
+  // channel. This is then displayed to all users in the user list. 
+  // In your production app, you should use a secure auth system.
+  let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z']
+  let initial1 = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase()
+  let initial2 = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase()
+  document.cookie = 'user_id=' + initial1 + initial2;
+}
+const channel = pusher.subscribe('presence-quickstart');
+const hashCode = s => s.split('').reduce((a,b)=>{a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
+function addMemberToUserList(memberId) {
+  userEl = document.createElement("li");
+  userEl.id = "user_"+memberId;
+  userEl.innerText = memberId;
+  userEl.style.backgroundColor = 'hsl('+hashCode(memberId)%360+',70%,60%)';
+  document.getElementById("user_list").appendChild(userEl);
+}
+channel.bind('pusher:subscription_succeeded', () => 
+  channel.members.each(member => addMemberToUserList(member.id)));
+channel.bind('pusher:member_added', member => addMemberToUserList(member.id));
+channel.bind('pusher:member_removed', member => {
+  const userEl = document.getElementById("user_"+member.id);
+  userEl.parentNode.removeChild(userEl);
 });
 
-var channel = pusher.subscribe('my-channel');
-channel.bind('my-event', function(data) {
+channel.bind('mini-game', function(data) {
   // Fill in all details about recently created game
   if (games.find(el => el.id == data.id)) {
     let game = games.findIndex(el => el.id == data.id)
@@ -24,20 +52,22 @@ channel.bind('my-event', function(data) {
     if (games[game].creator == false && games[game].teammate == false && games[game].instructions !== null) {
       currentGame = games[game]
       let button = document.createElement('button')
-      button.textContent = `Join ${currentGame.topic} game ${currentGame.id}`
+      button.textContent = `Join ${currentGame.creatorID}'s ${currentGame.topic.toUpperCase()} game`
       button.setAttribute('id', `join-${currentGame.id}`)
       button.addEventListener('click', (e) => {
         document.getElementById('submission').value = ""
         Array.from(document.getElementById('start-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
         Array.from(document.getElementById('join-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
         let joinedGame = games[games.findIndex(el => el.id == e.target.id.split('-')[1])]
-        console.log(joinedGame)
         fetch('/joined', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(joinedGame)
+            body: JSON.stringify({
+              ...joinedGame,
+              "joinerid": channel.members.me.id
+            })
           })
           .then(response => {
             joinedGame.participated = true
@@ -50,7 +80,7 @@ channel.bind('my-event', function(data) {
             document.getElementById('game').classList.remove('is-hidden')
             document.getElementById('player-1').classList.add('is-hidden')
             document.getElementById('player-2').classList.remove('is-hidden')
-            document.getElementById(`game-${joinedGame.id}`).textContent = "You're attempting to solve"
+            document.getElementById(`game-${joinedGame.id}`).textContent = `You're attempting to solve ${currentGame.creatorID}'s game`
           })
       })
       document.getElementById('join-buttons').appendChild(button)
@@ -58,7 +88,7 @@ channel.bind('my-event', function(data) {
     // Notify game creator that another player joined their game
     if (games[game].creator == true && games[game].teammate == true && games[game].submission == null) {
         currentGame = games[game]
-        document.getElementById(`game-${currentGame.id}`).textContent = "Teammate is attempting to solve"
+        document.getElementById(`game-${currentGame.id}`).textContent = `${currentGame.joinerID} is attempting to solve`
     }
     if (games[game].creator == false && games[game].teammate == true && games[game].submission == null) {
       currentGame = games[game]
@@ -70,9 +100,17 @@ channel.bind('my-event', function(data) {
       document.getElementById('instructions').value = ''
       document.getElementById('submission').value = ''
       if (games[game].solved) {
-          document.getElementById(`game-${currentGame.id}`).textContent = "Nice! You and your teammate won!"
+        document.getElementById(`game-${currentGame.id}`).innerHTML = `
+          <p>Nice! You and ${currentGame.joinerID} won!</p>
+          <p>Original code: <code>${currentGame.challenge}</code></p>
+          <p>${currentGame.joinerID}'s submission: <code>${currentGame.submission}</code></p>
+        `
       } else {
-          document.getElementById(`game-${currentGame.id}`).textContent = "Sorry, You and your teammate lost!"
+        document.getElementById(`game-${currentGame.id}`).innerHTML = `
+          <p>Sorry! You and ${currentGame.joinerID} lost!</p>
+          <p>Original code: <code>${currentGame.challenge}</code></p>
+          <p>${currentGame.joinerID}'s submission: <code>${currentGame.submission}</code></p>
+        `
       }
     }
   } else {
@@ -93,6 +131,7 @@ function newGame(event, topic) {
         },
         body: JSON.stringify({
           id: timestamp,
+          userid: channel.members.me.id
         })
     })
     .then(response => {
@@ -119,6 +158,7 @@ document.getElementById('share').addEventListener('click', (e) => {
       },
       body: JSON.stringify({
         "id": currentGame.id,
+        "userid": channel.members.me.id,
         "challenge": currentGame.challenge,
         "instructions": document.getElementById('instructions').value
       })
@@ -138,8 +178,7 @@ document.getElementById('solve').addEventListener('click', (e) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        "id": currentGame.id,
-        "challenge": currentGame.challenge,
+        ...currentGame,
         "submission": document.getElementById('submission').value,
       })
     })
