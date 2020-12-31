@@ -1,0 +1,82 @@
+body {
+    background-color: #171d23;
+    color: aliceblue;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+#game p {
+    text-align: left;
+}
+button {
+    display: block;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    background-color: springgreen;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 1rem auto;
+}
+button:disabled {
+    background-color: #333;
+    color: #999;
+    font-style: italic;
+    cursor: not-allowed;
+}
+button:not(:disabled):hover,
+button:not(:disabled):focus,
+button:not(:disabled):active {
+    background-color: aquamarine;
+}
+code {
+    background-color: black;
+    color: khaki;
+    border: 2px solid khaki;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    display: block;
+    text-align: left;
+    white-space: normal;
+}
+textarea {
+    display: block;
+    width: 100%;
+    height: 20vh;
+    padding: 0;
+    font-size: 1.2rem;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#games-started li {
+    border: 2px dotted limegreen;
+    color: lime;
+    padding: 1rem;
+    background-color: rgba(0,0,0,25%);
+}
+#games-joined li {
+    border: 2px dotted lightcoral;
+    color: lightpink;
+    padding: 1rem;
+    background-color: rgba(0,0,0,25%);
+}
+.is-hidden { 
+    display: none; 
+}
+#user_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#user_list li {
+    margin: 0 4px;
+    font-family: sans-serif; text-align: center;
+    height: 40px; width: 40px; line-height: 40px;
+    border-radius: 50%;
+    border: 3px solid white; color: white;
+}

@@ -1,17 +1,12 @@
 var games = [];
 var currentGame = null;
 
-Pusher.logToConsole = true;
-const pusher = new Pusher('a0a317b210ac3be6457d', { // Replace with 'key' from dashboard
-  cluster: 'mt1',              // Replace with 'cluster' from dashboard
+const pusher = new Pusher('a0a317b210ac3be6457d', {
+  cluster: 'mt1',
   forceTLS: true,
   authEndpoint: "/pusher/auth"
 });
 if (!document.cookie.match('(^|;) ?user_id=([^;]*)(;|$)')) {
-  // Primitive auth! This 'user_id' cookie is read by your auth endpoint,
-  // and used as the user_id in the subscription to the 'presence-quickstart' 
-  // channel. This is then displayed to all users in the user list. 
-  // In your production app, you should use a secure auth system.
   let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z']
   let initial1 = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase()
   let initial2 = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase()
@@ -102,14 +97,14 @@ channel.bind('mini-game', function(data) {
       if (games[game].solved) {
         document.getElementById(`game-${currentGame.id}`).innerHTML = `
           <p>Nice! You and ${currentGame.joinerID} won!</p>
-          <p>Original code: <code>${currentGame.challenge}</code></p>
-          <p>${currentGame.joinerID}'s submission: <code>${currentGame.submission}</code></p>
+          <p>Original code: <pre><code>${currentGame.challenge}</code></pre></p>
+          <p>${currentGame.joinerID}'s submission: <pre><code>${currentGame.submission}</code></pre></p>
         `
       } else {
         document.getElementById(`game-${currentGame.id}`).innerHTML = `
           <p>Sorry! You and ${currentGame.joinerID} lost!</p>
-          <p>Original code: <code>${currentGame.challenge}</code></p>
-          <p>${currentGame.joinerID}'s submission: <code>${currentGame.submission}</code></p>
+          <p>Original code: <pre><code>${currentGame.challenge}</code></pre></p>
+          <p>${currentGame.joinerID}'s submission: <pre><code>${currentGame.submission}</code></pre></p>
         `
       }
     }

@@ -4,23 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamstack Attack! Practice Frontend with friends!</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-    <style>
-      .is-hidden { display: none; }
-      #user_list {
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      #user_list li {
-        font-family: sans-serif; text-align: center;
-        height: 40px; width: 40px; line-height: 40px;
-        border-radius: 50%;
-        border: 3px solid white; color: white;
-      }
-    </style>
 </head>
 <body>
   <header>
@@ -28,25 +13,29 @@
     <p>
       Practice Frontend Development together!
     </p>
+    <h3>Players online now</h3>
+    <ul id="user_list"></ul>
     <p id="start-buttons">
       <button id="start">Start a new game</button>
     </p>
     <p id="join-buttons"></p>
   </header>
   <section id="game" class="is-hidden">
-    <h2><span id="topic"></span>Mini-game: Coding Telefone!</h2>
+    <h2>You're playing: Coding Telefone!</h2>
+    <h3>Your <span id="topic"></span> challenge</h3>
     <pre><code id="prompt"></code></pre>
     <div id="player-1">
       <h3>How to play</h3>
       <p>Describe the code snippet using the textarea below. Your teammate must use your description when attempting to match it.</p>  
-      <textarea name="instructions" id="instructions" cols="30" rows="10" placeholder="Describe the code so that another player could re-create it using only the instructions you type here"></textarea>
-      <button id="share">Pass to another player</button>
+      <label for="instructions">Your instructions</label>
+      <textarea name="instructions" id="instructions" placeholder="Type your instructions here"></textarea>
+      <button id="share">Summon a teammate</button>
     </div>
     <div id="player-2" class="is-hidden">
       <h3>How to play</h3>
       <p>Write code based on the description you see.</p>  
-      <label for="submission">Your code solution goes here</label>
-      <input type="text" name="submission" id="submission" width="200" />
+      <label for="submission">Your code</label>
+      <textarea name="submission" id="submission" placeholder="Type your code here"></textarea>
       <button id="solve">Submit your answer</button>
     </div>
   </section>
@@ -56,10 +45,6 @@
     <h3>Games joined</h3>
     <ul id="games-joined"></ul>
   </aside>
-  <footer>
-    <h3>Players online now</h3>
-    <ul id="user_list"></ul>
-  </footer>
   <script src="app.js"></script>
 </body>
 </html>
