@@ -80,3 +80,32 @@ ul {
     border-radius: 50%;
     border: 3px solid white; color: white;
 }
+
+@media only screen and (min-width: 1024px) {
+    body {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "players players players"
+        "header  game    lists";
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    #players {
+        grid-area: players;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header {
+        grid-area: header;
+    }
+    #game {
+        grid-area: game;
+    }
+    aside {
+        grid-area: lists;
+    }
+}
