@@ -7,6 +7,19 @@
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <style>
       .is-hidden { display: none; }
+      #user_list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      #user_list li {
+        font-family: sans-serif; text-align: center;
+        height: 40px; width: 40px; line-height: 40px;
+        border-radius: 50%;
+        border: 3px solid white; color: white;
+      }
     </style>
 </head>
 <body>
@@ -43,6 +56,10 @@
     <h3>Games joined</h3>
     <ul id="games-joined"></ul>
   </aside>
+  <footer>
+    <h3>Players online now</h3>
+    <ul id="user_list"></ul>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
