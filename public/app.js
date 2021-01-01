@@ -92,6 +92,14 @@ channel.bind('mini-game', function(data) {
     // Once game is solved, notify both players and delete 'join' button for all players
     if (games[game].submission !== null && (games[game].creator == true || games[game].participated == true)) {
       currentGame = games[game]
+      if (currentGame.topic == 'html') {
+        currentGame.challenge = currentGame.challenge.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+          return '&#'+i.charCodeAt(0)+';'; 
+        });
+        currentGame.submission = currentGame.submission.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+          return '&#'+i.charCodeAt(0)+';'; 
+        });
+      }
       document.getElementById('instructions').value = ''
       document.getElementById('submission').value = ''
       if (games[game].solved) {
