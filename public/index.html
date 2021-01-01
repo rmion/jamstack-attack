@@ -4,42 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamstack Attack! Practice Frontend with friends!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Jamstack Attack!</h1>
-    <p>
-      Practice Frontend together!
-    </p>
-    <p id="start-buttons">
-      <button id="start">Start a new game</button>
-    </p>
-    <p id="join-buttons"></p>
-  </header>
+  <h1>Jamstack Attack!</h1>
+  <button id="start">Start a new game</button>
+  <p id="join-buttons"></p>
   <section id="game" class="is-hidden">
-    <h2>You're playing: Coding Telefone!</h2>
-    <h3>Your <span id="topic"></span> challenge</h3>
+    <h2>Your <span id="topic"></span> challenge</h2>
     <pre><code id="prompt"></code></pre>
     <div id="player-1">
-      <h3>How to play</h3>
-      <p>Describe the code snippet using the textarea below. Your teammate must use your description when attempting to match it.</p>  
       <label for="instructions">Your instructions</label>
-      <textarea name="instructions" id="instructions" placeholder="Type your instructions here"></textarea>
+      <textarea name="instructions" id="instructions" placeholder="See the code above? Well, your teammate won't. And for you both to win, they'll have to re-create it exactly. All they will have as reference is the instructions you type here. Choose your words wisely!"></textarea>
       <button id="share">Summon a teammate</button>
     </div>
     <div id="player-2" class="is-hidden">
-      <h3>How to play</h3>
-      <p>Write code based on the description you see.</p>  
       <label for="submission">Your code</label>
-      <textarea name="submission" id="submission" placeholder="Type your code here"></textarea>
+      <textarea name="submission" id="submission" placeholder="See the text above? Those are instructions! Your teammate wrote those! They were shown some code. They wrote those instructions to help you re-create the code they saw. It's your turn now. Good luck!"></textarea>
       <button id="solve">Submit your answer</button>
     </div>
   </section>
   <aside>
     <h3>Games started</h3>
     <ul id="games-started"></ul>
+  </aside>
+  <aside>
     <h3>Games joined</h3>
     <ul id="games-joined"></ul>
   </aside>

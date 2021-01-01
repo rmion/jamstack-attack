@@ -2,6 +2,7 @@ body {
     background-color: #171d23;
     color: aliceblue;
     font-family: sans-serif;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 1rem;
     text-align: center;
@@ -10,7 +11,6 @@ body {
     text-align: left;
 }
 button {
-    display: block;
     background: none;
     border: none;
     border-radius: 5px;
@@ -18,7 +18,6 @@ button {
     padding: .5rem 1rem;
     font-size: 1.5rem;
     cursor: pointer;
-    margin: 1rem auto;
 }
 button:disabled {
     background-color: #333;
@@ -82,16 +81,22 @@ ul {
 }
 
 @media only screen and (min-width: 1024px) {
+    html, body {
+        height: 100%;
+    }
     body {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 1rem 0;
+        margin: 0;
+        padding: 0;
         display: grid;
+        align-items: baseline;
         grid-gap: 20px;
         grid-template-areas: 
-        "players players players"
-        "header  game    lists";
+        "players  players players"
+        "created  button   joined"
+        "created  game    joined"
+        "title    title   title";
         grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: min-content 1fr 1fr min-content;
     }
     #players {
         grid-area: players;
@@ -99,13 +104,38 @@ ul {
         align-items: center;
         justify-content: center;
     }
-    header {
-        grid-area: header;
+    h1 {
+        font-family: 'VT323', monospace;
+        grid-area: title;
+        font-size: 15vw;
+        align-self: end;
+        transition: text-shadow 0.3s;
+    }
+    h1:hover {
+        text-shadow: 
+            -1px 1px 0 #eee,
+            -2px 2px 0 #ccc,
+            -3px 3px 0 #aaa,
+            -5px 5px 0 #999,
+            -8px 8px 0 #777,
+            -13px 13px 0 #555,
+            -21px 21px 0 #333,
+            -34px 34px 0 #171d23;
+    }
+    h1, h2, h3 {
+        margin: 0;
     }
     #game {
         grid-area: game;
     }
-    aside {
-        grid-area: lists;
+    aside:first-of-type {
+        grid-area: created;
+    }
+    aside:last-of-type {
+        grid-area: joined;
+    }
+    #start, #join-buttons {
+        grid-area: button;
+        justify-self: center;
     }
 }

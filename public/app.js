@@ -51,7 +51,7 @@ channel.bind('mini-game', function(data) {
       button.setAttribute('id', `join-${currentGame.id}`)
       button.addEventListener('click', (e) => {
         document.getElementById('submission').value = ""
-        Array.from(document.getElementById('start-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
+        document.getElementById('start').setAttribute('disabled', 'disabled')
         Array.from(document.getElementById('join-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
         let joinedGame = games[games.findIndex(el => el.id == e.target.id.split('-')[1])]
         fetch('/joined', {
@@ -117,7 +117,7 @@ channel.bind('mini-game', function(data) {
 });
 function newGame(event, topic) {
   document.getElementById('instructions').value = ''
-  Array.from(document.getElementById('start-buttons').children).forEach(el => el.setAttribute('disabled', 'disabled'))
+  document.getElementById('start').setAttribute('disabled', 'disabled')
   let timestamp = new Date().getTime()
   fetch('/new', {
       method: 'POST',
@@ -145,7 +145,7 @@ function newGame(event, topic) {
 }
 document.getElementById('start').addEventListener('click', newGame)
 document.getElementById('share').addEventListener('click', (e) => {
-  Array.from(document.getElementById('start-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
+  document.getElementById('start').removeAttribute('disabled')
   fetch('/described', {
       method: 'POST',
       headers: {
@@ -165,8 +165,8 @@ document.getElementById('share').addEventListener('click', (e) => {
     })
 })
 document.getElementById('solve').addEventListener('click', (e) => {
-  Array.from(document.getElementById('start-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
-  Array.from(document.getElementById('join-buttons').children).forEach(el => el.removeAttribute('disabled', 'disabled'))
+  document.getElementById('start').removeAttribute('disabled')
+  Array.from(document.getElementById('join-buttons').children).forEach(el => el.removeAttribute('disabled'))
   fetch('/solved', {
       method: 'POST',
       headers: {
