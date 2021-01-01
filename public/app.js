@@ -115,6 +115,10 @@ channel.bind('mini-game', function(data) {
     })
   }
 });
+function initializeApp() {
+  document.getElementById('share').setAttribute('disabled', 'disabled')
+  document.getElementById('solve').setAttribute('disabled', 'disabled')
+}
 function newGame(event, topic) {
   document.getElementById('instructions').value = ''
   document.getElementById('start').setAttribute('disabled', 'disabled')
@@ -183,3 +187,19 @@ document.getElementById('solve').addEventListener('click', (e) => {
         document.getElementById('game').classList.add('is-hidden')
     })
 })
+document.getElementById('instructions').addEventListener('input', (e) => {
+  if (e.target.value != '') {
+    document.getElementById('share').removeAttribute('disabled')
+  } else if (e.target.value == '') {
+    document.getElementById('share').setAttribute('disabled', 'disabled')
+  }
+})
+document.getElementById('submission').addEventListener('input', (e) => {
+  if (e.target.value != '') {
+    document.getElementById('solve').removeAttribute('disabled')
+  } else if (e.target.value == '') {
+    document.getElementById('solve').setAttribute('disabled', 'disabled')
+  }
+})
+
+initializeApp();

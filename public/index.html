@@ -11,8 +11,6 @@
 </head>
 <body>
   <h1>Jamstack Attack!</h1>
-  <button id="start">Start a new game</button>
-  <p id="join-buttons"></p>
   <section id="game" class="is-hidden">
     <h2>Your <span id="topic"></span> challenge</h2>
     <pre><code id="prompt"></code></pre>
@@ -28,11 +26,13 @@
     </div>
   </section>
   <aside>
-    <h3>Games started</h3>
+    <h3>Games you started</h3>
+    <button id="start">Start a new game</button>
     <ul id="games-started"></ul>
   </aside>
   <aside>
-    <h3>Games joined</h3>
+    <h3>Games you joined</h3>
+    <p id="join-buttons"></p>
     <ul id="games-joined"></ul>
   </aside>
   <footer id="players">
