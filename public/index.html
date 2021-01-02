@@ -10,9 +10,10 @@
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <body>
-  <h1>Jamstack Attack!</h1>
+  <header>
+    <h1>Jamstack Attack!</h1>
+  </header>
   <section id="game" class="is-hidden">
-    <h2>Your <span id="topic"></span> challenge</h2>
     <pre><code id="prompt"></code></pre>
     <div id="player-1">
       <label for="instructions">Your instructions</label>
@@ -31,7 +32,7 @@
     <ul id="games-started"></ul>
   </aside>
   <aside>
-    <h3>Games you joined</h3>
+    <h3>Games by other players</h3>
     <p id="join-buttons"></p>
     <ul id="games-joined"></ul>
   </aside>

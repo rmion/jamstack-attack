@@ -10,6 +10,9 @@ body {
 #game p {
     text-align: left;
 }
+p {
+    margin: 0;
+}
 button {
     background: none;
     border: none;
@@ -104,10 +107,12 @@ ul {
         align-items: center;
         justify-content: center;
     }
+    header {
+        grid-area: title;
+    }
     h1 {
         margin: 0;
         font-family: 'VT323', monospace;
-        grid-area: title;
         font-size: 15vw;
         align-self: end;
         transition: text-shadow 0.3s;
