@@ -54,7 +54,7 @@ channel.bind('mini-game', function(data) {
     }
     if (games[game].creator == false && games[game].teammate == true && !games[game].hasOwnProperty("participated") && games[game].submission == null) {
       currentGame = games[game]
-      document.getElementById(`join-buttons`).removeChild(document.getElementById(`game-${currentGame.id}`))
+      document.getElementById(`games-joined`).removeChild(document.getElementById(`game-${currentGame.id}`))
     }
     // Once game is solved, notify both players and delete 'join' button for all players
     if (games[game].submission !== null && (games[game].creator == true || games[game].participated == true)) {
