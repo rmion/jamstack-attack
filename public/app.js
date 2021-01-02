@@ -104,12 +104,13 @@ channel.bind('mini-game', function(data) {
     let button = document.createElement('button')
     button.textContent = `Join`
     button.setAttribute('id', `join-${games[games.length - 1].id}`)
-    button.setAttribute('disabled', 'disabled')
+    button.setAttribute('disabled', true)
     button.addEventListener('click', (e) => {
       document.getElementById('submission').value = ""
-      document.getElementById('start').setAttribute('disabled', 'disabled')
-      Array.from(document.getElementById('join-buttons').children).forEach(el => el.nextElementSibling.setAttribute('disabled', 'disabled'))
+      Array.from(document.getElementsByTagName('button')).forEach(el => el.setAttribute('disabled', true))
+      document.getElementById('solve').removeAttribute('disabled')    
       let joinedGame = games[games.findIndex(el => el.id == e.target.id.split('-')[1])]
+      currentGame = joinedGame
       fetch('/joined', {
           method: 'POST',
           headers: {
@@ -126,20 +127,17 @@ channel.bind('mini-game', function(data) {
           document.getElementById('game').classList.remove('is-hidden')
           document.getElementById('player-1').classList.add('is-hidden')
           document.getElementById('player-2').classList.remove('is-hidden')
-          document.getElementById(`game-${joinedGame.id}`).textContent = `You joined ${currentGame.creatorID}'s game`
+          document.getElementById(`game-${joinedGame.id}`).textContent = `You joined ${joinedGame.creatorID}'s game`
         })
     })
     li.appendChild(button)
     document.getElementById('games-joined').appendChild(li)
   }
 });
-function initializeApp() {
-  document.getElementById('share').setAttribute('disabled', 'disabled')
-  document.getElementById('solve').setAttribute('disabled', 'disabled')
-}
 function newGame(event, topic) {
   document.getElementById('instructions').value = ''
-  document.getElementById('start').setAttribute('disabled', 'disabled')
+  Array.from(document.getElementsByTagName('button')).forEach(el => el.setAttribute('disabled', true))
+  document.getElementById('share').removeAttribute('disabled')
   let timestamp = new Date().getTime()
   fetch('/new', {
       method: 'POST',
@@ -167,7 +165,7 @@ function newGame(event, topic) {
 }
 document.getElementById('start').addEventListener('click', newGame)
 document.getElementById('share').addEventListener('click', (e) => {
-  document.getElementById('start').removeAttribute('disabled')
+  Array.from(document.getElementsByTagName('button')).forEach(el => el.removeAttribute('disabled'))
   fetch('/described', {
       method: 'POST',
       headers: {
@@ -187,16 +185,14 @@ document.getElementById('share').addEventListener('click', (e) => {
     })
 })
 document.getElementById('solve').addEventListener('click', (e) => {
-  document.getElementById('start').removeAttribute('disabled')
-  Array.from(document.getElementById('join-buttons').children).forEach(el => el.nextElementSibling.removeAttribute('disabled'))
-  Array.from(document.getElementById('join-buttons').children).forEach(el => el.removeAttribute('disabled'))
+  Array.from(document.getElementsByTagName('button')).forEach(el => el.removeAttribute('disabled'))
   fetch('/solved', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        ...currentGame,
+        ...games[games.findIndex(el => el.id == currentGame.id)],
         "submission": document.getElementById('submission').value,
       })
     })
@@ -207,18 +203,18 @@ document.getElementById('solve').addEventListener('click', (e) => {
     })
 })
 document.getElementById('instructions').addEventListener('input', (e) => {
-  if (e.target.value != '') {
-    document.getElementById('share').removeAttribute('disabled')
+  if (e.target.value.trim() == document.getElementById('prompt').textContent) {
+    document.getElementById('share').setAttribute('disabled', true)
   } else if (e.target.value == '') {
-    document.getElementById('share').setAttribute('disabled', 'disabled')
+    document.getElementById('share').setAttribute('disabled', true)
+  } else if (e.target.value != '') {
+    document.getElementById('share').removeAttribute('disabled')
   }
 })
 document.getElementById('submission').addEventListener('input', (e) => {
   if (e.target.value != '') {
     document.getElementById('solve').removeAttribute('disabled')
   } else if (e.target.value == '') {
-    document.getElementById('solve').setAttribute('disabled', 'disabled')
+    document.getElementById('solve').setAttribute('disabled', true)
   }
 })
-
-initializeApp();
