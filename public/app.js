@@ -69,7 +69,7 @@ channel.bind('mini-game', function(data) {
       document.getElementById('submission').value = ''
       if (games[game].solved) {
         document.getElementById(`game-${currentGame.id}`).innerHTML = `
-          <p>Nice! You and ${currentGame.joinerID} won!</p>
+          <p>Nice, you won together!</p>
           <details>
             <summary>Review the code</summary>
             <h4>${currentGame.creatorID}'s code</h4>
@@ -80,7 +80,7 @@ channel.bind('mini-game', function(data) {
         `
       } else {
         document.getElementById(`game-${currentGame.id}`).innerHTML = `
-          <p>Sorry! You and ${currentGame.joinerID} lost!</p>
+          <p>Sorry, you lost together!</p>
           <details>
             <summary>Review the code</summary>
             <h4>${currentGame.creatorID}'s code</h4>
