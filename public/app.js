@@ -1,6 +1,6 @@
 var games = [];
 var currentGame = null;
-
+Pusher.logToConsole = true
 const pusher = new Pusher('a0a317b210ac3be6457d', {
   cluster: 'mt1',
   forceTLS: true,
@@ -20,6 +20,11 @@ function addMemberToUserList(memberId) {
   userEl.innerText = memberId;
   userEl.style.backgroundColor = 'hsl('+hashCode(memberId)%360+',70%,60%)';
   document.getElementById("user_list").appendChild(userEl);
+  if (channel.members.count > 1) {
+    document.getElementById('player-count-zero').style.display = "none"
+  } else if (channel.members.count <= 1) {
+    document.getElementById('player-count-zero').style.display = "block"
+  }
 }
 channel.bind('pusher:subscription_succeeded', () => 
   channel.members.each(member => addMemberToUserList(member.id)));
@@ -27,6 +32,9 @@ channel.bind('pusher:member_added', member => addMemberToUserList(member.id));
 channel.bind('pusher:member_removed', member => {
   const userEl = document.getElementById("user_"+member.id);
   userEl.parentNode.removeChild(userEl);
+  if (channel.members.count <= 1) {
+    document.getElementById('player-count-zero').style.display = "block"
+  }
 });
 
 channel.bind('mini-game', function(data) {
