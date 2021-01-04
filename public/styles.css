@@ -36,8 +36,8 @@ button:not(:disabled):active {
 }
 code {
     background-color: black;
-    color: khaki;
-    border: 2px solid khaki;
+    border-width: 2px;
+    border-style: solid;
     font-size: 1.2rem;
     padding: .5rem 1rem;
     display: block;
@@ -63,13 +63,25 @@ ul {
     background-color: rgba(0,0,0,25%);
 }
 #games-joined li {
-    border: 2px dotted lightcoral;
-    color: lightpink;
+    border: 2px dotted aquamarine;
+    color: aquamarine;
     padding: 1rem;
     background-color: rgba(0,0,0,25%);
 }
 .is-hidden { 
     display: none; 
+}
+.html {
+    color: #FF7A2E;
+    border-color: #FF7A2E;
+}
+.css {
+    color: #2BB6E6;
+    border-color: #2BB6E6;
+}
+.js {
+    color: #FFDF2B;
+    border-color: #FFDF2B;
 }
 #user_list {
     display: flex;

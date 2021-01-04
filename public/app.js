@@ -47,7 +47,11 @@ channel.bind('mini-game', function(data) {
     }
     // Present the challenge to the game creator
     if (games[game].creator == true && games[game].challenge !== null && games[game].solved == null) {
-      document.getElementById('prompt').textContent = games[game].challenge
+      document.getElementById('player-one-prompt').textContent = games[game].challenge
+      document.getElementById('player-one-prompt').classList.add(games[game].topic)
+      document.querySelectorAll('.topic').forEach(el => {
+        el.textContent = games[game].topic.toUpperCase()
+      })
       currentGame = games[game]
     } 
     // Enable 'Join' button if game has instructions
@@ -131,7 +135,11 @@ channel.bind('mini-game', function(data) {
         })
         .then(response => {
           joinedGame.participated = true
-          document.getElementById('prompt').textContent = joinedGame.instructions
+          document.getElementById('player-two-prompt').textContent = joinedGame.instructions
+          document.getElementById('player-two-prompt').classList.add(joinedGame.topic)
+          document.querySelectorAll('.topic').forEach(el => {
+            el.textContent = joinedGame.topic.toUpperCase()
+          })
           document.getElementById('game').classList.remove('is-hidden')
           document.getElementById('player-1').classList.add('is-hidden')
           document.getElementById('player-2').classList.remove('is-hidden')
@@ -187,7 +195,8 @@ document.getElementById('share').addEventListener('click', (e) => {
       })
     })
     .then(response => {
-      document.getElementById('prompt').textContent = ""
+      document.getElementById('player-one-prompt').textContent = ""
+      document.getElementById('player-one-prompt').classList.remove(currentGame.topic)
       document.getElementById('game').classList.add('is-hidden')
       document.getElementById(`game-${currentGame.id}`).textContent = "Awaiting a teammate"
     })
@@ -205,13 +214,14 @@ document.getElementById('solve').addEventListener('click', (e) => {
       })
     })
     .then(response => {
-        document.getElementById('prompt').textContent = ""
+        document.getElementById('player-two-prompt').textContent = ""
+        document.getElementById('player-two-prompt').classList.remove(games[games.findIndex(el => el.id == currentGame.id)].topic)
         document.getElementById('submission').value = ""
         document.getElementById('game').classList.add('is-hidden')
     })
 })
 document.getElementById('instructions').addEventListener('input', (e) => {
-  if (e.target.value.trim() == document.getElementById('prompt').textContent) {
+  if (e.target.value.trim() == document.getElementById('player-one-prompt').textContent) {
     document.getElementById('share').setAttribute('disabled', true)
   } else if (e.target.value == '') {
     document.getElementById('share').setAttribute('disabled', true)
