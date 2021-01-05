@@ -140,6 +140,7 @@ channel.bind('mini-game', function(data) {
           document.querySelectorAll('.topic').forEach(el => {
             el.textContent = joinedGame.topic.toUpperCase()
           })
+          document.getElementById('solve').setAttribute('disabled', true)
           document.getElementById('game').classList.remove('is-hidden')
           document.getElementById('player-1').classList.add('is-hidden')
           document.getElementById('player-2').classList.remove('is-hidden')
@@ -170,6 +171,7 @@ function newGame(event, topic) {
         id: timestamp,
         creator: true
       })
+      document.getElementById('share').setAttribute('disabled', true)
       document.getElementById('game').classList.remove('is-hidden')
       document.getElementById('player-1').classList.remove('is-hidden')
       document.getElementById('player-2').classList.add('is-hidden')

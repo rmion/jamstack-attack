@@ -7,8 +7,10 @@ body {
     padding: 1rem;
     text-align: center;
 }
-#game p {
-    text-align: left;
+h1 {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    transition: text-shadow 0.3s;
 }
 p {
     margin: 0;
@@ -56,17 +58,20 @@ ul {
     margin: 0;
     padding: 0;
 }
-#games-started li {
-    border: 2px dotted limegreen;
-    color: lime;
-    padding: 1rem;
+aside li {
+    border-width: 2px;
+    border-style: dotted;
+    padding: 0.5rem 1rem;
     background-color: rgba(0,0,0,25%);
+    margin-bottom: 0.5rem;
+}
+#games-started li {
+    border-color: limegreen;
+    color: lime;
 }
 #games-joined li {
-    border: 2px dotted aquamarine;
+    border-color: aquamarine;
     color: aquamarine;
-    padding: 1rem;
-    background-color: rgba(0,0,0,25%);
 }
 .is-hidden { 
     display: none; 
@@ -83,12 +88,13 @@ ul {
     color: #FFDF2B;
     border-color: #FFDF2B;
 }
-#user_list {
+footer ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
 }
-#user_list li {
+footer li {
     margin: 0 4px;
     font-family: sans-serif; text-align: center;
     height: 40px; width: 40px; line-height: 40px;
@@ -107,9 +113,9 @@ ul {
         align-items: baseline;
         grid-gap: 20px;
         grid-template-areas: 
-        "players  players players"
-        "created  game    joined"
-        "title    title   title";
+            "players  players players"
+            "created  game    joined"
+            "title    title   title";
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: min-content 1fr min-content;
     }
@@ -117,17 +123,14 @@ ul {
         grid-area: players;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;    
     }
     header {
         grid-area: title;
     }
     h1 {
-        margin: 0;
-        font-family: 'VT323', monospace;
         font-size: 15vw;
         align-self: end;
-        transition: text-shadow 0.3s;
     }
     h1:hover {
         text-shadow: 
