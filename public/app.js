@@ -47,7 +47,9 @@ channel.bind('mini-game', function(data) {
     }
     // Present the challenge to the game creator
     if (games[game].creator == true && games[game].challenge !== null && games[game].solved == null) {
+      console.log("In first IF")
       document.getElementById('player-one-prompt').textContent = games[game].challenge
+      document.getElementById('player-one-prompt').classList = ""
       document.getElementById('player-one-prompt').classList.add(games[game].topic)
       document.querySelectorAll('.topic').forEach(el => {
         el.textContent = games[game].topic.toUpperCase()
@@ -197,8 +199,6 @@ document.getElementById('share').addEventListener('click', (e) => {
       })
     })
     .then(response => {
-      document.getElementById('player-one-prompt').textContent = ""
-      document.getElementById('player-one-prompt').classList.remove(currentGame.topic)
       document.getElementById('game').classList.add('is-hidden')
       document.getElementById(`game-${currentGame.id}`).textContent = "Awaiting a teammate"
     })

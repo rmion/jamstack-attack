@@ -119,4 +119,76 @@ module.exports = [
         "topic": "css",
         "code": "h2 ~ p"
     },
+    {
+        "topic": "js",
+        "code": "{ creator: 'Robert Mion' }"
+    },
+    {
+        "topic": "html",
+        "code": "<a href='#main'>Skip to main content</a>"
+    },
+    {
+        "topic": "css",
+        "code": "a[href$='.pdf']"
+    },
+    {
+        "topic": "js",
+        "code": "3 + 2 + +true"
+    },
+    {
+        "topic": "html",
+        "code": "<button type='submit'>Add</button>"
+    },
+    {
+        "topic": "css",
+        "code": "a:not(:visited)"
+    },
+    {
+        "topic": "js",
+        "code": "[1, 2, 3].pop()"
+    },
+    {
+        "topic": "html",
+        "code": "<form action='submit.php' method='POST'>"
+    },
+    {
+        "topic": "css",
+        "code": "li:only-of-type"
+    },
+    {
+        "topic": "js",
+        "code": "game['cheatcode'] = 'ababxyxy'"
+    },
+    {
+        "topic": "html",
+        "code": "<input type='text' id='name' />"
+    },
+    {
+        "topic": "css",
+        "code": ":root { --primary-color: red; }"
+    },
+    {
+        "topic": "js",
+        "code": "num => () => num"
+    },
+    {
+        "topic": "html",
+        "code": "<h6>Level-6 Heading</h6>"
+    },
+    {
+        "topic": "css",
+        "code": ".elem { color: var(--primary-color); }"
+    },
+    {
+        "topic": "js",
+        "code": "function sum(a,b) { return a + b }"
+    },
+    {
+        "topic": "html",
+        "code": "<!doctype html>"
+    },
+    {
+        "topic": "css",
+        "code": "* + *"
+    },
 ]

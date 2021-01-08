@@ -77,7 +77,14 @@ app.post('/joined', (req, res) => {
 })
 
 app.post('/solved', (req, res) => {
-  var solved = req.body.challenge.trim().replace(/\s/g,'') == req.body.submission.trim().replace(/\s/g,'') ? true : false;
+  let solved;
+  if (req.body.topic == 'css') {
+    // Normalize spaces and quotation marks
+    solved = req.body.challenge.trim().replace(/\s/g,'') == req.body.submission.trim().replace(/\s/g,'').replace(/\"/g, "'") ? true : false;
+  } else {
+    // Normalize spaces, quotation marks and semicolons
+    solved = req.body.challenge.trim().replace(/\s/g,'') == req.body.submission.trim().replace(/\s/g,'').replace(/\"/g, "'").replace(/;/g,"") ? true : false;
+  }
   pusher.trigger("presence-quickstart", "mini-game", {
     id: req.body.id,
     creatorID: req.body.creatorID,

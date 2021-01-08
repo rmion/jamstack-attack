@@ -15,6 +15,9 @@ h1 {
 p {
     margin: 0;
 }
+a {
+    color: white;
+}
 button {
     background: none;
     border: none;
@@ -36,15 +39,38 @@ button:not(:disabled):focus,
 button:not(:disabled):active {
     background-color: aquamarine;
 }
+#player-count-zero {
+    margin: 1rem 0; 
+    text-align: left;
+}
 code {
     background-color: black;
     border-width: 2px;
     border-style: solid;
     font-size: 1.2rem;
     padding: .5rem 1rem;
+    padding-left: 0;
     display: block;
     text-align: left;
     white-space: normal;
+}
+code#player-one-prompt:before {
+    color: black;
+    padding: 0.5rem;
+    margin: 1rem;
+    margin-left: 0;
+}
+code#player-one-prompt.css:before {
+    content: "CSS";
+    background-color: #2BB6E6;
+}
+code#player-one-prompt.js:before {
+    content: "JS";
+    background-color: #FFDF2B;
+}
+code#player-one-prompt.html:before {
+    content: "HTML";
+    background-color: #FF7A2E;
 }
 textarea {
     display: block;
