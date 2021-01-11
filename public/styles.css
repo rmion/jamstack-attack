@@ -7,6 +7,11 @@ body {
     padding: 1rem;
     text-align: center;
 }
+.flexed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 h1 {
     margin: 0;
     font-family: 'VT323', monospace;
@@ -14,6 +19,10 @@ h1 {
 }
 p {
     margin: 0;
+}
+strong {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
 }
 a {
     color: white;
@@ -40,7 +49,9 @@ button:not(:disabled):active {
     background-color: aquamarine;
 }
 #player-count-zero {
-    margin: 1rem 0; 
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: darkorchid;
     text-align: left;
 }
 code {
@@ -115,10 +126,7 @@ aside li {
     border-color: #FFDF2B;
 }
 footer ul {
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 }
 footer li {
     margin: 0 4px;
@@ -137,7 +145,7 @@ footer li {
         padding: 0;
         display: grid;
         align-items: baseline;
-        grid-gap: 20px;
+        grid-gap: 10px;
         grid-template-areas: 
             "players  players players"
             "created  game    joined"
@@ -147,15 +155,13 @@ footer li {
     }
     #players {
         grid-area: players;
-        display: flex;
-        align-items: center;
-        justify-content: center;    
     }
     header {
         grid-area: title;
     }
     h1 {
         font-size: 15vw;
+        line-height: 1;
         align-self: end;
     }
     h1:hover {
@@ -180,5 +186,8 @@ footer li {
     }
     aside:last-of-type {
         grid-area: joined;
+    }
+    #user_list {
+        margin-left: 0.5rem;
     }
 }

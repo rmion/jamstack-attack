@@ -22,8 +22,10 @@ function addMemberToUserList(memberId) {
   document.getElementById("user_list").appendChild(userEl);
   if (channel.members.count > 1) {
     document.getElementById('player-count-zero').style.display = "none"
+    document.getElementById('player-count-zero').nextElementSibling.classList.remove('is-hidden')
   } else if (channel.members.count <= 1) {
     document.getElementById('player-count-zero').style.display = "block"
+    document.getElementById('player-count-zero').nextElementSibling.classList.add('is-hidden')
   }
 }
 channel.bind('pusher:subscription_succeeded', () => 
@@ -34,6 +36,7 @@ channel.bind('pusher:member_removed', member => {
   userEl.parentNode.removeChild(userEl);
   if (channel.members.count <= 1) {
     document.getElementById('player-count-zero').style.display = "block"
+    document.getElementById('player-count-zero').nextElementSibling.classList.add('is-hidden')
   }
 });
 
