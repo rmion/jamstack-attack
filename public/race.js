@@ -25,6 +25,7 @@ function updateExercise() {
   if (counter == exercises.length) {
     document.getElementById('player-one-test').setAttribute('disabled', true)
     document.getElementById('match').textContent = "Game over! You won!"
+    addAgainBtn()
     clearInterval(intervalId)
   } else {
     document.getElementById('match').textContent = exercises[counter];
@@ -35,17 +36,39 @@ function updateExercise() {
 
 let i = 0;
 let opponentCounter = 0;
-let opponentExercise = exercises[opponentCounter]
 let intervalId
 
-document.getElementById('start').addEventListener('click', function(e) {
+function startNewGame() {
   fetch('/race')
-    .then(response => response.json())
-    .then(data => {
-      exercises = data.challenges
-      initializeGame()
-    })
-})
+  .then(response => response.json())
+  .then(data => {
+    exercises = data.challenges
+    initializeGame()
+  })
+}
+
+document.getElementById('start').addEventListener('click', startNewGame)
+
+function resetGame() {
+  document.getElementById('game').removeChild(document.getElementById('again'))
+  document.getElementById('player-one-test').removeAttribute('disabled')
+  i = 0
+  opponentCounter = 0
+  counter = -1
+  misses = 0
+  exercises = []
+  startNewGame()
+}
+
+function addAgainBtn() {
+  let button = document.createElement('button')
+  button.textContent = "Play again!"
+  button.id = "again"
+  button.addEventListener('click', () => {
+    resetGame()
+  })
+  document.getElementById('game').appendChild(button)
+}
 
 function initializeGame() {
   document.getElementById('player-1').classList.remove('is-hidden')
@@ -57,7 +80,8 @@ function initializeGame() {
       if (opponentCounter == exercises.length) {
         document.getElementById('player-one-test').setAttribute('disabled', true)
         document.getElementById('match').textContent = "Game over! You lost!"
-        clearInterval(intervalId)   
+        clearInterval(intervalId)
+        addAgainBtn() 
       } else if (input.value == exercises[opponentCounter]) {
         i = 0;
         opponentCounter += 1;
