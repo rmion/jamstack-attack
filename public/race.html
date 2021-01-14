@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Racer: Practice typing HTML, CSS and JavaScript</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Jamstack Attack!</h1>
+        <p><small>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
+      </header>
+      <section id="game">
+        <div id="intro">
+          <h2>Practice typing!</h2>
+          <p>Can you type HTML, CSS and JS code faster than your opponent?</p>
+          <p>You can <button id="start">Start a new game</button> or <a href="/">Practice pairing instead</a></p>
+        </div>
+        <div id="player-1" class="is-hidden">
+          <h2>Practice typing!</h2>
+          <div id="highlight"></div>
+          <pre><code id="match"></code></pre>
+          <label for="instructions">Re-type the code</label>
+          <input type="text" id="player-one-test" placeholder="Type code here" />
+          <h3 id="misses">0 mis-types</h3>
+        </div>
+        <div id="player-2" class="is-hidden">
+          <h2>Your opponent is typing the code, too!</h2>
+          <input type="text" id="player-two-test" disabled/>
+        </div>
+      </section>
+      <aside>
+        <h3>Games you started</h3>
+        <ul id="games-started"></ul>
+      </aside>
+      <aside>
+        <h3>Games you can join</h3>
+        <ul id="games-joined"></ul>
+      </aside>
+      <footer id="players" class="flexed">
+        <p id="player-count-zero">
+          Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
+        </p>
+        <section class="flexed is-hidden">
+          <h3>Players online now</h3>
+          <ul id="user_list" class="flexed"></ul>  
+        </section>
+      </footer>
+    <script src="race.js"></script>    
+</body>
+</html>

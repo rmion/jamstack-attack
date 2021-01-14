@@ -14,8 +14,13 @@
     <h1>Jamstack Attack!</h1>
     <p><small>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
   </header>
-  <section id="game" class="is-hidden">
-    <div id="player-1">
+  <section id="game">
+    <div id="intro">
+      <h2>Practice pairing!</h2>
+      <p>Can you describe HTML, CSS and JS code for your teammate?</p>
+      <p>You can <button id="start">Start a new game</button> or <a href="race.html">Practice typing instead</a></p>
+    </div>
+    <div id="player-1" class="is-hidden">
       <h2>Your teammate must re-create this <span class="topic"></span> code</h2>
       <pre><code id="player-one-prompt"></code></pre>
       <label for="instructions">Type your instructions below</label>
@@ -32,7 +37,6 @@
   </section>
   <aside>
     <h3>Games you started</h3>
-    <button id="start">Start a new game</button>
     <ul id="games-started"></ul>
   </aside>
   <aside>

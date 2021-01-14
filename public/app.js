@@ -1,6 +1,5 @@
 var games = [];
 var currentGame = null;
-Pusher.logToConsole = true
 const pusher = new Pusher('a0a317b210ac3be6457d', {
   cluster: 'mt1',
   forceTLS: true,
@@ -146,8 +145,7 @@ channel.bind('mini-game', function(data) {
             el.textContent = joinedGame.topic.toUpperCase()
           })
           document.getElementById('solve').setAttribute('disabled', true)
-          document.getElementById('game').classList.remove('is-hidden')
-          document.getElementById('player-1').classList.add('is-hidden')
+          document.getElementById('intro').classList.add('is-hidden')
           document.getElementById('player-2').classList.remove('is-hidden')
           document.getElementById(`game-${joinedGame.id}`).textContent = `You joined ${joinedGame.creatorID}'s game`
         })
@@ -177,7 +175,7 @@ function newGame(event, topic) {
         creator: true
       })
       document.getElementById('share').setAttribute('disabled', true)
-      document.getElementById('game').classList.remove('is-hidden')
+      document.getElementById('intro').classList.add('is-hidden')
       document.getElementById('player-1').classList.remove('is-hidden')
       document.getElementById('player-2').classList.add('is-hidden')
       let li = document.createElement('li')
@@ -202,7 +200,8 @@ document.getElementById('share').addEventListener('click', (e) => {
       })
     })
     .then(response => {
-      document.getElementById('game').classList.add('is-hidden')
+      document.getElementById('intro').classList.remove('is-hidden')
+      document.getElementById('player-1').classList.add('is-hidden')
       document.getElementById(`game-${currentGame.id}`).textContent = "Awaiting a teammate"
     })
 })
@@ -222,8 +221,10 @@ document.getElementById('solve').addEventListener('click', (e) => {
         document.getElementById('player-two-prompt').textContent = ""
         document.getElementById('player-two-prompt').classList.remove(games[games.findIndex(el => el.id == currentGame.id)].topic)
         document.getElementById('submission').value = ""
-        document.getElementById('game').classList.add('is-hidden')
-    })
+        document.getElementById('intro').classList.remove('is-hidden')
+        document.getElementById('player-1').classList.add('is-hidden')
+        document.getElementById('player-2').classList.add('is-hidden')
+      })
 })
 document.getElementById('instructions').addEventListener('input', (e) => {
   if (e.target.value.trim() == document.getElementById('player-one-prompt').textContent) {

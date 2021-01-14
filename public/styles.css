@@ -136,6 +136,44 @@ footer li {
     border: 3px solid white; color: white;
 }
 
+/* Racer */
+input {
+    font-family: monospace;
+    width: 100%;
+    padding: 0;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+#highlight {
+    color: transparent;
+    font-family: monospace;
+    background-color: forestgreen;
+    position: absolute;
+    z-index: -1;
+    padding: 0.5rem 0;
+}
+#match {
+    background-color: transparent;
+}
+#highlight, #match {
+    margin-left: 2px;
+}
+input, #match, #highlight {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+input:disabled {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid currentColor;
+    color: aquamarine;
+}
+#misses {
+    background-color: rgba(255,0,0,0.5);
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
 @media only screen and (min-width: 1024px) {
     html, body {
         height: 100%;

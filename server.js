@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
 const path = require('path');
 const Pusher = require("pusher");
-const challenges = require('./challenges.js')
+const pairingchallenges = require('./pairing.js')
+const typingChallenges = require('./typing.js')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -34,8 +35,18 @@ app.post("/pusher/auth", (req, res) => {
   res.send(auth);
 });
 
+app.get('/race', (req, res) => {
+  res.send(JSON.stringify({
+    "challenges": [
+      typingChallenges[Math.floor(Math.random() * typingChallenges.length)],
+      typingChallenges[Math.floor(Math.random() * typingChallenges.length)],
+      typingChallenges[Math.floor(Math.random() * typingChallenges.length)]
+    ]
+  }))
+})
+
 app.post('/new', (req, res) => {
-  let challenge = challenges[Math.floor(Math.random() * challenges.length)]
+  let challenge = pairingchallenges[Math.floor(Math.random() * pairingchallenges.length)]
   pusher.trigger("presence-quickstart", "mini-game", {
     id: req.body.id,
     creatorID: req.body.userid,
