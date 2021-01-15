@@ -52,10 +52,12 @@ document.getElementById('start').addEventListener('click', startNewGame)
 function resetGame() {
   document.getElementById('game').removeChild(document.getElementById('again'))
   document.getElementById('player-one-test').removeAttribute('disabled')
+  document.getElementById('player-two-test').value = ""
   i = 0
   opponentCounter = 0
   counter = -1
   misses = 0
+  document.getElementById('misses').textContent = misses + " mis-types";
   exercises = []
   startNewGame()
 }
