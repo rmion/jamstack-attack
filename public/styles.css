@@ -49,7 +49,6 @@ button:not(:disabled):active {
     background-color: aquamarine;
 }
 #player-count-zero {
-    margin: 1rem 0;
     padding: 0.5rem 1rem;
     background-color: darkorchid;
     text-align: left;
@@ -174,6 +173,94 @@ input:disabled {
     margin: 0;
 }
 
+/* Box Model */
+#player-1 > section {
+    display: flex;
+    align-items: center;
+}
+#control {
+    color: rgba(255,255,255,0.7);
+    box-sizing: border-box;
+    border: 0 solid #666;
+    background-color: #333;
+  }
+  #variable {
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0 solid rgba(0, 255, 166, 0.5);
+  }
+  #container {
+    overflow: auto;
+    position: relative;
+    border: 1px solid white;
+  }
+  #container p {
+    text-align: left;
+  }  
+  form input {
+    width: 3em;
+  }
+  input.correct {
+    background-color: #171d23;
+    color: white;
+  }
+  legend {
+      background-color: #171d23;
+      padding: 0 0.5rem;
+  }
+  fieldset#margin {
+      background-color: #B58654;
+  }
+  fieldset#border {
+      background-color: #E7C683;
+  }
+  fieldset#padding {
+      background-color: #BAC580;
+  }
+  label, span {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  .model {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: 
+      ". t ."
+      "l . r"
+      ". b .";
+  }
+  
+  .model > p:nth-of-type(1) {
+    grid-area: t
+  }
+  .model > p:nth-of-type(2) {
+    grid-area: l
+  }
+  .model > p:nth-of-type(3) {
+    grid-area: r
+  }
+  .model > p:nth-of-type(4) {
+    grid-area: b
+  }
+
+  .model input {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+  }
+
 @media only screen and (min-width: 1024px) {
     html, body {
         height: 100%;
@@ -227,5 +314,20 @@ input:disabled {
     }
     #user_list {
         margin-left: 0.5rem;
+    }
+    #games-list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+    #games-list a {
+        text-decoration: none;
+    }
+    #games-list a:hover,
+    #games-list a:active,
+    #games-list a:focus {
+        font-style: italic;
+        text-decoration: underline;
+        color: springgreen;
     }
 }
