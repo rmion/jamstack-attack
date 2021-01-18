@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice pairing: Match HTML, CSS and JS from instructions</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Practice matching!</h1>
+    <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
+  </header>
+  <section id="game">
+    <div id="intro">
+      <h2>It's time to practice matching!</h2>
+      <p>Can you help your teammate match some HTML, CSS or JS code?</p>
+      <p><button id="start">Start a new game</button></p>
+    </div>
+    <div id="player-1" class="is-hidden">
+      <h2>Your teammate must re-create this <span class="topic"></span> code</h2>
+      <pre><code id="player-one-prompt"></code></pre>
+      <label for="instructions">Type your instructions below</label>
+      <textarea name="instructions" id="instructions" placeholder="See the code above? Well, your teammate won't. And for you both to win, they'll have to re-create it exactly. All they will have as reference is the instructions you type here. Choose your words wisely!"></textarea>
+      <button id="share">Summon a teammate</button>
+    </div>
+    <div id="player-2" class="is-hidden">
+      <h2>Your teammate wrote these instructions to help you re-create some <span class="topic"></span></h2>
+      <pre><code id="player-two-prompt"></code></pre>
+      <label for="submission">Type your code below</label>
+      <textarea name="submission" id="submission" placeholder="See the text above? Those are instructions! Your teammate wrote those! They were shown some code. They wrote those instructions to help you re-create the code they saw. It's your turn now. Good luck!"></textarea>
+      <button id="solve">Submit your answer</button>
+    </div>
+  </section>
+  <aside>
+    <h3>Games you started</h3>
+    <ul id="games-started"></ul>
+  </aside>
+  <aside>
+    <h3>Games you can join</h3>
+    <ul id="games-joined"></ul>
+  </aside>
+  <footer id="players" class="flexed">
+    <p id="player-count-zero">
+      Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
+    </p>
+    <section class="flexed is-hidden">
+      <h3>Players online now</h3>
+      <ul id="user_list" class="flexed"></ul>  
+    </section>
+  </footer>
+  <script src="pair.js"></script>
+</body>
+</html>

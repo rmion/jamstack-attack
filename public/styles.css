@@ -1,3 +1,6 @@
+*, input {
+    box-sizing: border-box;
+}
 body {
     background-color: #171d23;
     color: aliceblue;
@@ -15,7 +18,7 @@ body {
 h1 {
     margin: 0;
     font-family: 'VT323', monospace;
-    transition: text-shadow 0.3s;
+    transition: all 0.3s;
 }
 p {
     margin: 0;
@@ -160,7 +163,6 @@ input {
 input, #match, #highlight {
     font-size: 1.5em;
     margin-bottom: 0;
-    box-sizing: border-box;
 }
 input:disabled {
     background-color: rgba(0,0,0,0.5);
@@ -174,91 +176,38 @@ input:disabled {
 }
 
 /* Box Model */
-#player-1 > section {
+#box-model {
     display: flex;
-    align-items: center;
+    margin: 1rem 0;
+}
+#box-model > * {
+    flex: 1;
+}
+label {
+    display: block;
 }
 #control {
-    color: rgba(255,255,255,0.7);
-    box-sizing: border-box;
-    border: 0 solid #666;
-    background-color: #333;
+    border: 0 solid #E7C683;
+    background-color: #BAC580;
   }
-  #variable {
-    color: rgba(0,0,0,0.7);
-    background-color: rgba(255, 255, 255, 0.7);
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0 solid rgba(0, 255, 166, 0.5);
+  #control p {
+      color: #171d23;
+      background-color: #8AB3BE;
   }
   #container {
+    background-color: #B58654;
     overflow: auto;
-    position: relative;
-    border: 1px solid white;
   }
   #container p {
     text-align: left;
   }  
   form input {
     width: 3em;
+    text-align: right;
   }
   input.correct {
-    background-color: #171d23;
+    background-color: green;
     color: white;
-  }
-  legend {
-      background-color: #171d23;
-      padding: 0 0.5rem;
-  }
-  fieldset#margin {
-      background-color: #B58654;
-  }
-  fieldset#border {
-      background-color: #E7C683;
-  }
-  fieldset#padding {
-      background-color: #BAC580;
-  }
-  label, span {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-  
-  .model {
-    display: grid;
-    grid-gap: 6px;
-    grid-template-columns: repeat(3, min-content);
-    grid-template-rows: repeat(3, min-content);
-    grid-template-areas: 
-      ". t ."
-      "l . r"
-      ". b .";
-  }
-  
-  .model > p:nth-of-type(1) {
-    grid-area: t
-  }
-  .model > p:nth-of-type(2) {
-    grid-area: l
-  }
-  .model > p:nth-of-type(3) {
-    grid-area: r
-  }
-  .model > p:nth-of-type(4) {
-    grid-area: b
-  }
-
-  .model input {
-    padding: 0;
-    margin: 0;
-    font-size: 1em;
   }
 
 @media only screen and (min-width: 1024px) {
@@ -285,21 +234,34 @@ input:disabled {
         grid-area: title;
     }
     h1 {
-        font-size: 15vw;
+        font-size: 10vw;
         line-height: 1;
         align-self: end;
     }
     h1:hover {
+        color: #171d23;
         text-shadow: 
-            -1px 1px 0 #eee,
-            -2px 2px 0 #ccc,
-            -3px 3px 0 #aaa,
-            -5px 5px 0 #999,
-            -8px 8px 0 #777,
-            -13px 13px 0 #555,
-            -21px 21px 0 #333,
-            -34px 34px 0 #171d23;
-    }
+            -1px 1px 0 springgreen,
+            -2px 2px 0 springgreen,
+            -3px 3px 0 springgreen,
+            -4px 4px 0 springgreen,
+            -5px 5px 0 springgreen,
+            -6px 6px 0 springgreen,
+            -7px 7px 0 springgreen,
+            -8px 8px 0 springgreen,
+            -9px 9px 0 springgreen,
+            -10px 10px 0 springgreen,
+            -11px 11px 0 springgreen,
+            -12px 12px 0 springgreen,
+            -13px 13px 0 springgreen,
+            -14px 14px 0 springgreen,
+            -15px 15px 0 springgreen,
+            -16px 16px 0 springgreen,
+            -17px 17px 0 springgreen,
+            -18px 18px 0 springgreen,
+            -19px 19px 0 springgreen,
+            -20px 20px 0 springgreen;
+}
     #game {
         grid-area: game;
     }
@@ -316,18 +278,37 @@ input:disabled {
         margin-left: 0.5rem;
     }
     #games-list {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 20px;
         margin-top: 1rem;
     }
     #games-list a {
+        text-align: left;
+        display: block;
+        font-family: 'VT323', monospace;
+        font-size: 3rem;
+        padding: 1rem 2rem;
         text-decoration: none;
+        border: 3px solid currentColor;
+        transition: all 0.3s;
     }
     #games-list a:hover,
     #games-list a:active,
     #games-list a:focus {
-        font-style: italic;
-        text-decoration: underline;
+        border-color: springgreen;
         color: springgreen;
+        box-shadow: 
+            -1px 1px 0 springgreen,
+            -2px 2px 0 springgreen,
+            -3px 3px 0 springgreen,
+            -4px 4px 0 springgreen,
+            -5px 5px 0 springgreen,
+            -6px 6px 0 springgreen,
+            -7px 7px 0 springgreen,
+            -8px 8px 0 springgreen,
+            -9px 9px 0 springgreen,
+            -10px 10px 0 springgreen;
     }
 }

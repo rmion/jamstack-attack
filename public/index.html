@@ -10,59 +10,48 @@
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Jamstack Attack!</h1>
-    <p><small>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
-  </header>
-  <section id="game">
-    <div id="intro">
-      <h2>Practice pairing!</h2>
-      <p>Can you help your teammate re-create some HTML, CSS or JS code?</p>
-      <p>You can <button id="start">Start a new game</button> or try another game!</p>
-      <ul id="games-list">
-          <li>
-            <a href="/">Practice pairing!</a>
-          </li>
-          <li>
-              <a href="race.html">Practice typing!</a>
-          </li>
-          <li>
-              <a href="box.html">Practice box modeling!</a>
-          </li>
-      </ul>
-    </div>
-    <div id="player-1" class="is-hidden">
-      <h2>Your teammate must re-create this <span class="topic"></span> code</h2>
-      <pre><code id="player-one-prompt"></code></pre>
-      <label for="instructions">Type your instructions below</label>
-      <textarea name="instructions" id="instructions" placeholder="See the code above? Well, your teammate won't. And for you both to win, they'll have to re-create it exactly. All they will have as reference is the instructions you type here. Choose your words wisely!"></textarea>
-      <button id="share">Summon a teammate</button>
-    </div>
-    <div id="player-2" class="is-hidden">
-      <h2>Your teammate wrote these instructions to help you re-create some <span class="topic"></span></h2>
-      <pre><code id="player-two-prompt"></code></pre>
-      <label for="submission">Type your code below</label>
-      <textarea name="submission" id="submission" placeholder="See the text above? Those are instructions! Your teammate wrote those! They were shown some code. They wrote those instructions to help you re-create the code they saw. It's your turn now. Good luck!"></textarea>
-      <button id="solve">Submit your answer</button>
-    </div>
-  </section>
-  <aside>
-    <h3>Games you started</h3>
-    <ul id="games-started"></ul>
-  </aside>
-  <aside>
-    <h3>Games you can join</h3>
-    <ul id="games-joined"></ul>
-  </aside>
-  <footer id="players" class="flexed">
-    <p id="player-count-zero">
-      Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
-    </p>
-    <section class="flexed is-hidden">
-      <h3>Players online now</h3>
-      <ul id="user_list" class="flexed"></ul>  
-    </section>
-  </footer>
-  <script src="app.js"></script>
+    <header>
+        <h1>Jamstack Attack!</h1>
+        <p><small>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
+      </header>
+      <section id="game">
+          <h2>Pick a game!</h2>
+          <p>Each game will help you practice HTML, CSS and JS</p>
+          <ul id="games-list">
+              <li>
+                <a href="pair.html">Practice matching!</a>
+              </li>
+              <li>
+                  <a href="race.html">Practice typing!</a>
+              </li>
+              <li>
+                  <a href="box-model.html">Practice boxing!</a>
+              </li>
+              <li>
+                  <a href="#">Practice coding!</a>
+              </li>
+              <li>
+                  <a href="#">Practice fixing!</a>
+              </li>
+          </ul>
+      </section>
+      <aside>
+        <h3>Games you started</h3>
+        <ul id="games-started"></ul>
+      </aside>
+      <aside>
+        <h3>Games you can join</h3>
+        <ul id="games-joined"></ul>
+      </aside>
+      <footer id="players" class="flexed">
+        <p id="player-count-zero">
+          Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
+        </p>
+        <section class="flexed is-hidden">
+          <h3>Players online now</h3>
+          <ul id="user_list" class="flexed"></ul>  
+        </section>
+      </footer>
+      <script src="home.js"></script>
 </body>
 </html>
