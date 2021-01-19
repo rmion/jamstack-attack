@@ -6,6 +6,7 @@ const path = require('path');
 const Pusher = require("pusher");
 const pairingchallenges = require('./pairing.js')
 const typingChallenges = require('./typing.js')
+const debuggingChallenges = require('./debugging.js')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -34,6 +35,14 @@ app.post("/pusher/auth", (req, res) => {
   const auth = pusher.authenticate(socketId, channel, presenceData);
   res.send(auth);
 });
+
+app.get('/debug', (req, res) => {
+  res.send(
+    JSON.stringify(
+      debuggingChallenges[Math.floor(Math.random() * debuggingChallenges.length)]
+    )
+  )
+})
 
 app.get('/race', (req, res) => {
   res.send(JSON.stringify({

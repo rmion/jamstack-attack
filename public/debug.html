@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Box Model: Match CSS Margin, Padding and Border</title>
+    <title>Practice fixing HTML, CSS and JavaScript</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -11,40 +11,24 @@
 </head>
 <body>
     <header>
-        <h1>Practice modeling!</h1>
+        <h1>Practice fixing!</h1>
         <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
       <section id="game">
         <div id="intro">
-          <h2>It's time to practice box modeling!</h2>
-          <p>Can you guess a box's padding, border and margin?</p>
+          <h2>It's time to practice fixing!</h2>
+          <p>Can you find and fix the single error in some code?</p>
           <p><button id="start">Start a new game</button></p>
         </div>
         <div id="player-1" class="is-hidden">
-          <h2>Measure the box!</h2>
-          <form action="" id="box-model">
-            <p>
-              <label for="margin-top">margin-top</label>
-              <input type="number" id="margin-top" min="0" />
-              <span>px</span>  
-            </p>
-            <p>
-              <label for="border-bottom-width">border-bottom</label>
-              <input type="number" id="border-bottom-width" min="0" />
-              <span>px</span>  
-            </p>
-            <p>
-              <label for="padding-left">padding-left</label>
-              <input type="number" id="padding-left" min="0" />
-              <span>px</span>  
-            </p>
-            <button type="submit">Guess</button>
-          </form>
-          <section>
-            <div id="container">
-              <div id="control"><p>I am a box with content, padding, border and margin. How good are you at using only your eyes to determine the size of each?</p></div>
-            </div>
-          </section>
+          <h2>Fix this <strong id="language">JS</strong> code! Difficulty: <em id="difficulty">easy</em></h2>
+          <textarea name="challenge" id="challenge" rows="5"></textarea>
+          <h3>Expected result:</h3>
+          <p id="expectation"></p>
+          <button id="check">Did I fix it?</button>
+          <button id="next-hint">Give me a hint!</button>
+          <button id="replay" class="is-hidden">Again!</button>
+          <p id="notification"></p>
         </div>
       </section>
       <aside>
@@ -65,6 +49,6 @@
         </section>
       </footer>
     <script src="show-players.js"></script>
-    <script src="box-model.js"></script>    
+    <script src="debug.js"></script>
 </body>
 </html>
