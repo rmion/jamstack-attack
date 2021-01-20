@@ -56,21 +56,34 @@ app.get('/race', (req, res) => {
 
 app.post('/new', (req, res) => {
   let challenge = pairingchallenges[Math.floor(Math.random() * pairingchallenges.length)]
-  pusher.trigger("presence-quickstart", "mini-game", {
-    id: req.body.id,
-    creatorID: req.body.userid,
-    challenge: challenge.code,
-    topic: challenge.topic,
-    instructions: null,
-    teammate: false,
-    submission: null,
-    solved: null,
-  });
+  if (req.body.singlePlayer) {
+    pusher.trigger("presence-jamstack", "mini-game", {
+      id: req.body.id,
+      creatorID: "AI",
+      challenge: challenge.code,
+      topic: challenge.topic,
+      instructions: challenge.instructions,
+      teammate: req.body.userid,
+      submission: null,
+      solved: null,
+    });  
+  } else {
+    pusher.trigger("presence-jamstack", "mini-game", {
+      id: req.body.id,
+      creatorID: req.body.userid,
+      challenge: challenge.code,
+      topic: challenge.topic,
+      instructions: null,
+      teammate: false,
+      submission: null,
+      solved: null,
+    });  
+  }
   res.send('New game is ready to play!')
 })
 
 app.post('/described', (req, res) => {
-  pusher.trigger("presence-quickstart", "mini-game", {
+  pusher.trigger("presence-jamstack", "mini-game", {
     id: req.body.id,
     creatorID: req.body.userid,
     challenge: req.body.challenge,
@@ -83,7 +96,7 @@ app.post('/described', (req, res) => {
 })
 
 app.post('/joined', (req, res) => {
-  pusher.trigger("presence-quickstart", "mini-game", {
+  pusher.trigger("presence-jamstack", "mini-game", {
     id: req.body.id,
     creatorID: req.body.creatorID,
     challenge: req.body.challenge,
@@ -105,7 +118,7 @@ app.post('/solved', (req, res) => {
     // Normalize spaces, quotation marks and semicolons
     solved = req.body.challenge.trim().replace(/\s/g,'') == req.body.submission.trim().replace(/\s/g,'').replace(/\"/g, "'").replace(/;/g,"") ? true : false;
   }
-  pusher.trigger("presence-quickstart", "mini-game", {
+  pusher.trigger("presence-jamstack", "mini-game", {
     id: req.body.id,
     creatorID: req.body.creatorID,
     challenge: req.body.challenge,

@@ -8,9 +8,17 @@ channel.bind('mini-game', function(data) {
       ...games[game],
       ...data
     }
+    if (games[game].singlePlayer && games[game].creatorID === "AI" && games[game].submission == null) {
+      currentGame = games[games.length - 1]
+      document.getElementById('player-two-prompt').textContent = currentGame.instructions
+      document.getElementById('player-two-prompt').classList.add(currentGame.topic)
+      document.querySelectorAll('.topic').forEach(el => {
+        el.textContent = currentGame.topic.toUpperCase()
+      })
+      document.getElementById(`game-${currentGame.id}`).textContent = `AI sent you instructions`
+    }
     // Present the challenge to the game creator
     if (games[game].creator == true && games[game].challenge !== null && games[game].solved == null) {
-      console.log("In first IF")
       document.getElementById('player-one-prompt').textContent = games[game].challenge
       document.getElementById('player-one-prompt').classList = ""
       document.getElementById('player-one-prompt').classList.add(games[game].topic)
@@ -69,6 +77,7 @@ channel.bind('mini-game', function(data) {
       }
     }
   } else {
+    if (data.creatorID === "AI") return false;
     games.push({
       ...data,
       creator: false
@@ -120,7 +129,35 @@ function newGame(event, topic) {
   Array.from(document.getElementsByTagName('button')).forEach(el => el.setAttribute('disabled', true))
   document.getElementById('share').removeAttribute('disabled')
   let timestamp = new Date().getTime()
-  fetch('/new', {
+  if (channel.members.count <= 1) {
+    fetch('/new', {
+      method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: timestamp,
+          userid: channel.members.me.id,
+          singlePlayer: true
+        })
+    })
+    .then(response => {
+      games.push({
+        id: timestamp,
+        creator: true,
+        singlePlayer: true
+      })
+      document.getElementById('share').setAttribute('disabled', true)
+      document.getElementById('intro').classList.add('is-hidden')
+      document.getElementById('player-1').classList.add('is-hidden')
+      document.getElementById('player-2').classList.remove('is-hidden')
+      let li = document.createElement('li')
+      li.setAttribute('id', `game-${timestamp}`)
+      li.textContent = "You started a game!"
+      document.getElementById('games-started').appendChild(li)
+    })
+  } else {
+    fetch('/new', {
       method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -144,6 +181,7 @@ function newGame(event, topic) {
       li.textContent = "You started a game!"
       document.getElementById('games-started').appendChild(li)
     })
+  }
 }
 document.getElementById('start').addEventListener('click', newGame)
 document.getElementById('share').addEventListener('click', (e) => {
