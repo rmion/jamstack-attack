@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
+const JSHINT = require('jshint').JSHINT
 const path = require('path');
 const Pusher = require("pusher");
 const pairingchallenges = require('./pairing.js')
@@ -35,6 +36,15 @@ app.post("/pusher/auth", (req, res) => {
   const auth = pusher.authenticate(socketId, channel, presenceData);
   res.send(auth);
 });
+
+app.post('/coding', (req, res) => {
+  JSHINT(req.body.code)
+  res.send(
+    JSON.stringify(
+      JSHINT.data()
+    )
+  )
+})
 
 app.get('/debug', (req, res) => {
   res.send(
