@@ -1,4 +1,5 @@
 let props;
+let randomKeyNames = ["margin-top","padding-bottom","border-left-width"]
 
 function newSize() {
   props = {
@@ -18,6 +19,41 @@ function newSize() {
   for (let prop in props) {
     document.getElementById('control').style[css(prop)] = props[prop] + "px"
   }
+}
+
+function addInputs() {
+  if (document.forms[0].children.length > 1) {
+    document.forms[0].removeChild(document.getElementById('prop-0'))
+    document.forms[0].removeChild(document.getElementById('prop-1'))
+    document.forms[0].removeChild(document.getElementById('prop-2'))
+  }
+  
+  let rando
+  console.log(randomKeyNames)
+  randomKeyNames.forEach((key, index) => {
+    rando = Object.keys(props)[Math.floor(Math.random() * Object.keys(props).length)]
+    while (randomKeyNames.includes(rando) == true) {
+      console.log("Inside while")
+      rando = Object.keys(props)[Math.floor(Math.random() * Object.keys(props).length)]
+    }
+    randomKeyNames[index] = rando
+    let label = document.createElement('label')
+    label.setAttribute('for', rando)
+    label.textContent = rando
+    let input = document.createElement('input')
+    input.setAttribute('type', 'number')
+    input.setAttribute('min', "0")
+    input.setAttribute('id', rando)
+    let span = document.createElement('span')
+    span.textContent = "px"
+    let p = document.createElement('p')
+    p.setAttribute('id', 'prop-' + index)
+    p.appendChild(label)
+    p.appendChild(input)
+    p.appendChild(span)
+    document.forms[0].insertBefore(p, document.getElementById('guess'))
+  })
+  console.log(randomKeyNames)
 }
 
 document.forms[0].addEventListener('submit', (e) => {
@@ -56,15 +92,13 @@ function r(max) {
   
   function resetGame() {
     newSize()
+    addInputs()
     document.getElementById('game').removeChild(document.getElementById('again'))
-    document.querySelectorAll('input').forEach((i) => {
-      i.value = 0
-      i.classList.remove('correct')
-    })
   }
 
   document.getElementById('start').addEventListener('click', function() {
     newSize()
+    addInputs()
     document.getElementById('player-1').classList.remove('is-hidden')
     document.getElementById('intro').classList.add('is-hidden')
   })

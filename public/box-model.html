@@ -22,29 +22,16 @@
         </div>
         <div id="player-1" class="is-hidden">
           <h2>Measure the box!</h2>
-          <form action="" id="box-model">
-            <p>
-              <label for="margin-top">margin-top</label>
-              <input type="number" id="margin-top" min="0" />
-              <span>px</span>  
-            </p>
-            <p>
-              <label for="border-bottom-width">border-bottom</label>
-              <input type="number" id="border-bottom-width" min="0" />
-              <span>px</span>  
-            </p>
-            <p>
-              <label for="padding-left">padding-left</label>
-              <input type="number" id="padding-left" min="0" />
-              <span>px</span>  
-            </p>
-            <button type="submit">Guess</button>
-          </form>
-          <section>
-            <div id="container">
-              <div id="control"><p>I am a box with content, padding, border and margin. How good are you at using only your eyes to determine the size of each?</p></div>
-            </div>
-          </section>
+          <div>
+            <form action="" id="box-model">
+              <button type="submit" id="guess">Guess</button>
+            </form>
+            <section>
+              <div id="container">
+                <div id="control"><p>I am a box with content, padding, border and margin. How good are you at using only your eyes to determine the size of each?</p></div>
+              </div>
+            </section>  
+          </div>
         </div>
       </section>
       <aside>

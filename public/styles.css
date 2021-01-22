@@ -176,15 +176,25 @@ input:disabled {
 }
 
 /* Box Model */
-#box-model {
-    display: flex;
-    margin: 1rem 0;
+#player-1 > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
-#box-model > * {
-    flex: 1;
+#box-model {
+    margin: 0 1rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 label {
     display: block;
+}
+#box-model > p + p {
+    margin-top: 1rem;
+}
+#box-model span {
+    padding-left: 0.5rem;
 }
 #control {
     border: 0 solid #E7C683;
