@@ -9,10 +9,11 @@ $( function() {
     let result = []
     $('#sortable li').each((i,el) => result.push(el.textContent.trim()))
     if(JSON.stringify(result) == JSON.stringify(solution)) {
-        document.getElementById('check').classList.add('is-hidden')
-        document.getElementById('replay').classList.remove('is-hidden')
+      document.getElementById('check').classList.add('is-hidden')
+      document.getElementById('replay').classList.remove('is-hidden')
+      document.getElementById('notification').textContent = "Great job!"
     } else {
-
+      document.getElementById('notification').textContent = "Sorry, not quite. Keep trying!"
     }
   })
 
@@ -24,6 +25,7 @@ $( function() {
 
   function newGame() {
     $('#sortable').empty()
+    document.getElementById('notification').textContent = ""
     fetch('/sort')
         .then(response => response.json())
         .then(data => {
