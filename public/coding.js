@@ -9,10 +9,17 @@ function r() {
 var gameMode;
 
 document.getElementById('start').addEventListener('click', function() {
-    gameMode = r()
+    gameMode = "html"
     document.querySelectorAll('.mode').forEach(el => el.textContent = gameMode.toUpperCase())
     document.getElementById('player-1').classList.remove('is-hidden')
     document.getElementById('intro').classList.add('is-hidden')
+    
+    let li = document.createElement('li')
+    li.textContent = tokens[gameMode].snips[3]
+    li.addEventListener('click', function(e) {
+        document.getElementById('submission').value += e.target.textContent
+    })
+    document.getElementById('hand').appendChild(li)
   })
 
 $('#validate').on('click', function(e) {
