@@ -225,6 +225,26 @@ textarea.fixed {
     background-color: springgreen;
 }
 
+/* Sorting */
+#sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    text-align: left;
+}
+#sortable li { 
+  margin: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1em;
+  color: white;
+  background-color: #212121;
+  cursor: grab;
+  font-family: 'Fira Code', monospace;
+}
+#sortable span {
+    margin-right: 0.5rem;
+}
+
 @media only screen and (min-width: 1024px) {
     html, body {
         height: 100%;

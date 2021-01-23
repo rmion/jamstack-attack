@@ -8,6 +8,7 @@ const Pusher = require("pusher");
 const pairingchallenges = require('./pairing.js')
 const typingChallenges = require('./typing.js')
 const debuggingChallenges = require('./debugging.js')
+const sortingChallenges = require('./sorting.js')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -42,6 +43,14 @@ app.post('/coding', (req, res) => {
   res.send(
     JSON.stringify(
       JSHINT.data()
+    )
+  )
+})
+
+app.get('/sort', (req, res) => {
+  res.send(
+    JSON.stringify(
+      sortingChallenges[Math.floor(Math.random() * sortingChallenges.length)]
     )
   )
 })

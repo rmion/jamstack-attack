@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice sorting: arrange HTML, CSS and JS in the right order</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Practice coding!</h1>
+        <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
+      </header>
+      <section id="game">
+        <div id="intro">
+          <h2>It's time to practice sorting!</h2>
+          <p>Can you arrange the lines of code in the correct order?</p>
+          <p><button id="start">Start a new game</button></p>
+        </div>
+        <div id="player-1" class="is-hidden">
+          <h2>Drag the lines of code into the correct order</h2>
+          <ul id="sortable">
+          </ul>        
+          <button id="check">Check</button>
+          <button id="replay" class="is-hidden">Great job! Play Again!</button>
+        </div>
+      </section>
+      <aside>
+        <h3>Games you started</h3>
+        <ul id="games-started"></ul>
+      </aside>
+      <aside>
+        <h3>Games you can join</h3>
+        <ul id="games-joined"></ul>
+      </aside>
+      <footer id="players" class="flexed">
+        <p id="player-count-zero">
+          Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
+        </p>
+        <section class="flexed is-hidden">
+          <h3>Players online now</h3>
+          <ul id="user_list" class="flexed"></ul>  
+        </section>
+      </footer>
+    <script src="show-players.js"></script>
+    <script src="sorting.js"></script>
+</body>
+</html>
