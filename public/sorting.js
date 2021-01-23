@@ -8,6 +8,13 @@ $( function() {
   $('#check').on('click', function() {
     let result = []
     $('#sortable li').each((i,el) => result.push(el.textContent.trim()))
+    $('#sortable li').each((i,el) => {
+      if (el.textContent.trim() == solution[i]) {
+        el.classList.add('correct')
+      } else {
+        el.classList.add('wrong')
+      }
+    })
     if(JSON.stringify(result) == JSON.stringify(solution)) {
       document.getElementById('check').classList.add('is-hidden')
       document.getElementById('replay').classList.remove('is-hidden')
