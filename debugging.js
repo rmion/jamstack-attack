@@ -4,7 +4,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function double(n) {\n    return n  n;\n  }",
         answer: "\n  function double(n) {\n    return n + n;\n  }",
-        test:   "double(1) → 2",
+        test:   "Expect double(1) to return 2",
         hints: [
             'Read between the n\'s',
             'To double, must add',
@@ -16,7 +16,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function double() {\n    return n + n;\n  }",
         answer: "\n  function double(n) {\n    return n + n;\n  }",
-        test:   "double(1) → 2",
+        test:   "Expect double(1) to return 2",
         hints: [
             'Where\'s it getting n from?',
             'Those parentheses look empty',
@@ -28,7 +28,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function double(n) {\n    n + n;\n  }",
         answer: "\n  function double(n) {\n    return n + n;\n  }",
-        test:   "double(3) → 6",
+        test:   "Expect double(3) to return 6",
         hints: [
             'To come back',
             'It adds, then throws away',
@@ -40,7 +40,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  define double(n) {\n    return n + n;\n  }",
         answer: "\n  function double(n) {\n    return n + n;\n  }",
-        test:   "double(4) → 8",
+        test:   "Expect double(4) to return 8",
         hints: [
             'What is double?',
             'double isn\'t a function',
@@ -52,7 +52,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function double(n) \n    return n + n;\n  }",
         answer: "\n  function double(n) {\n    return n + n;\n  }",
-        test:   "double(5) → 10",
+        test:   "Expect double(5) to return 10",
         hints: [
             'Where is the start?',
             'Function body missing a matching set',
@@ -64,7 +64,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function today() {\n    return Date();\n  }",
         answer: "\n  function today() {\n    return new Date();\n  }",
-        test:   "today() → Date object",
+        test:   "Expect today() to return Date object",
         hints: [
             "Shiny and...",
             "Return...just Date?",
@@ -76,7 +76,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function today() {\n    return new Date;\n  }",
         answer: "\n  function today() {\n    return new Date();\n  }",
-        test:   "today() → Date object",
+        test:   "Expect today() to return Date object",
         hints: [
             "Calling all Dates!",
             "Return...a function?",
@@ -88,7 +88,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function today() {\n    return new date();\n  }",
         answer: "\n  function today() {\n    return new Date();\n  }",
-        test:   "today() → Date object",
+        test:   "Expect today() to return Date object",
         hints: [
             "Case sensitive",
             "Upper! Not lower!",
@@ -100,7 +100,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function 2day() {\n    return new Date();\n  }",
         answer: "\n  function today() {\n    return new Date();\n  }",
-        test:   "today() → Date object",
+        test:   "Expect today() to return Date object",
         hints: [
             "You kids and your hip language",
             "Too? To? Two?",
@@ -112,7 +112,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function today() {\n    returns new Date();\n  }",
         answer: "\n  function today() {\n    return new Date();\n  }",
-        test:   "today() → Date object",
+        test:   "Expect today() to return Date object",
         hints: [
             "False pluralization",
             "That's a department, not a keyword!",
@@ -124,7 +124,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function bigger(ab) {\n    return Math.max(a,b);\n  }",
         answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
-        test:   "bigger(1,2) → 2",
+        test:   "Expect bigger(1,2) to return 2",
         hints: [
             "Practice your A, B, C's",
             "It separates two things",
@@ -136,7 +136,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function bigger(a,b) {\n    return Math.max(ab);\n  }",
         answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
-        test:   "bigger(2,4) → 4",
+        test:   "Expect bigger(2,4) to return 4",
         hints: [
             "Practice your A, B, C's",
             "It separates two things",
@@ -148,7 +148,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function bigger(a,b) {\n    return Math.maximum(a,b);\n  }",
         answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
-        test:   "bigger(5,3) → 5",
+        test:   "Expect bigger(5,3) to return 5",
         hints: [
             "Abbreviate it, instead",
             "Mad Max",
@@ -160,7 +160,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function bigger(a,b) {\n    return math.max(a,b);\n  }",
         answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
-        test:   "bigger(5,8) → 8",
+        test:   "Expect bigger(5,8) to return 8",
         hints: [
             "It's kind of a Big Deal",
             "Capitalize it, instead",
@@ -172,7 +172,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function bigger(a,b) {\n    Math.max(a,b);\n  }",
         answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
-        test:   "bigger(2,12) → 12",
+        test:   "Expect bigger(2,12) to return 12",
         hints: [
             'To come back',
             'It compares, then throws away',
@@ -184,7 +184,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function sayHello() {\n    return \"Hello\';\n  }",
         answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
-        test:   "sayHello() → \"Hello\"",
+        test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'The ending is always the same!',
             'Mismatch detected',
@@ -196,7 +196,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function sayHello() {\n    return Hello\";\n  }",
         answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
-        test:   "sayHello() → \"Hello\"",
+        test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'Someone famous once said...',
             'What\'s Hello?',
@@ -208,7 +208,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function sayHe11o() {\n    return \"Hello\";\n  }",
         answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
-        test:   "sayHello() → \"Hello\"",
+        test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'H-E- double hockey stick',
             'We\'re not saying the same thing',
@@ -220,7 +220,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function sayHello {\n    return \"Hello\";\n  }",
         answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
-        test:   "sayHello() → \"Hello\"",
+        test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'How would I call you?!',
             'Every function must have these',
@@ -232,7 +232,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  fnuction sayHello() {\n    return \"Hello\";\n  }",
         answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
-        test:   "sayHello() → \"Hello\"",
+        test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'Fun times...',
             'First things, first',
@@ -244,7 +244,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i))\n    }\n  }",
         answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        test:   "loopy([1,2,3]) → 1 2 3",
+        test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'Mismatch detected',
             'Start from the end and work backwards',
@@ -256,7 +256,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function loopy(list) {\n    for (i==0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
         answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        test:   "loopy([1,2,3]) → 1 2 3",
+        test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'Under what condition?',
             'Eye on the first i',
@@ -268,7 +268,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log([i])\n    }\n  }",
         answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        test:   "loopy([1,2,3]) → 1 2 3",
+        test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             '1, 2, 3...not [0][1][2]!',
             'i is in a cage, all alone',
@@ -280,7 +280,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(loopy[i])\n    }\n  }",
         answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        test:   "loopy([1,2,3]) → 1 2 3",
+        test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'That\'s not an array!',
             'Functions don\'t have i\'s',
@@ -292,7 +292,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function loopy(list) {\n    for (i=1; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
         answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        test:   "loopy([1,2,3]) → 1 2 3",
+        test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'No i left behind',
             'Watch where you start',
@@ -304,7 +304,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function sum(a,b,c) {\n    return a + b  c;\n  }",
         answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
-        test:   "sum(1,1,1) → 3",
+        test:   "Expect sum(1,1,1) to return 3",
         hints: [
             'Fill the gap',
             'Stopped short of c',
@@ -316,7 +316,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function sum(a,b,c) {\n    return a + b + C;\n  }",
         answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
-        test:   "sum(2,2,2) → 6",
+        test:   "Expect sum(2,2,2) to return 6",
         hints: [
             'Can you C it?',
             'Looked for C. Came up empty.',
@@ -328,7 +328,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function sum(a,b,b) {\n    return a + b + c;\n  }",
         answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
-        test:   "sum(1,2,3) → 6",
+        test:   "Expect sum(1,2,3) to return 6",
         hints: [
             'Comes after b',
             'b extra careful',
@@ -340,7 +340,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function sum(a,b,c) {\n    retrun a + b + c;\n  }",
         answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
-        test:   "sum(3,1,1) → 5",
+        test:   "Expect sum(3,1,1) to return 5",
         hints: [
             'rut-ro!',
             'Stopped short of returning',
@@ -352,7 +352,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function sum(a,b,c) {\n    return a + b + c;\n  ",
         answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
-        test:   "sum(3,2,1) → 6",
+        test:   "Expect sum(3,2,1) to return 6",
         hints: [
             'It never ends!',
             'What starts, must end',
@@ -364,7 +364,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function each(list) {\n    return list.forEach(i > i);\n  }",
         answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
-        test:   "each(3,2,1) → 3 2 1",
+        test:   "Expect each(3,2,1) to return 3 2 1",
         hints: [
             'Where\'s the arrow?',
             'Greater than?',
@@ -376,7 +376,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function each(list) {\n    return list.fourEach(i => i);\n  }",
         answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
-        test:   "each(1,2,3) → 1 2 3",
+        test:   "Expect each(1,2,3) to return 1 2 3",
         hints: [
             'Oh, you',
             '4...Each?',
@@ -388,7 +388,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function each(list) {\n    return list.foreach(i => i);\n  }",
         answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
-        test:   "each(2,4,6) → 2 4 6",
+        test:   "Expect each(2,4,6) to return 2 4 6",
         hints: [
             'Camel case',
             'Every second word',
@@ -400,7 +400,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function each(1ist) {\n    return list.forEach(i => i);\n  }",
         answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
-        test:   "each(1,2,3) → 1 2 3",
+        test:   "Expect each(1,2,3) to return 1 2 3",
         hints: [
             'Sneaky one',
             'Check parameter list',
@@ -412,7 +412,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function each(list) {\n    return list.Each(i => i);\n  }",
         answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
-        test:   "each(4,4,4) → 4 4 4",
+        test:   "Expect each(4,4,4) to return 4 4 4",
         hints: [
             'Method, man',
             'After the dot',
@@ -424,7 +424,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function equals(num) {\n    return num === String(num);\n  }",
         answer: "\n  function equals(num) {\n    return num == String(num);\n  }",
-        test:   "equals(3) → true",
+        test:   "Expect equals(3) to return true",
         hints: [
             'One too many',
             'Make triplicates duplicates',
@@ -436,7 +436,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function equals(num) {\n    return num == String(num);\n  }",
         answer: "\n  function equals(num) {\n    return num === String(num);\n  }",
-        test:   "equals(4) → false",
+        test:   "Expect equals(4) to return false",
         hints: [
             'One too few',
             'Make duplicates triplicates',
@@ -448,7 +448,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function equals(num) {\n    return num == 'num;\n  }",
         answer: "\n  function equals(num) {\n    return num == num;\n  }",
-        test:   "equals(5) → true",
+        test:   "Expect equals(5) to return true",
         hints: [
             'Both num should be naked',
             'Kill the stray apostrophe!',
@@ -460,7 +460,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function equals(num) {\n    return num === Sting(num);\n  }",
         answer: "\n  function equals(num) {\n    return num === String(num);\n  }",
-        test:   "equals(6) → true",
+        test:   "Expect equals(6) to return true",
         hints: [
             'Call The Police',
             'Grrrrrr',
@@ -472,7 +472,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function equals(num) {\n    return num = String(num);\n  }",
         answer: "\n  function equals(num) {\n    return num == String(num);\n  }",
-        test:   "equals(7) → true",
+        test:   "Expect equals(7) to return true",
         hints: [
             'Wrong assignment',
             'Is equal to?',
@@ -484,7 +484,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function dataType(data) {\n    return typeof dada;\n  }",
         answer: "\n  function dataType(data) {\n    return typeof data;\n  }",
-        test:   "dataType({}) → 'object'",
+        test:   "Expect dataType({}) to return 'object'",
         hints: [
             'Art history',
             'Father, forgive me',
@@ -496,7 +496,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function dataType(data) {\n    return typeof data\';\n  }",
         answer: "\n  function dataType(data) {\n    return typeof data;\n  }",
-        test:   "dataType({}) → 'object'",
+        test:   "Expect dataType({}) to return 'object'",
         hints: [
             'Stringing you along',
             'Stop returning strings!',
@@ -508,7 +508,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function dataType(data) {\n    return typeof data;\n  }",
         answer: "\n  function dataType(data) {\n    return typeof +data;\n  }",
-        test:   "dataType('5') → 'number'",
+        test:   "Expect dataType('5') to return 'number'",
         hints: [
             'One symbol to rule them all',
             'Who\'s your plus-one?',
@@ -520,7 +520,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function dataType(data) {\n    return typeof data();\n  }",
         answer: "\n  function dataType(data) {\n    return typeof new data();\n  }",
-        test:   "dataType(Date) → 'object'",
+        test:   "Expect dataType(Date) to return 'object'",
         hints: [
             'Something borrowed, blue, and...',
             'What\'s new?',
@@ -532,7 +532,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function dataType(data) {\n    return typ of data;\n  }",
         answer: "\n  function dataType(data) {\n    return typeof data;\n  }",
-        test:   "dataType({}) → 'object'",
+        test:   "Expect dataType({}) to return 'object'",
         hints: [
             'Mind the gap',
             'all to get her now',
@@ -544,7 +544,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function formalName(f,l) {\n    return `${f}, ${f}`;\n  }",
         answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
-        test:   "formalName('Kanye','West') → 'West, Kanye'",
+        test:   "Expect formalName('Kanye','West') to return 'West, Kanye'",
         hints: [
             'Use all the pieces',
             'Don\'t double the f\'s',
@@ -556,7 +556,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function formalName(f,l) {\n    return `${l}, $(f}`;\n  }",
         answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
-        test:   "formalName('George','Bush') → 'Bush, George'",
+        test:   "Expect formalName('George','Bush') to return 'Bush, George'",
         hints: [
             'The wall of f',
             'Mismatch detected',
@@ -568,7 +568,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function formalName(f,l) {\n    return `${l} ${f}`;\n  }",
         answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
-        test:   "formalName('Bob','Dole') → 'Dole, Bob'",
+        test:   "Expect formalName('Bob','Dole') to return 'Dole, Bob'",
         hints: [
             'Poor grammar',
             'It separates two things',
@@ -580,7 +580,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function formalName(f,l) {\n    return '${l}, ${f}`;\n  }",
         answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
-        test:   "formalName('Jack','Ryan') → 'Ryan, Jack'",
+        test:   "Expect formalName('Jack','Ryan') to return 'Ryan, Jack'",
         hints: [
             'Wrong tick',
             'Must use correct quote mark',
@@ -592,7 +592,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function formalName(f,l) {\n    return `{l}, ${f}`;\n  }",
         answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
-        test:   "formalName('Robert','Mion') → 'Mion, Robert'",
+        test:   "Expect formalName('Robert','Mion') to return 'Mion, Robert'",
         hints: [
             'Money money money!',
             'One is not like the other',
@@ -604,7 +604,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function ternary(bool) {\n    return bowl ? 'this' : 'that';\n  }",
         answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
-        test:   "ternary(false) → 'that'",
+        test:   "Expect ternary(false) to return 'that'",
         hints: [
             'Don\'t strike out',
             'Spare me another pun',
@@ -616,7 +616,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
         answer: "\n  function ternary(bool) {\n    return bool ? this : 'that';\n  }",
-        test:   "ternary(true) → Window",
+        test:   "Expect ternary(true) to return Window",
         hints: [
             'Magic keyword',
             'this part shoudn\'t be a string',
@@ -628,7 +628,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function ternary(bool) {\n    return bool ? 'this : 'that';\n  }",
         answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
-        test:   "ternary(true) → 'this'",
+        test:   "Expect ternary(true) to return 'this'",
         hints: [
             'this is the hint',
             'this is the next hint',
@@ -640,7 +640,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function ternary(bool) {\n    return bool ? 'this' ; 'that';\n  }",
         answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
-        test:   "ternary(false) → 'that'",
+        test:   "Expect ternary(false) to return 'that'",
         hints: [
             'Look: hint.',
             'Dot over dot, not dot over comma',
@@ -652,7 +652,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function ternary(bool) {\n    return bool : 'this' : 'that';\n  }",
         answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
-        test:   "ternary(true) → 'this'",
+        test:   "Expect ternary(true) to return 'this'",
         hints: [
             'Question...everything',
             'First part is a question',
@@ -664,7 +664,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c};\n  }",
         answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
-        test:   "makeArrayFrom(1,2,3) → [1,2,3]",
+        test:   "Expect makeArrayFrom(1,2,3) to return [1,2,3]",
         hints: [
             'Not now, curly',
             'Do you c it yet?',
@@ -676,7 +676,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function makeArrayFrom(a,b,c) {\n    return (a,b,c);\n  }",
         answer: "\n  function makeArrayFrom(a,b,c) {\n    return Array(a,b,c);\n  }",
-        test:   "makeArrayFrom(3,2,1) → [3,2,1]",
+        test:   "Expect makeArrayFrom(3,2,1) to return [3,2,1]",
         hints: [
             'Use a constructor function',
             'Want array, getting group',
@@ -688,7 +688,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function newArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
         answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
-        test:   "makeArrayFrom(2,2,2) → [2,2,2]",
+        test:   "Expect makeArrayFrom(2,2,2) to return [2,2,2]",
         hints: [
             'Happens all the time',
             'Naming things is hard',
@@ -700,7 +700,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function makeArrayFrom(a,b,c) {\n    return [a.b,c];\n  }",
         answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
-        test:   "makeArrayFrom(1,3,5) → [1,3,5]",
+        test:   "Expect makeArrayFrom(1,3,5) to return [1,3,5]",
         hints: [
             'Grammatical error',
             'Stopping at a',
@@ -712,7 +712,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function makeArrayFrom(a,b,c) {\n    return; [a,b,c];\n  }",
         answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
-        test:   "makeArrayFrom(2,4,6) → [2,4,6]",
+        test:   "Expect makeArrayFrom(2,4,6) to return [2,4,6]",
         hints: [
             'Remove the hurdle',
             'Two semi-colons?',
@@ -724,7 +724,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function greet(name) {\n    return 'Hi, ${name}!`;\n  }",
         answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
-        test:   "greet('John') → 'Hi, John!'",
+        test:   "Expect greet('John') to return 'Hi, John!'",
         hints: [
             'Mismatch detected',
             'Don\'t quote me on that',
@@ -736,7 +736,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function greet(name) {\n    return `Hi, $(name}!`;\n  }",
         answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
-        test:   "greet('Charles') → 'Hi, Charles!'",
+        test:   "Expect greet('Charles') to return 'Hi, Charles!'",
         hints: [
             'Mismatch',
             'One of them needs the spike',
@@ -748,7 +748,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function great(name) {\n    return `Hi, ${name}!`;\n  }",
         answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
-        test:   "greet('Jack') → 'Hi, Jack!'",
+        test:   "Expect greet('Jack') to return 'Hi, Jack!'",
         hints: [
             'Good. Swell. Fine!',
             'One letter off',
@@ -760,7 +760,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function greet(name) {\n    return `Hi, ${name}`;\n  }",
         answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
-        test:   "greet('Robert') → 'Hi, Robert!'",
+        test:   "Expect greet('Robert') to return 'Hi, Robert!'",
         hints: [
             'Not excited enough',
             'I can\'t hear you!',
@@ -772,7 +772,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function greet() {\n    return `Hi, ${name}!`;\n  }",
         answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
-        test:   "greet('Kate') → 'Hi, Kate!'",
+        test:   "Expect greet('Kate') to return 'Hi, Kate!'",
         hints: [
             'Where\'s name coming from?',
             'Functions need inputs',
@@ -784,7 +784,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function noteToSelf() {\n    / Some comment\n  }",
         answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
-        test:   "noteToSelf() → undefined",
+        test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Divide by?',
             'This is no time for math',
@@ -796,7 +796,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function noteToSelf() {\n    \\\\ Some comment\n  }",
         answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
-        test:   "noteToSelf() → undefined",
+        test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Wrong way',
             'Up and to the right',
@@ -808,7 +808,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function noteToSelf() {\n     Some comment\n  }",
         answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
-        test:   "noteToSelf() → undefined",
+        test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Forgetting something?',
             'Error: no idea what Some is',
@@ -820,7 +820,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function notetoSelf() {\n    // Some comment\n  }",
         answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
-        test:   "noteToSelf() → undefined",
+        test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Middle child',
             'Camel case',
@@ -832,7 +832,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function noteToSelf() {\n    */ Some comment\n  }",
         answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
-        test:   "noteToSelf() → undefined",
+        test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Wish upon a star',
             'Single-line comment, not multi-line',
@@ -844,7 +844,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function parrot(number) {\n    return () > number;\n  }",
         answer: "\n  function parrot(number) {\n    return () => number;\n  }",
-        test:   "parrot(1)() → 1",
+        test:   "Expect parrot(1)() to return 1",
         hints: [
             'Greater than?',
             'That\'s not quite an arrow',
@@ -856,7 +856,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function parrot(number) {\n    return {} => number;\n  }",
         answer: "\n  function parrot(number) {\n    return () => number;\n  }",
-        test:   "parrot(2)() → 2",
+        test:   "Expect parrot(2)() to return 2",
         hints: [
             'Wrong container',
             'Looks like you\'re returning an object?',
@@ -868,7 +868,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function parrot(number) {\n    return () <= number;\n  }",
         answer: "\n  function parrot(number) {\n    return () => number;\n  }",
-        test:   "parrot(3)() → 3",
+        test:   "Expect parrot(3)() to return 3",
         hints: [
             'Wrong direction',
             'Left-to-right',
@@ -880,7 +880,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function parrot(number) {\n    return (number) => number;\n  }",
         answer: "\n  function parrot(number) {\n    return () => number;\n  }",
-        test:   "parrot(4)() → 4",
+        test:   "Expect parrot(4)() to return 4",
         hints: [
             'Closure, baby!',
             'It already has number',
@@ -892,7 +892,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function parrot(number) {\n    return  => number;\n  }",
         answer: "\n  function parrot(number) {\n    return () => number;\n  }",
-        test:   "parrot(5)() → 5",
+        test:   "Expect parrot(5)() to return 5",
         hints: [
             'Left of the arrow',
             'Key ingredient in an arrow function',
@@ -904,7 +904,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function IdPlease(id) {\n    return document.getElementByID(id);\n  }",
         answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
-        test:   "IdPlease('neo') → HTMLElement",
+        test:   "Expect IdPlease('neo') to return HTMLElement",
         hints: [
             'Big D little d',
             'First letter capital, second lowercase',
@@ -916,7 +916,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function IdPlease(id) {\n    return document.getElementsById(id);\n  }",
         answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
-        test:   "IdPlease('cher') → HTMLElement",
+        test:   "Expect IdPlease('cher') to return HTMLElement",
         hints: [
             'More than we were expecting',
             'We only want one',
@@ -928,7 +928,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function IdPlease(id) {\n    return document.getElementById('id);\n  }",
         answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
-        test:   "IdPlease('prince') → HTMLElement",
+        test:   "Expect IdPlease('prince') to return HTMLElement",
         hints: [
             'Stringing you along',
             'Literally...id',
@@ -940,7 +940,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function IdPlease(id) {\n    return document.getElementFromId(id);\n  }",
         answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
-        test:   "IdPlease('bono') → HTMLElement",
+        test:   "Expect IdPlease('bono') to return HTMLElement",
         hints: [
             'Opposite of Hello',
             'Four words. Third word. Two letters.',
@@ -952,7 +952,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function IdPlease(id) {\n    return window.getElementById(id);\n  }",
         answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
-        test:   "IdPlease('sting') → HTMLElement",
+        test:   "Expect IdPlease('sting') to return HTMLElement",
         hints: [
             'Look deeper into the window',
             'Synonymous with page',
@@ -964,7 +964,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function newTail(list,item) {\n    return list.pass(item);\n  }",
         answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
-        test:   "newTail([1,2],3) → 3",
+        test:   "Expect newTail([1,2],3) to return 3",
         hints: [
             'Bad pass',
             'Wrong method name',
@@ -976,11 +976,11 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function newTail(list,item) {\n    retun list.push(item);\n  }",
         answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
-        test:   "newTail([2,4],6) → 3",
+        test:   "Expect newTail([2,4],6) to return 3",
         hints: [
             'That\'s not a word, silly',
             'Send it back',
-            'Change retun to return'
+            'Change rExpect etun to return'
         ]
     },
     {
@@ -988,7 +988,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function newTail(list,item) {\n    return list.tail(item);\n  }",
         answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
-        test:   "newTail([3,4],5) → 3",
+        test:   "Expect newTail([3,4],5) to return 3",
         hints: [
             'Use your head',
             'Wrong method name',
@@ -1000,7 +1000,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function newTail(list,item) {\n    return list.push(item]);\n  }",
         answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
-        test:   "newTail([3,5],7) → 3",
+        test:   "Expect newTail([3,5],7) to return 3",
         hints: [
             'Hard right wall',
             'Start at the end',
@@ -1012,7 +1012,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function newTai(list,item) {\n    return list.push(item);\n  }",
         answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
-        test:   "newTail([3,2],1) → 3",
+        test:   "Expect newTail([3,2],1) to return 3",
         hints: [
             'Use your head',
             'Naming is important',
@@ -1024,7 +1024,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function chopTail(list) {\n    return list.poop();\n  }",
         answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
-        test:   "chopTail([1,2,3]) → 3",
+        test:   "Expect chopTail([1,2,3]) to return 3",
         hints: [
             'Toilet humor',
             'Potty mouth',
@@ -1036,7 +1036,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function chopTail(list) {\n    return list.pop;\n  }",
         answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
-        test:   "chopTail([3,2,1]) → 1",
+        test:   "Expect chopTail([3,2,1]) to return 1",
         hints: [
             'Don\'t return the function',
             'Work your way backwards',
@@ -1048,7 +1048,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function chopTail(list) {\n    return list,pop();\n  }",
         answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
-        test:   "chopTail([2,4,6]) → 6",
+        test:   "Expect chopTail([2,4,6]) to return 6",
         hints: [
             'list and pop?',
             'Dot...dot...dot',
@@ -1060,7 +1060,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function chopTail() {\n    return list.pop();\n  }",
         answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
-        test:   "chopTail([6,6,6]) → 6",
+        test:   "Expect chopTail([6,6,6]) to return 6",
         hints: [
             'Beware the void',
             'Nothing in...but something out?',
@@ -1072,7 +1072,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function chopTail(list) {\n    return list.pop(1);\n  }",
         answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
-        test:   "chopTail([9,1,1]) → 1",
+        test:   "Expect chopTail([9,1,1]) to return 1",
         hints: [
             'Does it need the argument?',
             'Read between the curved lines',
@@ -1084,7 +1084,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function chopHead(list) {\n    return list.shift(1);\n  }",
         answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
-        test:   "chopHead([1,2,3]) → 1",
+        test:   "Expect chopHead([1,2,3]) to return 1",
         hints: [
             'Does it need the argument?',
             'Read between the curved lines',
@@ -1096,7 +1096,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function chopHead(list) {\n    return list.shit();\n  }",
         answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
-        test:   "chopHead([2,2,2]) → 2",
+        test:   "Expect chopHead([2,2,2]) to return 2",
         hints: [
             'Toilet humor',
             'Potty mouth',
@@ -1108,7 +1108,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function chopHead(list) {\n    return list.pop();\n  }",
         answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
-        test:   "chopHead([2,3,4]) → 2",
+        test:   "Expect chopHead([2,3,4]) to return 2",
         hints: [
             'Other end',
             'Wrong method',
@@ -1120,7 +1120,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function chopHead(list) {\n    return list.unshift();\n  }",
         answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
-        test:   "chopHead([3,2,1]) → 3",
+        test:   "Expect chopHead([3,2,1]) to return 3",
         hints: [
             'Other end',
             'Wrong method',
@@ -1132,7 +1132,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function chopHead(list) {\n    return list.shift;\n  }",
         answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
-        test:   "chopHead([9,1,1]) → 9",
+        test:   "Expect chopHead([9,1,1]) to return 9",
         hints: [
             'Why won\'t you call?',
             'Return the action, not the function',
@@ -1144,7 +1144,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function newHead(list,item) {\n    return list.unshift();\n  }",
         answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
-        test:   "newHead([1,2],3) → 3",
+        test:   "Expect newHead([1,2],3) to return 3",
         hints: [
             'Fill the void',
             'Someone stole an item',
@@ -1156,7 +1156,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function newHead(list,item) {\n    return list.unshift(list);\n  }",
         answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
-        test:   "newHead([3,2],1) → 3",
+        test:   "Expect newHead([3,2],1) to return 3",
         hints: [
             'Add list to list?',
             'Read between the curly lines',
@@ -1168,7 +1168,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function newHead(list,item) {\n    return list.shift(item);\n  }",
         answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
-        test:   "newHead([7,3],7) → 3",
+        test:   "Expect newHead([7,3],7) to return 3",
         hints: [
             'Shift, left',
             'un-acceptable',
@@ -1180,7 +1180,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function newHead(list,item) {\n    return lift.unshift(item);\n  }",
         answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
-        test:   "newHead([4,1],4) → 3",
+        test:   "Expect newHead([4,1],4) to return 3",
         hints: [
             'Minor spelling error',
             'For f\'s sake',
@@ -1192,7 +1192,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function manMade(sex) {\n    return {\n      gender= sex\n    }\n  }",
         answer: "\n  function manMade(sex) {\n    return {\n      gender: sex\n    }\n  }",
-        test:   "manMade('male') → Object",
+        test:   "Expect manMade('male') to return Object",
         hints: [
             'Wrong assignment',
             'No place for equality',
@@ -1204,7 +1204,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function coercion(bool) {\n    return bool;\n  }",
         answer: "\n  function coercion(bool) {\n    return +bool;\n  }",
-        test:   "coercion(true) → 1",
+        test:   "Expect coercion(true) to return 1",
         hints: [
             'Unary, baby!',
             'Need number, not boolean',
@@ -1216,7 +1216,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function coercion(name) {\n    return name;\n  }",
         answer: "\n  function coercion(name) {\n    return !name;\n  }",
-        test:   "coercion('Robert') → false",
+        test:   "Expect coercion('Robert') to return false",
         hints: [
             'Bang bang!',
             'Convert to truthy/falsey',
@@ -1228,7 +1228,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function blockScope(num) {\n    for (var i = 0; i < num; i++) {\n      setTimeout(() => console.log(i), 1);\n    }\n  }",
         answer: "\n  function blockScope(num) {\n    for (let i = 0; i < num; i++) {\n      setTimeout(() => console.log(i), 1);\n    }\n  }",
-        test:   "blockScope(3) → 0 1 2",
+        test:   "Expect blockScope(3) to return 0 1 2",
         hints: [
             'Right now it logs 3 3 3',
             'Wrong variable scoping',
@@ -1240,7 +1240,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function prefix(num) {\n    return ++num++;\n  }",
         answer: "\n  function prefix(num) {\n    return ++num;\n  }",
-        test:   "prefix(3) → 4",
+        test:   "Expect prefix(3) to return 4",
         hints: [
             'Asymmetry',
             'Front-loaded',
@@ -1252,7 +1252,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function postfix(num) {\n    return ++num++;\n  }",
         answer: "\n  function postfix(num) {\n    return num++;\n  }",
-        test:   "postfix(5) → 5",
+        test:   "Expect postfix(5) to return 5",
         hints: [
             'Asymmetry',
             'Back-loaded',
@@ -1264,7 +1264,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function rest(args) {\n    return typeof args;\n  }",
         answer: "\n  function rest(...args) {\n    return typeof args;\n  }",
-        test:   "rest(1,2,3) → 'object'",
+        test:   "Expect rest(1,2,3) to return 'object'",
         hints: [
             '...',
             'Spread out. Rest up.',
@@ -1276,7 +1276,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function tooSoon(max) {\n    for (let i=0;i<max;i++) {\n      if (i === 3) break;\n      console.log(i);\n    }\n  }",
         answer: "\n  function tooSoon(max) {\n    for (let i=0;i<max;i++) {\n      if (i === 3) continue;\n      console.log(i);\n    }\n  }",
-        test:   "tooSoon(5) → 1 2 4",
+        test:   "Expect tooSoon(5) to return 1 2 4",
         hints: [
             'Don\'t exit, skip',
             'Synonym: keep going',
@@ -1288,7 +1288,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function iife(num) {\n    return (() => num));\n  }",
         answer: "\n  function iife(num) {\n    return (() => num)();\n  }",
-        test:   "iife(5) → 'number'",
+        test:   "Expect iife(5) to return 'number'",
         hints: [
             'Feeling iffy?',
             'Missing parenthesis, but where?',
@@ -1300,7 +1300,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function spread(name) {\n    return [name];\n  }",
         answer: "\n  function spread(name) {\n    return [...name];\n  }",
-        test:   "spread('Robert') → ['R','o','b','e','r','t']",
+        test:   "Expect spread('Robert') to return ['R','o','b','e','r','t']",
         hints: [
             '...',
             'Roger that. Spread out.',
@@ -1312,7 +1312,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x + 1);\n  }",
         answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
-        test:   "factorial(5) → 120",
+        test:   "Expect factorial(5) to return 120",
         hints: [
             'Memory leak detected',
             'Smaller each time, not larger',
@@ -1324,7 +1324,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function factorial(x) {\n    return x <= 0 ? 0 : x * factorial(x - 1);\n  }",
         answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
-        test:   "factorial(4) → 24",
+        test:   "Expect factorial(4) to return 24",
         hints: [
             'Check the condition',
             'Always gonna be 0',
@@ -1336,7 +1336,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function factorial(x) {\n    return x <= 0 ? 1 : x + factorial(x - 1);\n  }",
         answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
-        test:   "factorial(6) → 720",
+        test:   "Expect factorial(6) to return 720",
         hints: [
             'Wrong operator',
             'Incorrect addition',
@@ -1348,7 +1348,7 @@ module.exports = [
         difficulty: 'normal',
         code:   "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * function(x - 1);\n  }",
         answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
-        test:   "factorial(3) → 6",
+        test:   "Expect factorial(3) to return 6",
         hints: [
             'Check the label',
             'Wrong name',
@@ -1360,7 +1360,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function factorial(x) {\n    return x < 0 ? 1 : x * factorial(x - 1);\n  }",
         answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
-        test:   "factorial(3) → 6",
+        test:   "Expect factorial(3) to return 6",
         hints: [
             'The smallest detail',
             'Check the condition',
@@ -1372,7 +1372,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function doubleNegative(value) {\n    return !value;\n  }",
         answer: "\n  function doubleNegative(value) {\n    return !!value;\n  }",
-        test:   "doubleNegative('Robert') → true",
+        test:   "Expect doubleNegative('Robert') to return true",
         hints: [
             'True or false',
             'Negate the negation',
@@ -1384,7 +1384,7 @@ module.exports = [
         difficulty: 'easy',
         code:   "\n  function charAt(str, index) {\n    return str index];\n  }",
         answer: "\n  function charAt(str, index) {\n    return str[index];\n  }",
-        test:   "charAt('Bus',1) → 'u'",
+        test:   "Expect charAt('Bus',1) to return 'u'",
         hints: [
             'Fill the gap',
             'Be the match-maker',
@@ -1396,7 +1396,7 @@ module.exports = [
         difficulty: 'hard',
         code:   "\n  function charAt(str, index) {\n    return str[];\n  }",
         answer: "\n  function charAt(str, index) {\n    return str[index];\n  }",
-        test:   "charAt('Car',1) → 'a'",
+        test:   "Expect charAt('Car',1) to return 'a'",
         hints: [
             'Fill the cage',
             'One of two inputs not used',
