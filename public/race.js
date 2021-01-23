@@ -92,6 +92,6 @@ function initializeGame() {
         i += 1;  
       }
     }, 400)  
-  }, 2000)
+  }, 3000)
   updateExercise(counter)
 }

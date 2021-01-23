@@ -11,13 +11,13 @@
 </head>
 <body>
   <header>
-    <h1>Practice matching!</h1>
+    <h1>Practice pairing!</h1>
     <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
   </header>
   <section id="game">
     <div id="intro">
-      <h2>It's time to practice matching!</h2>
-      <p>Can you help your teammate match some HTML, CSS or JS code?</p>
+      <h2>How to play</h2>
+      <h3>You and your teammate must write the same HTML, CSS or JS code</h3>
       <p><button id="start">Start a new game</button></p>
       <p><a href="/">Back to title screen</a></p>
     </div>
@@ -31,7 +31,7 @@
     <div id="player-2" class="is-hidden">
       <h2>Your teammate wrote these instructions to help you re-create some <span class="topic"></span></h2>
       <pre><code id="player-two-prompt"></code></pre>
-      <label for="submission">Type your code below</label>
+      <label for="submission">Type <span class="topic"></span> code below</label>
       <textarea name="submission" id="submission" placeholder="See the text above? Those are instructions! Your teammate wrote those! They were shown some code. They wrote those instructions to help you re-create the code they saw. It's your turn now. Good luck!"></textarea>
       <button id="solve">Submit your answer</button>
     </div>

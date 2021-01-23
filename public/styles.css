@@ -176,7 +176,7 @@ input:disabled {
 }
 
 /* Box Model */
-#player-1 > div {
+.grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
