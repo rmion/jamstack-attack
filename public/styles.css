@@ -194,7 +194,7 @@ label {
     margin-top: 1rem;
 }
 #box-model span {
-    padding-left: 0.5rem;
+    padding: 0.5rem;
 }
 #control {
     border: 0 solid #E7C683;

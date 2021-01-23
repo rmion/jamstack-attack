@@ -18,14 +18,16 @@
       <section id="game">
         <div id="intro">
           <h2>It's time to practice fixing!</h2>
-          <p>The code has syntax errors. Fix the code so it is valid.</p>
+          <p>Fix the code so it passes validation.</p>
           <p><button id="start">Start a new game</button></p>
           <p><a href="/">Back to title screen</a></p>
         </div>
         <div id="player-1" class="is-hidden">
-            <h2>The code has syntax errors. Fix the code so it is valid.</h2>
+            <h2>Fix the code so it passes validation.</h2>
           <textarea name="submission" id="submission" rows="10"></textarea>
-          <button id="validate">Validate this <span class="mode"></span> code!</button>
+          <button id="validate">Check if this <span class="mode"></span> code is valid!</button>
+          <button id="again" class="is-hidden">Play again!</button>
+          <p id="notification"></p>
         </div>
       </section>
       <aside>

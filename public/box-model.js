@@ -47,8 +47,10 @@ function addInputs() {
     let span = document.createElement('span')
     span.textContent = "px"
     let p = document.createElement('p')
+    let span2 = document.createElement('span')
     p.setAttribute('id', 'prop-' + index)
     p.appendChild(label)
+    p.appendChild(span2)
     p.appendChild(input)
     p.appendChild(span)
     document.forms[0].insertBefore(p, document.getElementById('guess'))
@@ -58,11 +60,27 @@ function addInputs() {
 
 document.forms[0].addEventListener('submit', (e) => {
   e.preventDefault()
+  document.getElementById('guess').setAttribute('disabled', true)
   document.querySelectorAll('input').forEach(i => {
+    let grade
+    let percent = (props[i.id] - Math.abs(props[i.id] - i.value)) / props[i.id] * 100
+    if (percent >= 90) {
+      grade = "A";
+    } else if (percent >= 80 && percent < 90) {
+      grade = "B";
+    } else if (percent >= 70 && percent < 80) {
+      grade = "C";
+    } else if (percent >= 60 && percent < 70) {
+      grade = "D";
+    } else if (percent < 60 && percent > 0) {
+      grade = "F";
+    } else if (isNaN(percent) || percent == 0) {
+      grade = 'F-'
+    }
+    i.previousElementSibling.textContent = "Was " + props[i.id] + ": " + grade
     if (i.value == props[i.id]) {
       i.classList.add('correct')
     }
-    i.value = props[i.id]
   })
   addAgainBtn()
 })
@@ -86,6 +104,7 @@ function r(max) {
     button.id = "again"
     button.addEventListener('click', () => {
       resetGame()
+      document.getElementById('guess').removeAttribute('disabled')
     })
     document.getElementById('game').appendChild(button)
   }

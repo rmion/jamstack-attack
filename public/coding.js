@@ -13,19 +13,20 @@ document.getElementById('start').addEventListener('click', function() {
     document.querySelectorAll('.mode').forEach(el => el.textContent = gameMode.toUpperCase())
     document.getElementById('player-1').classList.remove('is-hidden')
     document.getElementById('intro').classList.add('is-hidden')
-    
-    let li = document.createElement('li')
-    li.textContent = tokens[gameMode].snips[3]
-    li.addEventListener('click', function(e) {
-        document.getElementById('submission').value += e.target.textContent
-    })
-    document.getElementById('hand').appendChild(li)
-  })
+})
+
+function newGame() {
+    document.getElementById('submission').value = tokens[gameMode][Math.floor(Math.random() * tokens[gameMode].length)]
+    document.getElementById('again').classList.add('is-hidden')
+    $('#notification').text("")
+    $('#validate').attr('disabled', false)
+}
+
+document.getElementById('again').addEventListener('click', newGame)
+document.getElementById('start').addEventListener('click', newGame)
 
 $('#validate').on('click', function(e) {
-    e.target.setAttribute('disabled', true)
     let content;
-    // let content = "h1 { color: red }"
       // emulate form post
       var formData = new FormData();
       formData.append('out', 'json');
@@ -64,9 +65,10 @@ $('#validate').on('click', function(e) {
           .then(response => response.json())
           .then(data => {
             if (!data.hasOwnProperty('errors')) {
-                $('#validate').text("It's valid! You win!")
+                $('#nofitication').text("It's valid! You win!")
+                document.getElementById('again').classList.remove('is-hidden')
             } else {
-                $('#validate').text("Sorry, that code was invalid!")
+                $('#notification').text("Sorry, that code was invalid!")
                 console.log(data.errors); // data.messages is an array
             }
           })
@@ -87,9 +89,11 @@ function validateHTMLOrCSS(formData) {
         contentType: false,
         success: function(data) {
             if (data.messages.length == 0) {
-                $('#validate').text("It's valid! You win!")
+                $('#notification').text("It's valid! Great job!")
+                $('#validate').attr('disabled', true)
+                document.getElementById('again').classList.remove('is-hidden')
             } else {
-                $('#validate').text("Sorry, that code was invalid!")
+                $('#notification').text("Sorry, that code was invalid!")
             }
             console.log(data.messages); // data.messages is an array
         },
