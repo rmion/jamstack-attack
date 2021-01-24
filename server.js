@@ -64,12 +64,20 @@ app.get('/debug', (req, res) => {
 })
 
 app.get('/race', (req, res) => {
+  let challenges = []
+  for (let i = 0; i < 3; i++) {
+    if (i == 0) {
+      challenges.push(typingChallenges[Math.floor(Math.random() * typingChallenges.length)])
+    } else {
+      let ch = typingChallenges[Math.floor(Math.random() * typingChallenges.length)]
+      while (challenges.includes(ch) == true) {
+        ch = typingChallenges[Math.floor(Math.random() * typingChallenges.length)]
+      }
+      challenges.push(ch)
+    }
+  }
   res.send(JSON.stringify({
-    "challenges": [
-      typingChallenges[Math.floor(Math.random() * typingChallenges.length)],
-      typingChallenges[Math.floor(Math.random() * typingChallenges.length)],
-      typingChallenges[Math.floor(Math.random() * typingChallenges.length)]
-    ]
+    "challenges": challenges
   }))
 })
 
