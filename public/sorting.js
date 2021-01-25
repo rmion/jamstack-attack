@@ -9,6 +9,7 @@ $( function() {
     let result = []
     $('#sortable li').each((i,el) => result.push(el.textContent.trim()))
     $('#sortable li').each((i,el) => {
+      el.classList.remove('correct', 'wrong')
       if (el.textContent.trim() == solution[i]) {
         el.classList.add('correct')
       } else {

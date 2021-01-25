@@ -138,6 +138,17 @@ footer li {
     border: 3px solid white; color: white;
 }
 
+#lesson {
+    background-color: #212121;
+    border: 1px solid white;
+    padding: 1rem;
+    padding-top: 0;
+    margin: 2rem 0;
+}
+#lesson p {
+    text-align: left;
+}
+
 /* Racer */
 input {
     font-family: monospace;
