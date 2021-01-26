@@ -34,5 +34,11 @@ module.exports = [
     'buttonEl.setAttribute("aria-expanded", "false");',
     "navLinks[a].setAttribute('aria-current','true');",
     'for (var b = 0; b < navItems.length; b++) {',
-    "a=o.getElementsByTagName('head')[0];"
+    "a=o.getElementsByTagName('head')[0];",
+    '<meta charset="utf-8" />',
+    "import ReactDOM from 'react-dom'",
+    "<Form handleSubmit={this.handleSubmit} />",
+    '<input type="button" value="Submit" onClick={this.sendForm} />',
+    "const citrusFruits = ['orange', 'lime', 'mandarin']",
+    
 ]

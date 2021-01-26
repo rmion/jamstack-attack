@@ -9,7 +9,7 @@ function r() {
 var gameMode;
 
 document.getElementById('start').addEventListener('click', function() {
-    gameMode = "html"
+    gameMode = modes[Math.floor(Math.random() * modes.length)]
     document.querySelectorAll('.mode').forEach(el => el.textContent = gameMode.toUpperCase())
     document.getElementById('player-1').classList.remove('is-hidden')
     document.getElementById('intro').classList.add('is-hidden')
@@ -26,6 +26,7 @@ document.getElementById('again').addEventListener('click', newGame)
 document.getElementById('start').addEventListener('click', newGame)
 
 $('#validate').on('click', function(e) {
+    $('#notification').text("")
     let content;
       // emulate form post
       var formData = new FormData();
@@ -65,7 +66,8 @@ $('#validate').on('click', function(e) {
           .then(response => response.json())
           .then(data => {
             if (!data.hasOwnProperty('errors')) {
-                $('#nofitication').text("It's valid! You win!")
+                $('#notification').text("It's valid! You win!")
+                $('#validate').attr('disabled', true)
                 document.getElementById('again').classList.remove('is-hidden')
             } else {
                 $('#notification').text("Sorry, that code was invalid!")
