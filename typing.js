@@ -40,5 +40,18 @@ module.exports = [
     "<Form handleSubmit={this.handleSubmit} />",
     '<input type="button" value="Submit" onClick={this.sendForm} />',
     "const citrusFruits = ['orange', 'lime', 'mandarin']",
+    "const doubled = numbers.map((number) => number * 2);",
+    "let newLength = fruits.unshift('Strawberry')",
+    "console.log(arr[arr.length - 1])",
+    "console.log(years['2'] != years['02'])",
+    "alert( arr.concat([3, 4], [5, 6]) );",
+    "arr.forEach(function(item, index, array) {",
+    "let user = users.find(item => item.id == 1);",
+    "const doubleList = list => list.map(x => x * 2);",
+    "setTimeout(() => resolve(value), 3000);",
+    "const fetchDataQuickly = async time => {",
+    '<td id="mp-right" class="MainPageBG mp-bordered">',
+    '<footer id="footer" class="mw-footer" role="contentinfo" >',
+    '<form action="/w/index.php" id="searchform">',
     
 ]
