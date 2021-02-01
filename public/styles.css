@@ -186,6 +186,9 @@ input:disabled {
     margin: 0;
     margin-bottom: 1rem;
 }
+progress {
+    width: 100%;
+}
 
 /* Box Model */
 .grid {
