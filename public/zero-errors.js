@@ -35,9 +35,8 @@ function updateExercise() {
   counter += 1;
   if (counter == exercises.length) {
     counter = 0;
-  } else {
-    document.getElementById('match').textContent = exercises[counter];
   }
+  document.getElementById('match').textContent = exercises[counter];
   document.getElementById('highlight').textContent = ""
   document.getElementById('player-one-test').value = ""
 }
@@ -88,15 +87,15 @@ function initializeGame() {
   setTimeout(() => {
     intervalId = setInterval(() => {
       let input = document.getElementById('player-two-test')
-      if (opponentCounter == exercises.length) {
-        opponentCounter = 0
-      } else if (input.value == exercises[opponentCounter]) {
+      if (input.value == exercises[opponentCounter]) {
         i = 0;
         opponentCounter += 1;
-      } else {
-        input.value = exercises[opponentCounter].slice(0, i + 1)
-        i += 1;  
       }
+      if (opponentCounter == exercises.length) {
+        opponentCounter = 0
+      }
+      input.value = exercises[opponentCounter].slice(0, i + 1)
+      i += 1;  
     }, 400)  
   }, 3000)
   updateExercise()

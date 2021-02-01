@@ -345,7 +345,7 @@ textarea.fixed {
         display: block;
         font-family: 'VT323', monospace;
         font-size: 3rem;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
         text-decoration: none;
         border: 3px solid currentColor;
         transition: all 0.3s;
