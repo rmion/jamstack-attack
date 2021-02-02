@@ -62,7 +62,7 @@ module.exports = [
     "console.log(`Missed call from ${number} at ${time}`);",
     "if ([1, 'one', 2, 'two'].includes(value)) {",
     "let average = +'42.6';",
-    "'sorry\n'.repeat(100);",
+    "'sorry\\n'.repeat(100);",
     "const arr = [2, 8, 15, 4]; Math.max(...arr);",
     "for (const val of arr) { console.log(val); }",
     "let arr2 = [...arr1, 60, 80];",
