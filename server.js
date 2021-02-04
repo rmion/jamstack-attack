@@ -9,6 +9,7 @@ const pairingchallenges = require('./pairing.js')
 const typingChallenges = require('./typing.js')
 const debuggingChallenges = require('./debugging.js')
 const sortingChallenges = require('./sorting.js')
+const invalidChallenges = require('./valid.js')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -45,6 +46,15 @@ app.post('/coding', (req, res) => {
       JSHINT.data()
     )
   )
+})
+
+app.get('/valid', (req, res) => {
+  let lang = Object.keys(invalidChallenges)[Math.floor(Math.random() * Object.keys(invalidChallenges).length)]
+  let challenge = invalidChallenges[lang][Math.floor(Math.random() * invalidChallenges[lang].length)]
+  res.send({
+    "lang": lang,
+    "challenge": challenge
+  })
 })
 
 app.get('/sort', (req, res) => {
@@ -84,7 +94,7 @@ app.get('/race', (req, res) => {
 app.post('/new', (req, res) => {
   let challenge = pairingchallenges[Math.floor(Math.random() * pairingchallenges.length)]
   if (req.body.singlePlayer) {
-    pusher.trigger("presence-jamstack", "mini-game", {
+    pusher.trigger("presence-jamstackattack", "mini-game", {
       id: req.body.id,
       creatorID: "AI",
       challenge: challenge.code,
@@ -95,7 +105,7 @@ app.post('/new', (req, res) => {
       solved: null,
     });  
   } else {
-    pusher.trigger("presence-jamstack", "mini-game", {
+    pusher.trigger("presence-jamstackattack", "mini-game", {
       id: req.body.id,
       creatorID: req.body.userid,
       challenge: challenge.code,
@@ -110,7 +120,7 @@ app.post('/new', (req, res) => {
 })
 
 app.post('/described', (req, res) => {
-  pusher.trigger("presence-jamstack", "mini-game", {
+  pusher.trigger("presence-jamstackattack", "mini-game", {
     id: req.body.id,
     creatorID: req.body.userid,
     challenge: req.body.challenge,
@@ -123,7 +133,7 @@ app.post('/described', (req, res) => {
 })
 
 app.post('/joined', (req, res) => {
-  pusher.trigger("presence-jamstack", "mini-game", {
+  pusher.trigger("presence-jamstackattack", "mini-game", {
     id: req.body.id,
     creatorID: req.body.creatorID,
     challenge: req.body.challenge,
@@ -145,7 +155,7 @@ app.post('/solved', (req, res) => {
     // Normalize spaces, quotation marks and semicolons
     solved = req.body.challenge.trim().replace(/\s/g,'') == req.body.submission.trim().replace(/\s/g,'').replace(/\"/g, "'").replace(/;/g,"") ? true : false;
   }
-  pusher.trigger("presence-jamstack", "mini-game", {
+  pusher.trigger("presence-jamstackattack", "mini-game", {
     id: req.body.id,
     creatorID: req.body.creatorID,
     challenge: req.body.challenge,
@@ -162,5 +172,5 @@ app.post('/solved', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Server listening on port ${port}`)
 })

@@ -1,29 +1,26 @@
-const modes = [
-    "html",
-    "css",
-    "js"
-]
-function r() {
-    return modes[Math.floor(Math.random() * modes.length)]
-}
-var gameMode;
+let gameMode;
 
-document.getElementById('start').addEventListener('click', function() {
-    gameMode = modes[Math.floor(Math.random() * modes.length)]
-    document.querySelectorAll('.mode').forEach(el => el.textContent = gameMode.toUpperCase())
+function fetchGame() {
+    fetch('/valid')
+        .then(response => response.json())
+        .then(data => {
+            gameMode = data.lang
+            document.getElementById('submission').value = data.challenge
+            document.querySelectorAll('.mode').forEach(el => el.textContent = data.lang.toUpperCase())
+            $('#notification').text("")
+            $('#validate').attr('disabled', false)        
+        })
+}
+
+document.getElementById('start').addEventListener('click', function(e) {
+    fetchGame()
     document.getElementById('player-1').classList.remove('is-hidden')
     document.getElementById('intro').classList.add('is-hidden')
 })
-
-function newGame() {
-    document.getElementById('submission').value = tokens[gameMode][Math.floor(Math.random() * tokens[gameMode].length)]
-    document.getElementById('again').classList.add('is-hidden')
-    $('#notification').text("")
-    $('#validate').attr('disabled', false)
-}
-
-document.getElementById('again').addEventListener('click', newGame)
-document.getElementById('start').addEventListener('click', newGame)
+document.getElementById('again').addEventListener('click', function(e) {
+    fetchGame()
+    e.target.classList.add('is-hidden')
+})
 
 $('#validate').on('click', function(e) {
     $('#notification').text("")
@@ -77,6 +74,18 @@ $('#validate').on('click', function(e) {
           .catch(err => {
               console.error(err)
           })
+      } else if (gameMode === "json") {
+          try {
+            let result = JSON.parse(document.getElementById('submission').value)
+            if (typeof result === "object") {
+                $('#notification').text("It's valid! You win!")
+                $('#validate').attr('disabled', true)
+                document.getElementById('again').classList.remove('is-hidden')
+            }
+          } catch(error) {
+            $('#notification').text("Sorry, that code was invalid!")
+            console.warn(error);
+          }
       }
 })
 

@@ -9,7 +9,7 @@ const pusher = new Pusher('a0a317b210ac3be6457d', {
     let initial2 = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase()
     document.cookie = 'user_id=' + initial1 + initial2;
   }
-  const channel = pusher.subscribe('presence-jamstack');
+  const channel = pusher.subscribe('presence-jamstackattack');
   const hashCode = s => s.split('').reduce((a,b)=>{a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
   function addMemberToUserList(memberId) {
     userEl = document.createElement("li");

@@ -1,4 +1,4 @@
-const tokens = {
+module.exports = {
     "html": [
         "<span><h1>Heading</h1></span>",
         "<img src='photo.jpg' alt='Photo'></img>",
@@ -11,7 +11,10 @@ const tokens = {
         `.service-icon..error .input-format {\n  display: inline-lock;\n  font-weight: normalized;\n  font-size: .85en;\n}`
     ],
     "js": [
-        `var utm_source = location.search.split('utm_source=')[1]|'').split('&')[0];\nif(utm_source){ document.cookie = 'utm_source="+ utm-source + "; path=/;"; )`,
         `jQuery(document).ready(functon( & ){\n  var hash == window.location.hush;\n  if( hesh ){\n    $('div.row'++hash).addclass('in');\n  }\n};`
+    ],
+    "json": [
+        `{\n  key: "value"\n}`,
+        `{\n  "game: "Jamstack Attack!"\n  "creator": Robert Mion\n}`
     ]
 }
