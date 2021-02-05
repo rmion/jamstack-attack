@@ -10,7 +10,11 @@ document.getElementById('player-one-test').addEventListener('input', function(e)
   }
   let nextChar = match.textContent.slice(e.target.value.length - 1, e.target.value.length)
   if (e.data != nextChar) {
-    e.target.value = e.target.value.slice(0,e.target.value.length - 1)
+    if (document.getElementById('hard-mode').checked) {
+      e.target.value = ""
+    } else {
+      e.target.value = e.target.value.slice(0,e.target.value.length - 1)
+    }
     misses += 1;
     document.getElementById('misses').textContent = misses + " mis-types";
   } else if (e.target.value.length == match.textContent.length && e.data == match.textContent[match.textContent.length - 1]) {
