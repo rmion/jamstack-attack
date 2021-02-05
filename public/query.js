@@ -32,12 +32,13 @@ document.getElementById('again').addEventListener('click', function(e) {
     document.getElementById('notification').textContent = ""
       try {
         if (eval('obj' + e.target.value) == item) {
-              document.getElementById('result').textContent = JSON.stringify(eval('obj' + e.target.value), null, 4)
+              document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
               document.getElementById('notification').textContent = "Great job!"
               document.getElementById('again').classList.remove('is-hidden')
               e.target.setAttribute('disabled', true)
           } else {
-            document.getElementById('result').textContent = JSON.stringify(eval('obj' + e.target.value), null, 4)
+            // document.getElementById('result').textContent = JSON.stringify(eval('obj' + e.target.value), null, 4)
+            document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
           }
       } catch (error) {
         
