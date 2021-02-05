@@ -60,11 +60,15 @@ code {
     background-color: black;
     border-width: 2px;
     border-style: solid;
-    font-size: 1.2rem;
+    font-family: 'Fira Code', monospace;
     padding: .5rem 1rem;
     padding-left: 0;
     display: block;
     text-align: left;
+    /* white-space: normal; */
+}
+code#player-one-prompt,
+code#player-two-prompt {
     white-space: normal;
 }
 code#player-one-prompt:before {
@@ -87,8 +91,9 @@ code#player-one-prompt.html:before {
 }
 textarea {
     display: block;
+    font-family: 'Fira Code', monospace;
     width: 100%;
-    height: 20vh;
+    /* height: 20vh; */
     padding: 0;
     font-size: 1.2rem;
 }
@@ -151,7 +156,8 @@ footer li {
 
 /* Racer */
 input {
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
     width: 100%;
     padding: 0;
     margin: 0.5rem 0;
@@ -159,7 +165,7 @@ input {
   }
 #highlight {
     color: transparent;
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
     background-color: forestgreen;
     position: absolute;
     z-index: -1;
@@ -172,7 +178,7 @@ input {
     margin-left: 2px;
 }
 input, #match, #highlight {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     margin-bottom: 0;
 }
 input:disabled {
@@ -264,6 +270,28 @@ textarea.fixed {
 }
 #sortable li.correct {
     background-color: teal;
+}
+
+/* Query */
+#side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+#query-answer {
+    background-color: transparent;
+    border: none;
+    color: white;
+    flex: 1;
+    font-size: 1.5rem;
+}
+#user-entry {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.5rem;
+}
+#result {
+    height: 100%;
 }
 
 @media only screen and (min-width: 1024px) {

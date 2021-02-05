@@ -10,6 +10,7 @@ const typingChallenges = require('./typing.js')
 const debuggingChallenges = require('./debugging.js')
 const sortingChallenges = require('./sorting.js')
 const invalidChallenges = require('./valid.js')
+const queryingChallenges = require('./querying.js')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -44,6 +45,14 @@ app.post('/coding', (req, res) => {
   res.send(
     JSON.stringify(
       JSHINT.data()
+    )
+  )
+})
+
+app.get('/object', (req, res) => {
+  res.send(    
+    JSON.stringify(
+      queryingChallenges[Math.floor(Math.random() * queryingChallenges.length)]
     )
   )
 })
