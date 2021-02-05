@@ -70,6 +70,8 @@ code {
     text-align: left;
     /* white-space: normal; */
 }
+#games-started code,
+#games-joined code,
 code#player-one-prompt,
 code#player-two-prompt {
     white-space: normal;
@@ -156,6 +158,45 @@ footer li {
 #lesson p {
     text-align: left;
 }
+
+#games-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+    margin-top: 1rem;
+}
+#games-list li {
+    display: flex;
+}
+#games-list a {
+    text-align: left;
+    display: block;
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    border: 3px solid currentColor;
+    transition: all 0.3s;
+}
+#games-list a:hover,
+#games-list a:active,
+#games-list a:focus {
+    border-color: springgreen;
+    color: springgreen;
+    box-shadow: 
+        -1px 1px 0 springgreen,
+        -2px 2px 0 springgreen,
+        -3px 3px 0 springgreen,
+        -4px 4px 0 springgreen,
+        -5px 5px 0 springgreen,
+        -6px 6px 0 springgreen,
+        -7px 7px 0 springgreen,
+        -8px 8px 0 springgreen,
+        -9px 9px 0 springgreen,
+        -10px 10px 0 springgreen;
+}
+
 
 /* Racer */
 input {
@@ -369,39 +410,5 @@ textarea.fixed {
     }
     #user_list {
         margin-left: 0.5rem;
-    }
-    #games-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-auto-rows: 1fr;
-        grid-gap: 20px;
-        margin-top: 1rem;
-    }
-    #games-list a {
-        text-align: left;
-        display: block;
-        font-family: 'VT323', monospace;
-        font-size: 3rem;
-        padding: 0.5rem 2rem;
-        text-decoration: none;
-        border: 3px solid currentColor;
-        transition: all 0.3s;
-    }
-    #games-list a:hover,
-    #games-list a:active,
-    #games-list a:focus {
-        border-color: springgreen;
-        color: springgreen;
-        box-shadow: 
-            -1px 1px 0 springgreen,
-            -2px 2px 0 springgreen,
-            -3px 3px 0 springgreen,
-            -4px 4px 0 springgreen,
-            -5px 5px 0 springgreen,
-            -6px 6px 0 springgreen,
-            -7px 7px 0 springgreen,
-            -8px 8px 0 springgreen,
-            -9px 9px 0 springgreen,
-            -10px 10px 0 springgreen;
     }
 }

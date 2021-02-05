@@ -109,7 +109,8 @@ app.post('/new', (req, res) => {
       challenge: challenge.code,
       topic: challenge.topic,
       instructions: challenge.instructions,
-      teammate: req.body.userid,
+      joinerID: req.body.userid,
+      teammate: true,
       submission: null,
       solved: null,
     });  

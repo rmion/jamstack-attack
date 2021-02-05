@@ -60,5 +60,12 @@ module.exports = [
         "latlng": [4.0, -72.0],
       },
       "item": -72.0
+    },
+    {
+      "blob": {
+        "Two-face": "Joker",
+        "Bat man": "Bruce Wayne"
+      },
+      "item": "Joker"
     }
 ]

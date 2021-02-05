@@ -35,7 +35,7 @@ channel.bind('mini-game', function(data) {
     // Notify game creator that another player joined their game
     if (games[game].creator == true && games[game].teammate == true && games[game].submission == null) {
         currentGame = games[game]
-        document.getElementById(`game-${currentGame.id}`).textContent = `${currentGame.joinerID} was summoned to play`
+        document.getElementById(`game-${currentGame.id}`).textContent = `${currentGame.joinerID == channel.members.myID ? "You were" : currentGame.joinerID} summoned to play`
     }
     if (games[game].creator == false && games[game].teammate == true && !games[game].hasOwnProperty("participated") && games[game].submission == null) {
       currentGame = games[game]
@@ -59,7 +59,7 @@ channel.bind('mini-game', function(data) {
             <summary>Review the code</summary>
             <h4>${currentGame.creatorID}'s code</h4>
             <pre><code>${currentGame.challenge}</code></pre>
-            <h4>${currentGame.joinerID}'s submission</h4>
+            <h4>What ${currentGame.joinerID == channel.members.myID ? "you" : currentGame.joinerID} submitted</h4>
             <pre><code>${currentGame.submission}</code></pre>
           </details>
         `
@@ -70,7 +70,7 @@ channel.bind('mini-game', function(data) {
             <summary>Review the code</summary>
             <h4>${currentGame.creatorID}'s code</h4>
             <pre><code>${currentGame.challenge}</code></pre>
-            <h4>${currentGame.joinerID}'s submission</h4>
+            <h4>What ${currentGame.joinerID == channel.members.myID ? "you" : currentGame.joinerID} submitted</h4>
             <pre><code>${currentGame.submission}</code></pre>
           </details>
         `
