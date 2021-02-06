@@ -250,7 +250,7 @@ progress {
 }
 
 /* Box Model */
-.grid {
+/* .grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
@@ -292,7 +292,7 @@ label {
   input.correct {
     background-color: green;
     color: white;
-  }
+  } */
 
 /* Debugging */
 textarea.fixed {
