@@ -3,7 +3,7 @@ module.exports = {
         "<span><h1>Heading</h1></span>",
         "<img src='photo.jpg' alt='Photo'></img>",
         `<ul>\n  <li>Item</li>\n  <li>Item</li>\n  <em>Item</li>\n</ol>`,
-        `<!-- .menu-main__item--contact ->\n<li clasz="menu-main__item menu-main__item--contact">\n  <a ref="https://www.paciellogroup.com/contact/">Contact</a>\n</eli>\n<-- /.menu-main__item--contact -->`
+        `<!-- .menu-main__item--contact ->\n<ul>\n  <li clasz="menu-main__item menu-main__item--contact">\n    <a ref="https://www.paciellogroup.com/contact/">Contact</a>\n  </eli>\n</ul><-- /.menu-main__item--contact -->`
     ],
     "css": [
         `promobox {\n  background: f8f8f8;\n  padding: 10px 20qx 15px;\n  border-radias: 15px;\n  margin-top: -10px;\n}`,

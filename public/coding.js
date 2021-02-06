@@ -67,7 +67,7 @@ $('#validate').on('click', function(e) {
                 $('#validate').attr('disabled', true)
                 document.getElementById('again').classList.remove('is-hidden')
             } else {
-                $('#notification').text("Sorry, that code was invalid!")
+                $('#notification').text(`Sorry, that code has at least ${data.errors.length} error${data.errors.length > 1 ? "s" : ""}!`)
                 console.log(data.errors); // data.messages is an array
             }
           })
@@ -83,7 +83,7 @@ $('#validate').on('click', function(e) {
                 document.getElementById('again').classList.remove('is-hidden')
             }
           } catch(error) {
-            $('#notification').text("Sorry, that code was invalid!")
+            $('#notification').text(`Sorry, that code still has at least one error!`)
             console.warn(error);
           }
       }
@@ -104,7 +104,7 @@ function validateHTMLOrCSS(formData) {
                 $('#validate').attr('disabled', true)
                 document.getElementById('again').classList.remove('is-hidden')
             } else {
-                $('#notification').text("Sorry, that code was invalid!")
+                $('#notification').text(`Sorry, that code still has at least ${data.messages.length} error${data.messages.length > 1 ? "s" : ""}!`)
             }
             console.log(data.messages); // data.messages is an array
         },
