@@ -23,6 +23,9 @@ h1 {
 p {
     margin: 0;
 }
+#game p {
+    margin-top: 1rem;
+}
 strong {
     font-family: 'VT323', monospace;
     font-size: 1.5rem;
