@@ -17,6 +17,12 @@
       <section id="game">
           <h2>Pick a game!</h2>
           <h3>Each game will help you practice Frontend Development!</h3>
+          <form action="https://formspree.io/f/mqkgjyvk" method="post">
+            <div>
+              <input type="email" style="width: auto;" placeholder="Enter your email..." name="player-email" required>
+              <button type="submit" id="email-subscribe">New mini-games? Email me!</button>  
+            </div>
+          </form>
           <p><a href="more.html">Show me other games!</a></p>
           <ul id="games-list">
             <li>
@@ -38,15 +44,6 @@
                 <a href="query.html">Grab N Go!</a>
             </li>
           </ul>
-          <div id="lesson">
-            <form
-              action="https://formspree.io/f/mqkgjyvk"
-              method="POST"
-            >
-              <input type="email" style="width: auto;" placeholder="Enter your email..." name="_replyto" required>
-              <button type="submit">New mini-games? Email me!</button>
-            </form>
-          </div>
       </section>
       <aside>
         <h3>Games you started</h3>
@@ -66,5 +63,7 @@
         </section>
       </footer>
       <script src="show-players.js"></script>
+      <script src="formspree.js"></script>
+      </script>
 </body>
 </html>
