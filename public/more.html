@@ -13,11 +13,9 @@
 <body>
     <header>
         <h1>Other games</h1>
-        <p><small>Jamstack Attack! was designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
-      <section id="game">
-          <h2>More interactive Frontend tutorials!</h2>
-          <h3>Each game will help you practice Frontend Development!</h3>
+      <main id="game">
+          <h2>Keep practicing!</h2>
           <ul id="games-list">
             <li>
                 <a target="_blank" href="https://www.codingame.com/multiplayer/clashofcode">Clash of Code!</a>
@@ -47,16 +45,28 @@
                 <a target="_blank" href="http://www.flexboxdefense.com/">Flexbox Defense!</a>
             </li>
           </ul>
-          <p><a href="/">Back to games list</a></p>
-      </section>
+      </main>
       <aside>
+        <h2>What are these!?</h2>
+        <ul>
+          <li>More interactive Frontend tutorials!</li>
+          <li>Each game will help you practice Frontend Development!</li>
+          <li>None were designed or developed by <a href="https://rmion.com">Robert Mion</a>!</li>
+        </ul>
+        <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
+          <input type="email" id="player-email" placeholder="Email me about new games!" name="player-email" required>
+          <input type="submit" id="email-subscribe" value="Attack!" />
+        </form>
+        <h3><a href="/">Back to the list of games!</a></h3>
+      </aside>
+      <!-- <aside>
         <h3>Games you started</h3>
         <ul id="games-started"></ul>
       </aside>
       <aside>
         <h3>Games you can join</h3>
         <ul id="games-joined"></ul>
-      </aside>
+      </aside> -->
       <footer id="players" class="flexed">
         <p id="player-count-zero">
           Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>

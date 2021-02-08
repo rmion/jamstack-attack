@@ -1,28 +1,22 @@
 let gameMode;
 
-function fetchGame() {
+function fetchGame(e) {
     fetch('/valid')
         .then(response => response.json())
         .then(data => {
+            e.target.setAttribute('disabled', true)
             gameMode = data.lang
+            document.getElementById('player-1').classList.remove('is-hidden')
             document.getElementById('submission').value = data.challenge
             document.querySelectorAll('.mode').forEach(el => el.textContent = data.lang.toUpperCase())
             $('#notification').text("")
-            $('#validate').attr('disabled', false)        
+            $('#solve').attr('disabled', false)        
         })
 }
 
-document.getElementById('start').addEventListener('click', function(e) {
-    fetchGame()
-    document.getElementById('player-1').classList.remove('is-hidden')
-    document.getElementById('intro').classList.add('is-hidden')
-})
-document.getElementById('again').addEventListener('click', function(e) {
-    fetchGame()
-    e.target.classList.add('is-hidden')
-})
+document.getElementById('start').addEventListener('click', fetchGame)
 
-$('#validate').on('click', function(e) {
+$('#solve').on('click', function(e) {
     $('#notification').text("")
     let content;
       // emulate form post
@@ -64,8 +58,8 @@ $('#validate').on('click', function(e) {
           .then(data => {
             if (!data.hasOwnProperty('errors')) {
                 $('#notification').text("It's valid! You win!")
-                $('#validate').attr('disabled', true)
-                document.getElementById('again').classList.remove('is-hidden')
+                $('#solve').attr('disabled', true)
+                document.getElementById('start').removeAttribute('disabled')
             } else {
                 $('#notification').text(`Sorry, that code has at least ${data.errors.length} error${data.errors.length > 1 ? "s" : ""}!`)
                 console.log(data.errors); // data.messages is an array
@@ -79,8 +73,8 @@ $('#validate').on('click', function(e) {
             let result = JSON.parse(document.getElementById('submission').value)
             if (typeof result === "object") {
                 $('#notification').text("It's valid! You win!")
-                $('#validate').attr('disabled', true)
-                document.getElementById('again').classList.remove('is-hidden')
+                $('#solve').attr('disabled', true)
+                document.getElementById('start').removeAttribute('disabled')
             }
           } catch(error) {
             $('#notification').text(`Sorry, that code still has at least one error!`)
@@ -101,8 +95,8 @@ function validateHTMLOrCSS(formData) {
         success: function(data) {
             if (data.messages.length == 0) {
                 $('#notification').text("It's valid! Great job!")
-                $('#validate').attr('disabled', true)
-                document.getElementById('again').classList.remove('is-hidden')
+                $('#solve').attr('disabled', true)
+                document.getElementById('start').removeAttribute('disabled')
             } else {
                 $('#notification').text(`Sorry, that code still has at least ${data.messages.length} error${data.messages.length > 1 ? "s" : ""}!`)
             }

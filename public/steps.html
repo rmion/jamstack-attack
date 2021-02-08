@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice sorting: arrange HTML, CSS and JS in the right order</title>
+    <title>Practice steps: create an expected design, one line at a time</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Out of order!</h1>
+        <h1>Step by step!</h1>
       </header>
       <main id="game">
-        <h2>Drag the lines of code into the correct order</h2>
+        <h2>Create an expected design, one line at a time!</h2>
         <div id="player-1" class="is-hidden">
-          <ul id="sortable"></ul>
-          <button id="check">Is that the right order?</button>
+          <textarea name="submission" id="submission" rows="10"></textarea>
+          <button id="validate">Check if this <span class="mode"></span> code is valid!</button>
           <p id="notification"></p>
         </div>
         <button id="start">Start a new game</button>
@@ -28,9 +26,7 @@
       <aside>
         <h2>What this game teaches you</h2>
         <ul>
-          <li>To put foreign code in the right order</li>
-          <li>To pause and study code once sorted</li>
-          <li>The rhythm inherit in the code you'll soon write</li>
+          <li>Fundamental CSS properties and values</li>
         </ul>
         <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
           <input type="email" id="player-email" placeholder="Email me about new games" name="player-email" required>
@@ -38,14 +34,6 @@
         </form>
         <h3><a href="/">Back to the list of games!</a></h3>
       </aside>
-      <!-- <aside>
-        <h3>Games you started</h3>
-        <ul id="games-started"></ul>
-      </aside>
-      <aside>
-        <h3>Games you can join</h3>
-        <ul id="games-joined"></ul>
-      </aside> -->
       <footer id="players" class="flexed">
         <p id="player-count-zero">
           Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
@@ -56,7 +44,7 @@
         </section>
       </footer>
     <script src="show-players.js"></script>
-    <script src="sorting.js"></script>
+    <script src="coding.js"></script>
     <script src="formspree.js"></script>
 </body>
 </html>

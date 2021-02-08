@@ -12,40 +12,34 @@
 <body>
     <header>
         <h1>Type faster!</h1>
-        <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
-      <section id="game">
-        <div id="intro">
-          <h2>How to play</h2>
-          <h3>Type HTML, CSS and JS code faster than your opponent!</h3>
-          <div id="lesson">
-            <h2>What will it teach me?</h2>
-            <p>The comfort of typing the strange words and symbols common among each language. There's no better way to train your fingers' muscle memory than to just...keep...typing!</p>
-          </div>
-          <p><button id="start">Start a new game</button></p>
-          <p><a href="/">Back to games list</a></p>
-        </div>
+      <main id="game">
+        <h2>Type the code faster than your opponent!</h2>
         <div id="player-1" class="is-hidden">
-          <h2>Type the code faster than your opponent!</h2>
           <div id="highlight"></div>
           <pre><code id="match"></code></pre>
-          <label id="player-one-status" for="player-one-test"></label>
-          <input type="text" id="player-one-test" placeholder="Start typing here..." />
+          <label id="player-one-status" for="player-one-test">Start typing!</label>
+          <input type="text" id="player-one-test" />
           <h3 id="misses">0 mis-types</h3>
-          <label for="hard-mode"><input type="checkbox" id="hard-mode" /> Enable Hard mode: each mis-type resets what you typed</label>
+          <label for="hard-mode"><input type="checkbox" id="hard-mode" /> Turn on Hard Mode: each mistake clears what you typed</label>
         </div>
         <div id="player-2" class="is-hidden">
           <label id="player-two-status" for="player-two-test"></label>
           <input type="text" id="player-two-test" disabled/>
         </div>
-      </section>
+        <button id="start">Start a new game</button>
+      </main>
       <aside>
-        <h3>Games you started</h3>
-        <ul id="games-started"></ul>
-      </aside>
-      <aside>
-        <h3>Games you can join</h3>
-        <ul id="games-joined"></ul>
+        <h2>What this game teaches you</h2>
+        <ul>
+          <li>Typing the strange words and symbols common among each language.</li>
+          <li>Trains your fingers' muscle memory </li>
+        </ul>
+        <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
+          <input type="email" id="player-email" placeholder="Email me about new games" name="player-email" required>
+          <input type="submit" id="email-subscribe" value="Attack!" />
+        </form>
+        <h3><a href="/">Back to the list of games!</a></h3>
       </aside>
       <footer id="players" class="flexed">
         <p id="player-count-zero">
@@ -57,6 +51,7 @@
         </section>
       </footer>
     <script src="show-players.js"></script>
-    <script src="race.js"></script>    
+    <script src="race.js"></script>
+    <script src="formspree.js"></script>
 </body>
 </html>

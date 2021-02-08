@@ -1,9 +1,11 @@
 let obj, item, itemAsString;
 
-function fetchGame() {
+function fetchGame(e) {
     fetch('/object')
         .then(response => response.json())
         .then(data => {
+            e.target.setAttribute('disabled', true)
+            document.getElementById('player-1').classList.remove('is-hidden')
             obj = data.blob
             itemAsString = JSON.stringify(data.blob, null, 4)
             item = data.item
@@ -17,16 +19,7 @@ function fetchGame() {
         })
 }
 
-document.getElementById('start').addEventListener('click', function(e) {
-    fetchGame()
-    document.getElementById('player-1').classList.remove('is-hidden')
-    document.getElementById('intro').classList.add('is-hidden')
-})
-document.getElementById('again').addEventListener('click', function(e) {
-    fetchGame()
-    e.target.classList.add('is-hidden')
-})
-  
+document.getElementById('start').addEventListener('click', fetchGame)  
   
   document.getElementById('query-answer').addEventListener('input', function(e)  {
     document.getElementById('notification').textContent = ""
@@ -34,10 +27,9 @@ document.getElementById('again').addEventListener('click', function(e) {
         if (eval('obj' + e.target.value) == item) {
               document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
               document.getElementById('notification').textContent = "Great job!"
-              document.getElementById('again').classList.remove('is-hidden')
               e.target.setAttribute('disabled', true)
+              document.getElementById('start').removeAttribute('disabled')
           } else {
-            // document.getElementById('result').textContent = JSON.stringify(eval('obj' + e.target.value), null, 4)
             document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
           }
       } catch (error) {

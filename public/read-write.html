@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice pairing: Match HTML, CSS and JS from instructions</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Read &amp; Write!</h1>
+  </header>
+  <main id="game">
+    <h2>Write code to fulfill the instructions</h2>
+    <div id="player-1" class="is-hidden">
+      <h3><span class="topic"></span> Instructions</h3>
+      <pre><code id="player-two-prompt"></code></pre>
+      <label for="submission">Write <span class="topic"></span> code</label>
+      <textarea name="submission" rows="3" id="submission"></textarea>
+      <pre><code id="solution">The correct answer will be revealed after you guess!</code></pre>
+      <button id="solve">How did I do?</button>
+      <p id="notification"></p>
+    </div>
+    <button id="start">Start a new game</button>
+  </main>
+  <aside>
+    <h2>What this game teaches you</h2>
+    <ul>
+      <li>Technical acuity a.k.a. how to talk and think like a Senior Developer.</li>
+      <li>To describe code with confidence and fluency</li>
+      <li>To pass part of the technical interview</li>
+    </ul>
+    <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
+      <input type="email" id="player-email" placeholder="Email me about new games" name="player-email" required>
+      <input type="submit" id="email-subscribe" value="Attack!" />
+    </form>
+    <h3><a href="/">Back to the list of games!</a></h3>
+  </aside>
+  <!-- <aside>
+    <h3>Games you started</h3>
+    <ul id="games-started"></ul>
+  </aside>
+  <aside>
+    <h3>Games you can join</h3>
+    <ul id="games-joined"></ul>
+  </aside> -->
+  <footer id="players" class="flexed">
+    <p id="player-count-zero">
+      Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
+    </p>
+    <section class="flexed is-hidden">
+      <h3>Players online now</h3>
+      <ul id="user_list" class="flexed"></ul>  
+    </section>
+  </footer>
+  <script src="show-players.js"></script>
+  <script src="read-write.js"></script>
+  <script src="formspree.js"></script>
+</body>
+</html>

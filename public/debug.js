@@ -1,9 +1,10 @@
 var game, hint;
 
-function newGame() {
+function newGame(e) {
     fetch('/debug')
         .then(response => response.json())
         .then(data => {
+            e.target.setAttribute('disabled', true)
             setTheStage(data)
         })
 }
@@ -15,11 +16,9 @@ function setTheStage(response) {
     document.getElementById('challenge').classList.remove('fixed')
     document.getElementById('check').removeAttribute('disabled')
     document.getElementById('next-hint').removeAttribute('disabled')
-    document.getElementById('replay').classList.add('is-hidden')
-    document.getElementById('intro').classList.add('is-hidden')
     document.getElementById('player-1').classList.remove('is-hidden')
     document.getElementById('challenge').value = game.code
-    document.getElementById('difficulty').textContent = game.difficulty
+    document.getElementById('difficulty').textContent = game.difficulty.toUpperCase()
     document.getElementById('language').textContent = game.language.toUpperCase()
     document.getElementById('expectation').textContent = game.test
 }
@@ -36,7 +35,7 @@ document.getElementById('check').addEventListener('click', function(e) {
         document.getElementById('challenge').classList.add('fixed')
         e.target.setAttribute('disabled', true)
         document.getElementById('next-hint').setAttribute('disabled', true)
-        document.getElementById('replay').classList.remove('is-hidden')
+        document.getElementById('start').removeAttribute('disabled')
     } else {
         document.getElementById('challenge').value = game.code
         document.getElementById('notification').textContent = "No, sorry. Need a hint?"
@@ -52,9 +51,6 @@ document.getElementById('next-hint').addEventListener('click', function(e) {
         document.getElementById('challenge').value = game.answer
         e.target.setAttribute('disabled', true)
         document.getElementById('check').setAttribute('disabled', true)
-        document.getElementById('replay').classList.remove('is-hidden')
+        document.getElementById('start').removeAttribute('disabled')
     }
 })
-
-document.getElementById('replay').addEventListener('click', newGame)
-

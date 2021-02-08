@@ -30,7 +30,7 @@ function updateExercise() {
     document.getElementById('player-one-test').setAttribute('disabled', true)
     document.getElementById('match').textContent = "Game over! You won!"
     document.getElementById('player-one-status').textContent = "You finished typing!"
-    addAgainBtn()
+    document.getElementById('start').removeAttribute('disabled')
     clearInterval(intervalId)
   } else {
     document.getElementById('match').textContent = exercises[counter];
@@ -49,15 +49,14 @@ function startNewGame() {
   .then(response => response.json())
   .then(data => {
     exercises = data.challenges
-    console.log(exercises)
     initializeGame()
   })
 }
 
-document.getElementById('start').addEventListener('click', startNewGame)
+document.getElementById('start').addEventListener('click', resetGame)
 
-function resetGame() {
-  document.getElementById('game').removeChild(document.getElementById('again'))
+function resetGame(e) {
+  e.target.setAttribute('disabled', true)
   document.getElementById('player-one-test').removeAttribute('disabled')
   document.getElementById('player-two-test').value = ""
   document.getElementById('player-one-status').textContent = ""
@@ -71,20 +70,9 @@ function resetGame() {
   startNewGame()
 }
 
-function addAgainBtn() {
-  let button = document.createElement('button')
-  button.textContent = "Play again!"
-  button.id = "again"
-  button.addEventListener('click', () => {
-    resetGame()
-  })
-  document.getElementById('game').appendChild(button)
-}
-
 function initializeGame() {
   document.getElementById('player-1').classList.remove('is-hidden')
   document.getElementById('player-2').classList.remove('is-hidden')
-  document.getElementById('intro').classList.add('is-hidden')
   setTimeout(() => {
     intervalId = setInterval(() => {
       let input = document.getElementById('player-two-test')
@@ -94,7 +82,6 @@ function initializeGame() {
         document.getElementById('match').textContent = "Game over! You lost!"
         document.getElementById('player-two-status').textContent = "Your opponent finished typing!"
         clearInterval(intervalId)
-        addAgainBtn() 
       } else if (input.value == exercises[opponentCounter]) {
         i = 0;
         opponentCounter += 1;

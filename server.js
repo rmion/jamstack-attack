@@ -40,6 +40,14 @@ app.post("/pusher/auth", (req, res) => {
   res.send(auth);
 });
 
+app.get('/readwrite', (req, res) => {
+  res.send(    
+    JSON.stringify(
+      pairingchallenges[Math.floor(Math.random() * pairingchallenges.length)]
+    )
+  )
+})
+
 app.post('/coding', (req, res) => {
   JSHINT(req.body.code)
   res.send(

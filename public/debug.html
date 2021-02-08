@@ -12,38 +12,41 @@
 <body>
     <header>
         <h1>Edit one thing!</h1>
-        <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
-      <section id="game">
-        <div id="intro">
-          <h2>How to play</h2>
-          <h3>Change one thing about the code to make the test pass</h3>
-          <div id="lesson">
-            <h2>What will it teach me?</h2>
-            <p>Two things, actually! 1. Not to overthink things; 2. To closely review each character you've typed after encountering an error. It's easy to type fast and to add code that fixes other broken code. But neither of these are the behaviors of Senior Developers.</p>  
-          </div>
-          <p><button id="start">Start a new game</button></p>
-          <p><a href="/">Back to games list</a></p>
-        </div>
+      <main id="game">
+        <h2>Edit one thing so the test passes</h2>
         <div id="player-1" class="is-hidden">
-          <h2>Fix this <strong id="language">JS</strong> code! Difficulty: <em id="difficulty">easy</em></h2>
+          <h3 id="test">Pass this <strong id="difficulty"></strong> <strong id="language"></strong> test:<br /><span id="expectation"></span></h3>
           <textarea name="challenge" id="challenge" rows="8"></textarea>
-          <h3>Change one thing to make the test below pass</h3>
-          <p id="expectation"></p>
-          <button id="check">Does it pass the test?</button>
-          <button id="next-hint">Give me a hint!</button>
-          <button id="replay" class="is-hidden">Play again!</button>
+          <p>
+            <button id="check">Does it pass the test?</button>
+            <button id="next-hint">Give me a hint!</button>  
+          </p>
           <p id="notification"></p>
         </div>
-      </section>
+        <button id="start">Start a new game</button>
+      </main>
       <aside>
+        <h2>What this game teaches you</h2>
+        <ul>
+          <li>Not to overthink things</li>
+          <li>To closely review each character you've typed after encountering an error</li>
+        </ul>
+        <!-- <p>Two things, actually! 1. Not to overthink things; 2. To closely review each character you've typed after encountering an error. It's easy to type fast and to add code that fixes other broken code. But neither of these are the behaviors of Senior Developers.</p> -->
+        <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
+          <input type="email" id="player-email" placeholder="Email me when new games launch" name="player-email" required>
+          <input type="submit" id="email-subscribe" value="Attack!" />
+        </form>
+        <h3><a href="/">Back to the list of games!</a></h3>
+      </aside>
+      <!-- <aside>
         <h3>Games you started</h3>
         <ul id="games-started"></ul>
       </aside>
       <aside>
         <h3>Games you can join</h3>
         <ul id="games-joined"></ul>
-      </aside>
+      </aside> -->
       <footer id="players" class="flexed">
         <p id="player-count-zero">
           Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>
@@ -55,5 +58,6 @@
       </footer>
     <script src="show-players.js"></script>
     <script src="debug.js"></script>
+    <script src="formspree.js"></script>
 </body>
 </html>

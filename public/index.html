@@ -14,22 +14,14 @@
         <h1>JamstackAttack.com</h1>
         <p><small>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
-      <section id="game">
-          <h2>Pick a game!</h2>
-          <h3>Each game will help you practice Frontend Development!</h3>
-          <form action="https://formspree.io/f/mqkgjyvk" method="post">
-            <div>
-              <input type="email" style="width: auto;" placeholder="Enter your email..." name="player-email" required>
-              <button type="submit" id="email-subscribe">New mini-games? Email me!</button>  
-            </div>
-          </form>
-          <p><a href="more.html">Show me other games!</a></p>
+      <main id="game">
+          <h2>Play a mini-game!</h2>
           <ul id="games-list">
             <li>
               <a href="debug.html">Edit one thing!</a>
             </li>
             <li>
-              <a href="pair.html">Read &amp; write!</a>
+              <a href="read-write.html">Read &amp; write!</a>
             </li>
             <li>
               <a href="sorting.html">Out of order!</a>
@@ -43,16 +35,30 @@
             <li>
                 <a href="query.html">Grab N Go!</a>
             </li>
+            <!-- <li>
+                <a href="steps.html">Step by step!</a>
+            </li> -->
           </ul>
-      </section>
+      </main>
       <aside>
+        <h2>What's Jamstack Attack!?</h2>
+        <ul>
+          <li>A collection of addictive mini-games!</li>
+          <li>Each game is designed to help you practice Frontend Development!</li>
+          <li>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</li>
+        </ul>
+        <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
+          <input type="email" id="player-email" placeholder="Email me about new games!" name="player-email" required>
+          <input type="submit" id="email-subscribe" value="Attack!" />
+        </form>
+        <h3><a href="more.html">Show me other games!</a></h3>
+      </aside>
+      <!-- <aside>
         <h3>Games you started</h3>
         <ul id="games-started"></ul>
-      </aside>
-      <aside>
         <h3>Games you can join</h3>
         <ul id="games-joined"></ul>
-      </aside>
+      </aside> -->
       <footer id="players" class="flexed">
         <p id="player-count-zero">
           Looks like no one else is here. Invite your friends! Tell them to visit <strong>JamstackAttack.com!</strong>

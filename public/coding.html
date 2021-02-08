@@ -13,34 +13,27 @@
 <body>
     <header>
         <h1>Make it valid!</h1>
-        <p><small>A Jamstack Attack! game. Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
-      <section id="game">
-        <div id="intro">
-          <h2>How to play</h2>
-          <h3>Fix the code to make it pass a validator</h3>
-          <div id="lesson">
-            <h2>What will it teach me?</h2>
-            <p>The importance of writing standardized, compliant code. When you join a team of professional Software Developers, you'll be expected to write code of a certain quality...that will be tested by others. Establish a habit of spotting and fixing invalid code now to avoid headache, frustration and stress later.</p>  
-          </div>    
-          <p><button id="start">Start a new game</button></p>
-          <p><a href="/">Back to games list</a></p>
-        </div>
+      <main id="game">
+        <h2>Fix the code to make it valid <span class="mode"></span></h2>
         <div id="player-1" class="is-hidden">
-          <h2>Fix the code to make it valid <span class="mode"></span>.</h2>
           <textarea name="submission" id="submission" rows="10"></textarea>
-          <button id="validate">Check if this <span class="mode"></span> code is valid!</button>
-          <button id="again" class="is-hidden">Play again!</button>
+          <button id="solve">Check if this <span class="mode"></span> code is valid!</button>
           <p id="notification"></p>
         </div>
-      </section>
+        <button id="start">Start a new game</button>
+      </main>
       <aside>
-        <h3>Games you started</h3>
-        <ul id="games-started"></ul>
-      </aside>
-      <aside>
-        <h3>Games you can join</h3>
-        <ul id="games-joined"></ul>
+        <h2>What this game teaches you</h2>
+        <ul>
+          <li>The importance of writing standardized, compliant code.</li>
+          <li>A habit of spotting and fixing invalid code</li>
+        </ul>
+        <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
+          <input type="email" id="player-email" placeholder="Email me about new games" name="player-email" required>
+          <input type="submit" id="email-subscribe" value="Attack!" />
+        </form>
+        <h3><a href="/">Back to the list of games!</a></h3>
       </aside>
       <footer id="players" class="flexed">
         <p id="player-count-zero">
@@ -53,5 +46,6 @@
       </footer>
     <script src="show-players.js"></script>
     <script src="coding.js"></script>
+    <script src="formspree.js"></script>
 </body>
 </html>

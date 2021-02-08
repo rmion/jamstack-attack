@@ -17,26 +17,21 @@ $( function() {
       }
     })
     if(JSON.stringify(result) == JSON.stringify(solution)) {
-      document.getElementById('check').classList.add('is-hidden')
-      document.getElementById('replay').classList.remove('is-hidden')
+      document.getElementById('check').setAttribute('disabled', true)
       document.getElementById('notification').textContent = "Great job!"
+      document.getElementById('start').removeAttribute('disabled')
     } else {
       document.getElementById('notification').textContent = "Sorry, not quite. Keep trying!"
     }
   })
 
-  $('#replay').on('click', function() {
-    document.getElementById('check').classList.remove('is-hidden')
-    document.getElementById('replay').classList.add('is-hidden')
-    newGame()
-  })
-
-  function newGame() {
+  function newGame(e) {
     $('#sortable').empty()
     document.getElementById('notification').textContent = ""
     fetch('/sort')
         .then(response => response.json())
         .then(data => {
+            e.target.setAttribute('disabled', true)
             setTheStage(data)
         })
     }
@@ -48,15 +43,13 @@ function setTheStage(data) {
     challenge.forEach(el => {
       $('#sortable').append(`
         <li class="ui-state-default">
-        <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
           ${el.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
             return '&#'+i.charCodeAt(0)+';'; 
           })}
         </li>`)
     })
-    document.getElementById('intro').classList.add('is-hidden')
+    document.getElementById('check').removeAttribute('disabled')
     document.getElementById('player-1').classList.remove('is-hidden')
-
 }
 
 document.getElementById('start').addEventListener('click', newGame)
