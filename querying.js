@@ -33,8 +33,7 @@ module.exports = [
       "blob": {
         "translations": {
             "de": "Kolumbien",
-            "es": "Colombia",
-            "fr": "Colombie"
+            "es": "Colombia"
         }
       },
       "item": 9,
@@ -45,14 +44,10 @@ module.exports = [
     },
     {
       "blob": {
-        "capital": "Bogotá",
-        "region": "Americas",
-        "subregion": "South America",
-        "popul": 48759958,
-        "latlng": [4.0, -72.0],
+        "popln": 48759958,
       },
       "item": 55,
-      "code": ".popul.toString().split('').reduce((a,i) => { return a + +i }, 0)",
+      "code": ".popln.toString().split('').reduce((a,i) => { return a + +i }, 0)",
       "methods": [
         "toString",
         "split",
@@ -61,10 +56,9 @@ module.exports = [
     },
     {
       "blob": {
-        "Two-face": "Joker",
         "Bat man": "Bruce Wayne"
       },
-      "item": "Joker",
+      "item": "Bruce",
       "code": "['Bat man'].split(' ')[0]",
       "methods": [
         'split'
