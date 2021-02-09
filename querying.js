@@ -15,7 +15,6 @@ module.exports = [
     },
     {
       "blob": {
-        "word": "example",
         "synonyms": [
           "model",
           "exemplar",
@@ -36,8 +35,8 @@ module.exports = [
             "es": "Colombia"
         }
       },
-      "item": 9,
-      "code": ".translations.de.length",
+      "item": 1,
+      "code": ".translations.de.length - obj.translations.es.length",
       "methods": [
         "length"
       ]
@@ -114,25 +113,27 @@ module.exports = [
     },
     {
       "blob": {
-        "left": [3,2,0],
+        "left": [3,2,1],
         "right": [1,2,3]
       },
-      "item": "3,2,1,2,3",
-      "code": ".left.slice(0,2).concat(obj.right)",
+      "item": "12233",
+      "code": ".left.slice(0,2).concat(obj.right).sort().join('')",
       "methods": [
         "slice",
         "concat",
-        "toString"
+        "sort",
+        "join"
       ]
     },
     {
       "blob": {
         "bond": [0,0,14]
       },
-      "item": "0,0,7",
-      "code": ".bond.map(i => i / 2)",
+      "item": "007",
+      "code": ".bond.map(i => i / 2).join('')",
       "methods": [
-        "map"
+        "map",
+        "join"
       ]
     },
 ]
