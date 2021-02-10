@@ -162,5 +162,14 @@ module.exports = [
         "<ul>{listItems}</ul>",
         ");",
         "}",
+    ],
+    [
+        "function reduce(arr, fn, init) {",
+        "let output;",
+        "arr.forEach(i => {",
+        "output = fn(output, i);",
+        "})",
+        "return output",
+        "}"
     ]
 ]

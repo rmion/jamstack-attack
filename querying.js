@@ -159,4 +159,49 @@ module.exports = [
         "sort"
       ]
     },
+    {
+      "blob": {
+        "owned": null
+      },
+      "item": "true",
+      "code": ".hasOwnProperty('owned')",
+      "methods": [
+        "hasOwnProperty"
+      ]
+    },
+    {
+      "blob": {
+        "where": "you@"
+      },
+      "item": "@",
+      "code": ".where.charAt(3)",
+      "methods": [
+        "charAt"
+      ]
+    },
+    {
+      "blob": {
+        "fruit": "na"
+      },
+      "item": "banana",
+      "code": ".repeat(3).replace('n','b')",
+      "methods": [
+        "repeat",
+        "replace"
+      ]
+    },
+    {
+      "blob": {
+        "go": "race"
+      },
+      "item": "racecar",
+      "code": ".go.concat(obj.go.slice(0,3).split('').reverse().join(''))",
+      "methods": [
+        "concat",
+        "slice",
+        "split",
+        "reverse",
+        "join"
+      ]
+    },
 ]
