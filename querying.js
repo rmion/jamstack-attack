@@ -106,7 +106,7 @@ module.exports = [
         "list": [1,2,4]
       },
       "item": 12,
-      "code": ".list.length * list[2]",
+      "code": ".list[2] * obj.list.length",
       "methods": [
         "length"
       ]
@@ -134,6 +134,29 @@ module.exports = [
       "methods": [
         "map",
         "join"
+      ]
+    },
+    {
+      "blob": {
+        "devil": [4,5,6]
+      },
+      "item": "666",
+      "code": ".fill(obj[obj.length - 1]).join('')",
+      "methods": [
+        "fill",
+        "length",
+        "join"
+      ]
+    },
+    {
+      "blob": {
+        "odds": [8,6,7,5,3,0,9]
+      },
+      "item": "3,5,7,9",
+      "code": ".filter(i => i % 2 == 1).sort()",
+      "methods": [
+        "filter",
+        "sort"
       ]
     },
 ]

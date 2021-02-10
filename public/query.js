@@ -1,4 +1,4 @@
-let obj, item, itemAsString, clues, solution;
+let obj, item, itemAsString, clues, answer;
 
 function fetchGame(e) {
     fetch('/object')
@@ -13,7 +13,7 @@ function fetchGame(e) {
             clues = data.methods
             answer = data.code
             if (clues.length) {
-              document.getElementById('requirements').textContent = "Your solution should include: "
+              document.getElementById('requirements').textContent = "Your answer should include: "
               clues.forEach(clue => {
                 let span = document.createElement('span')
                 span.innerHTML = `
@@ -27,6 +27,7 @@ function fetchGame(e) {
             document.getElementById('result').textContent = ""
             document.getElementById('expectation').textContent = item
             document.getElementById('notification').textContent = ""
+            document.getElementById('solution').textContent = ""
             document.getElementById('query-answer').removeAttribute('disabled')
             document.getElementById('query-answer').value = ""
             document.getElementById('result').textContent = ""
@@ -49,7 +50,8 @@ document.getElementById('start').addEventListener('click', fetchGame)
       try {
         if (eval('obj' + e.target.value) == item) {
               document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
-              document.getElementById('notification').textContent = "Great job!"
+              document.getElementById('notification').textContent = "Great job! Let's compare answers!"
+              document.getElementById('solution').textContent = "> obj" + answer
               e.target.setAttribute('disabled', true)
               document.getElementById('start').removeAttribute('disabled')
           } else {
