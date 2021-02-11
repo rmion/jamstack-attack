@@ -163,7 +163,7 @@ module.exports = [
       "blob": {
         "owned": null
       },
-      "item": "true",
+      "item": true,
       "code": ".hasOwnProperty('owned')",
       "methods": [
         "hasOwnProperty"
