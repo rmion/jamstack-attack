@@ -141,7 +141,7 @@ module.exports = [
         "devil": [4,5,6]
       },
       "item": "666",
-      "code": ".fill(obj[obj.length - 1]).join('')",
+      "code": ".devil.fill(obj[obj.length - 1]).join('')",
       "methods": [
         "fill",
         "length",
@@ -153,7 +153,7 @@ module.exports = [
         "odds": [8,6,7,5,3,0,9]
       },
       "item": "3,5,7,9",
-      "code": ".filter(i => i % 2 == 1).sort()",
+      "code": ".odds.filter(i => i % 2 == 1).sort()",
       "methods": [
         "filter",
         "sort"
@@ -174,17 +174,19 @@ module.exports = [
         "where": "you@"
       },
       "item": "@",
-      "code": ".where.charAt(3)",
+      "code": ".where.charAt(obj.where.length - 1)",
       "methods": [
-        "charAt"
+        "charAt",
+        "length"
       ]
     },
     {
       "blob": {
-        "fruit": "na"
+        "fruit": "na",
+        "times": 3
       },
       "item": "banana",
-      "code": ".repeat(3).replace('n','b')",
+      "code": ".fruit.repeat(obj.times).replace('n','b')",
       "methods": [
         "repeat",
         "replace"

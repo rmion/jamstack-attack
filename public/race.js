@@ -80,7 +80,8 @@ function initializeGame() {
       if (opponentCounter == exercises.length) {
         document.getElementById('player-one-test').setAttribute('disabled', true)
         document.getElementById('match').textContent = "Game over! You lost!"
-        document.getElementById('player-two-status').textContent = "Your opponent finished typing!"
+        document.getElementById('player-two-status').textContent = "Your opponent finished typing first!"
+        document.getElementById('start').removeAttribute('disabled')
         clearInterval(intervalId)
       } else if (input.value == exercises[opponentCounter]) {
         i = 0;

@@ -13,12 +13,12 @@ function fetchGame(e) {
             clues = data.methods
             answer = data.code
             if (clues.length) {
-              document.getElementById('requirements').textContent = "Your answer should include: "
+              document.getElementById('requirements').textContent = "Try using: "
               clues.forEach(clue => {
                 let span = document.createElement('span')
                 span.innerHTML = `
                   <input type="checkbox" id="${clue}" />
-                  <a href='https://developer.mozilla.org/en-US/search?q=${clue}'>${clue}</a>
+                  <a target="_blank" href='https://developer.mozilla.org/en-US/search?q=${clue}'>${clue}</a>
                 `
                 document.getElementById('requirements').appendChild(span)
               })  
