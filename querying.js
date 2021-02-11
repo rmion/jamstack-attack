@@ -141,7 +141,7 @@ module.exports = [
         "devil": [4,5,6]
       },
       "item": "666",
-      "code": ".devil.fill(obj[obj.length - 1]).join('')",
+      "code": ".devil.fill(6).join('')",
       "methods": [
         "fill",
         "length",
@@ -203,6 +203,43 @@ module.exports = [
         "slice",
         "split",
         "reverse",
+        "join"
+      ]
+    },
+    {
+      "blob": {
+        "haha": "color"
+      },
+      "item": "lol",
+      "code": ".substr(1,3).split('').sort().copyWithin(2,0).join('')",
+      "methods": [
+        "substr",
+        "split",
+        "sort",
+        "copyWithin",
+        "join"
+      ]
+    },
+    {
+      "blob": {
+        "nested": [1,[2,[3,[4,[[5]]]]]],
+        "i": 1
+      },
+      "item": "12345",
+      "code": ".nested.flat(obj.nested[obj.i][obj.i][obj.i][obj.i]).join('')",
+      "methods": [
+        "flat",
+        "join"
+      ]
+    },
+    {
+      "blob": {
+        "list": [1,4,7]
+      },
+      "item": "123456789",
+      "code": ".flatMap(x => [x, x + 1, x + 2]).join('')",
+      "methods": [
+        "flatMap",
         "join"
       ]
     },
