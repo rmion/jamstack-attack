@@ -164,7 +164,7 @@ module.exports = [
         "owned": null
       },
       "item": true,
-      "code": ".hasOwnProperty('owned')",
+      "code": ".owned.hasOwnProperty('owned')",
       "methods": [
         "hasOwnProperty"
       ]
@@ -211,7 +211,7 @@ module.exports = [
         "haha": "color"
       },
       "item": "lol",
-      "code": ".substr(1,3).split('').sort().copyWithin(2,0).join('')",
+      "code": ".haha.substr(1,3).split('').sort().copyWithin(2,0).join('')",
       "methods": [
         "substr",
         "split",
@@ -237,9 +237,36 @@ module.exports = [
         "list": [1,4,7]
       },
       "item": "123456789",
-      "code": ".flatMap(x => [x, x + 1, x + 2]).join('')",
+      "code": ".list.flatMap(x => [x, x + 1, x + 2]).join('')",
       "methods": [
         "flatMap",
+        "join"
+      ]
+    },
+    {
+      "blob": {
+        "trapped": [[[[[4]]]]]
+      },
+      "item": true,
+      "code": ".trapped.flat(4).includes(4)",
+      "methods": [
+        "flat",
+        "includes"
+      ]
+    },
+    {
+      "blob": {
+        "song": {
+          "do": null,
+          "re": null,
+          "mi": null
+        },
+        "start": ""
+      },
+      "item": "do-re-mi",
+      "code": ".start + Object.keys(obj.song).join('-')",
+      "methods": [
+        "Object.keys",
         "join"
       ]
     },

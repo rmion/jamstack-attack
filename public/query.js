@@ -49,13 +49,13 @@ document.getElementById('start').addEventListener('click', fetchGame)
     }
       try {
         if (eval('obj' + e.target.value) == item) {
-              document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
+              document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 2)
               document.getElementById('notification').textContent = "Great job! Let's compare answers!"
               document.getElementById('solution').textContent = "> obj" + answer
               e.target.setAttribute('disabled', true)
               document.getElementById('start').removeAttribute('disabled')
           } else {
-            document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 4)
+            document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 2)
           }
       } catch (error) {
         
