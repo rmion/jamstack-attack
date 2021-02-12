@@ -111,7 +111,7 @@ module.exports = [
     },
     {
         "topic": "html",
-        "code": "<p>I am <strong>here</strong></p>",
+        "code": "<p>I am <strong>here</strong>.</p>",
         "instructions": "A paragraph with the text content: I am here. 'here' is inside a strong element."
     },
     {
