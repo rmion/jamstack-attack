@@ -164,7 +164,7 @@ module.exports = [
         "owned": null
       },
       "item": true,
-      "code": ".owned.hasOwnProperty('owned')",
+      "code": ".hasOwnProperty('owned')",
       "methods": [
         "hasOwnProperty"
       ]
