@@ -11,6 +11,7 @@ const debuggingChallenges = require('./debugging.js')
 const sortingChallenges = require('./sorting.js')
 const invalidChallenges = require('./valid.js')
 const queryingChallenges = require('./querying.js')
+const cssChallenges = require('./levels.js')
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -39,6 +40,14 @@ app.post("/pusher/auth", (req, res) => {
   const auth = pusher.authenticate(socketId, channel, presenceData);
   res.send(auth);
 });
+
+app.get('/steps', (req, res) => {
+  res.send(    
+    JSON.stringify(
+      cssChallenges[Math.floor(Math.random() * cssChallenges.length)]
+    )
+  )
+})
 
 app.get('/readwrite', (req, res) => {
   res.send(    

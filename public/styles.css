@@ -326,11 +326,11 @@ label {
   } */
 
 /* Debugging */
-textarea.fixed {
+.fixed {
     background-color: springgreen;
 }
-textarea.wrong {
-    background-color: darkred;
+.wrong {
+    background-color: darkred !important;
     color: white;
 }
 
@@ -383,6 +383,48 @@ textarea.wrong {
 #solution {
     color: springgreen;
     padding-left: 0.5em;
+}
+
+/* Steps */
+dl {
+    font-family: monospace;
+    font-size: 1.5em;
+}
+dl:after {
+    content: "}";
+}
+dt:after {
+    content: " {";
+}
+dd {
+    margin-left: 1rem;
+}
+#boxjr {
+    background: #ffdf00;
+    color: #171d23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#boxsr {
+    border: 1px solid white;
+    height: 200px;
+}
+#declaration {
+    display: flex;
+    align-items: baseline;
+}
+input#prop,
+input#val {
+    background: #212121;
+    border: none;
+    color: #00fff5;
+    font-size: 1.3rem;
+    width: auto;
+    flex: 1;
+}
+input#val {
+    color: white;
 }
 
 @media only screen and (min-width: 1024px) {

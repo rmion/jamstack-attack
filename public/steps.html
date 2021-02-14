@@ -8,18 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@421&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Step by step!</h1>
       </header>
       <main id="game">
-        <h2>Create an expected design, one line at a time!</h2>
+        <h2>Create a particular design, one line at a time!</h2>
         <div id="player-1" class="is-hidden">
-          <textarea name="submission" id="submission" rows="10"></textarea>
-          <button id="validate">Check if this <span class="mode"></span> code is valid!</button>
-          <p id="notification"></p>
+          <h3 id="level"></h3>
+          <p id="declaration">
+            <input type="text" id="prop" placeholder="Type a css property" disabled>&nbsp;:&nbsp;
+            <input type="text" id="val" placeholder="Type a css value" disabled>&nbsp;
+            <button id="solve" disabled>Check</button>  
+          </p>
+          <section id="side-by-side">
+            <div id="boxsr" style="position: relative;">
+              <span style="position: absolute; bottom: 10px; right: 10px; color: white;">#BOXSR</span>
+              <div id="boxjr">#BOXJR</div>
+            </div>  
+            <dl id="rule">
+              <dt>#BOXJR</dt>
+            </dl>
+          </section>
         </div>
         <button id="start">Start a new game</button>
       </main>
@@ -27,6 +38,8 @@
         <h2>What this game teaches you</h2>
         <ul>
           <li>Fundamental CSS properties and values</li>
+          <li>Create responsive layouts</li>
+          <li>Latest layout tools</li>
         </ul>
         <form id="subscribe" action="https://formspree.io/f/mqkgjyvk" method="post">
           <input type="email" id="player-email" placeholder="Email me about new games" name="player-email" required>
@@ -44,7 +57,7 @@
         </section>
       </footer>
     <script src="show-players.js"></script>
-    <script src="coding.js"></script>
+    <script src="steps.js"></script>
     <script src="formspree.js"></script>
 </body>
 </html>
