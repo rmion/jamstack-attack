@@ -5,6 +5,7 @@
   let boxsr = document.getElementById('boxsr')
   let boxjr = document.getElementById('boxjr')
   let levels, test;
+  let stuckIter = 0;
   
   function fetchGame(e) {
     boxsr.removeChild(boxjr)
@@ -32,12 +33,25 @@
                 dd.textContent = `${i.property}: ${i.value};`
                 rule.appendChild(dd)
             })
+            stuckIter = 0;
+            document.getElementById('stuck').removeAttribute('disabled')
+            document.getElementById('solution').textContent = ""    
             e.target.setAttribute('disabled', true)
             document.getElementById('player-1').classList.remove('is-hidden')
         })
 }
 
-  document.getElementById('start').addEventListener('click', fetchGame)  
+  document.getElementById('start').addEventListener('click', fetchGame)
+
+  document.getElementById('stuck').addEventListener('click', function(e) {
+    stuckIter += 1;
+    if (stuckIter == (test.property + ": " + test.value + ";").length) {
+      e.target.setAttribute('disabled', true)
+      stuckIter = 0;
+    } else {
+      document.getElementById('solution').textContent = (test.property + ": " + test.value + ";").slice(0, stuckIter)
+    }  
+  })
 
   document.getElementById('solve').addEventListener('click', function(e) {
       if (prop.value == test.property && val.value == test.value) {
@@ -64,9 +78,15 @@
             [...document.getElementById('declaration').children].forEach(i => {
               i.setAttribute('disabled', true)
             })
+            stuckIter = 0;
+            document.getElementById('stuck').setAttribute('disabled', true)
+            document.getElementById('solution').textContent = ""
         } else {
             level.textContent = "Level " + (currentLevel + 1) + " of " + levels.length + ": " + levels[currentLevel].task
-            test = levels[currentLevel].test    
+            test = levels[currentLevel].test
+            stuckIter = 0;
+            document.getElementById('stuck').removeAttribute('disabled')
+            document.getElementById('solution').textContent = ""    
         }
       } else {
         if (prop.value != test.property) {

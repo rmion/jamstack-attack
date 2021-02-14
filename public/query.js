@@ -1,9 +1,11 @@
 let obj, item, itemAsString, clues, answer;
+let stuckIter = 0;
 
 function fetchGame(e) {
     fetch('/object')
         .then(response => response.json())
         .then(data => {
+          document.getElementById('stuck').removeAttribute('disabled')
           document.getElementById('requirements').innerHTML = ""
             e.target.setAttribute('disabled', true)
             document.getElementById('player-1').classList.remove('is-hidden')
@@ -34,7 +36,22 @@ function fetchGame(e) {
         })
 }
 
-document.getElementById('start').addEventListener('click', fetchGame)  
+document.getElementById('start').addEventListener('click', fetchGame)
+
+document.getElementById('stuck').addEventListener('click', function(e) {
+  stuckIter += 1;
+  if (stuckIter == answer.length) {
+    document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 2)
+    document.getElementById('notification').textContent = "It's ok! Feeling stuck is natural!"
+    document.getElementById('solution').textContent = "> obj" + answer
+    e.target.setAttribute('disabled', true)
+    document.getElementById('query-answer').setAttribute('disabled', true)
+    document.getElementById('start').removeAttribute('disabled')
+    stuckIter = 0;
+  } else {
+    document.getElementById('solution').textContent = "> obj" + answer.slice(0, stuckIter)
+  }
+})
   
   document.getElementById('query-answer').addEventListener('input', function(e)  {
     document.getElementById('notification').textContent = ""
