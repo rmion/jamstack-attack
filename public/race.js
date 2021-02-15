@@ -4,6 +4,7 @@ let misses = 0;
 let match = document.getElementById('match')
 
 document.getElementById('player-one-test').addEventListener('input', function(e) {
+  console.log(e.data)
   if (e.data == null) {
     document.getElementById('highlight').textContent = e.target.value
     return false;

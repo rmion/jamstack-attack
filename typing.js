@@ -137,7 +137,7 @@ module.exports = [
     'if(Array.isArray(item) && depth > 0) {',
     'const flattened = [...flatten(arr, Infinity)];',
     'if (!Array.prototype.findIndex) {',
-    '// 2. Let len be ? ToLength(? Get(O, "length")).',
+    '// 2. Let len be ? ToLength(? Get(0, "length")).',
     'if (predicate.call(thisArg, kValue, k, o)) {',
     'var o = Object(this);',
     "throw new TypeError('\"this\" is null or not defined');",
