@@ -15,8 +15,11 @@
         <p><small>Designed and developed by <a href="https://rmion.com">Robert Mion</a>!</small></p>
       </header>
       <main id="game">
-          <h2>Play a mini-game!</h2>
+          <h2>Pick a mini-game!</h2>
           <ul id="games-list">
+            <li>
+              <a href="#" id="random">Random game!</a>
+            </li>
             <li>
               <a href="debug.html">Edit one thing!</a>
             </li>
@@ -64,5 +67,14 @@
       </footer>
       <script src="show-players.js"></script>
       <script src="formspree.js"></script>
+      <script>
+        let urls;
+        document.getElementById('random').addEventListener('click', function(e) {
+          urls = [...document.getElementById('games-list').children].map(i => {
+            return i.children[0].href.split("/")[3]
+          }).filter(i => i !== "#")
+          window.location = urls[Math.floor(Math.random() * urls.length)]
+        })
+      </script>
 </body>
 </html>

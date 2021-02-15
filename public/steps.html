@@ -17,19 +17,23 @@
         <h2>Create a particular design, one line at a time!</h2>
         <div id="player-1" class="is-hidden">
           <h3 id="level"></h3>
-          <p id="declaration">
-            <input type="text" id="prop" placeholder="Type a css property" disabled>&nbsp;:&nbsp;
-            <input type="text" id="val" placeholder="Type a css value" disabled>&nbsp;
-            <button id="solve" disabled>Check</button>  
-          </p>
-          <p><button id="stuck">Stuck?</button><span id="solution"></span></p>
+          <fieldset>
+            <legend class="target"></legend>
+            <div id="declaration">
+              <input type="text" id="prop" placeholder="Type a css property" disabled>:
+              <input type="text" id="val" placeholder="Type a css value" disabled>
+              <button id="solve" disabled>Check</button>
+              <button id="stuck">Stuck?</button>  
+            </div>
+            <p id="solution"></p>
+          </fieldset>
           <section id="side-by-side">
-            <div id="boxsr" style="position: relative;">
-              <span style="position: absolute; bottom: 10px; right: 10px; color: white;">#BOXSR</span>
+            <div id="boxsr">
+              <span>#BOXSR</span>
               <div id="boxjr">#BOXJR</div>
             </div>  
             <dl id="rule">
-              <dt>#BOXJR</dt>
+              <dt class="target"></dt>
             </dl>
           </section>
         </div>

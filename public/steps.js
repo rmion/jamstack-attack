@@ -8,11 +8,19 @@
   let stuckIter = 0;
   
   function fetchGame(e) {
-    boxsr.removeChild(boxjr)
+    document.getElementById('side-by-side').removeChild(document.getElementById('boxsr'))
+    boxsr = document.createElement('div')
+    boxsr.id = "boxsr"
+    boxsrspan = document.createElement('span')
+    boxsrspan.textContent = "#BOXSR"
+    boxsr.appendChild(boxsrspan)
+    // boxsr.removeChild(boxjr)
     boxjr = document.createElement('div')
     boxjr.id = "boxjr"
     boxjr.textContent = "#BOXJR"
     boxsr.appendChild(boxjr);
+    document.getElementById('side-by-side').insertBefore(boxsr, document.getElementById('rule'));
+    // document.getElementById('side-by-side').appendChild(boxsr);
     [...document.querySelectorAll('dd')].forEach(i => {
         document.getElementById('rule').removeChild(i)
     });
@@ -26,14 +34,19 @@
         .then(data => {
             levels = data.steps
             test = levels[currentLevel].test
-            level.textContent = "Level " + (currentLevel + 1) + " of " + levels.length + ": " + levels[currentLevel].task
+            level.textContent = "Level " + (currentLevel + 1) + " of " + levels.length + ":\n" + levels[currentLevel].task
             data.setup.forEach(i => {
-                boxjr.style[i.property] = i.value
-                let dd = document.createElement('dd')
-                dd.textContent = `${i.property}: ${i.value};`
-                rule.appendChild(dd)
+                document.getElementById(i.el).style[i.property] = i.value
+                if (i.el == data.target) {
+                  let dd = document.createElement('dd')
+                  dd.textContent = `${i.property}: ${i.value};`
+                  rule.appendChild(dd)  
+                }
             })
             stuckIter = 0;
+            [...document.querySelectorAll('.target')].forEach(el => {
+              el.textContent = "#" + test.el.toUpperCase()
+            })
             document.getElementById('stuck').removeAttribute('disabled')
             document.getElementById('solution').textContent = ""    
             e.target.setAttribute('disabled', true)
@@ -54,8 +67,8 @@
   })
 
   document.getElementById('solve').addEventListener('click', function(e) {
-      if (prop.value == test.property && val.value == test.value) {
-        boxjr.style[css(prop.value)] = val.value
+      if (prop.value == levels[currentLevel].test.property && val.value == levels[currentLevel].test.value) {
+        document.getElementById(levels[currentLevel].test.el).style[css(prop.value)] = val.value
         let lineItem = [...document.querySelectorAll('dd')].find(el => el.textContent.indexOf(prop.value) == 0)
         if (lineItem) {
             lineItem.textContent = `${prop.value}: ${val.value};`

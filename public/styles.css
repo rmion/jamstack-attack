@@ -386,6 +386,9 @@ label {
 }
 
 /* Steps */
+#level {
+    white-space: pre-line;
+}
 dl {
     font-family: monospace;
     font-size: 1.5em;
@@ -407,25 +410,40 @@ dd {
     align-items: center;
 }
 #boxsr {
+    position: relative;
     border: 1px solid white;
     height: 200px;
+}
+#boxsr span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+fieldset {
+    border: none;
+    background-color: #212121;
+    margin: 0;
 }
 #declaration {
     display: flex;
     align-items: baseline;
 }
+#declaration > * {
+    margin: 0 0.5rem;
+}
 input#prop,
 input#val {
-    background: #212121;
+    /* background: #212121;
     border: none;
-    color: #00fff5;
+    color: #00fff5; */
     font-size: 1.3rem;
     width: auto;
     flex: 1;
 }
-input#val {
+/* input#val {
     color: white;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
     html, body {
