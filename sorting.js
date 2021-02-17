@@ -171,5 +171,111 @@ module.exports = [
         "})",
         "return output",
         "}"
+    ],
+    [
+        "function intersection(...args) {",
+        "function fn(accumulator, current) {",
+        "let output = [];",
+        "current.forEach(i => {",
+        "if (accumulator.indexOf(i) >= 0) {",
+        "output.push(i); }})",
+        "return output; }",
+        "return reduce(args.slice(1), fn, args[0]); }",
+        "intersection([1,2,3], [1, 2], [2, 7]); // -> [ 2 ]"
+    ],
+    [
+        "<h2>Contact us</h2>",
+        "<form action='script.php' method='POST'>",
+        "<fieldset>",
+        "<legend>General information</legend>",
+        "<label for='name'>Name</label>",
+        "<input type='text' id='name' />",
+        "</fieldset>",
+        "</form>"
+    ],
+    [
+        "<ul>",
+        "<li>",
+        "Instructions",
+        "<ol>",
+        "<li>Do this</li>",
+        "<li>Then that</li>",
+        "<li>Lastly, do this</li>",
+        "</ol>",
+        "</li>",
+        "</ul>"
+    ],
+    [
+        "<nav>",
+        "<ul>",
+        "<li>",
+        "<a href='/'>Home</a></li>",
+        "<li><a href='about.html'>About us",
+        "</a></li>",
+        "<li>",
+        "<a href='contact.html'>Contact us</a>",
+        "</li>",
+        "</ul>",
+        "</nav>"
+    ],
+    [
+        "<dl>",
+        "<div>",
+        "<dt>",
+        "Term",
+        "</dt>",
+        "<dd>",
+        "Description",
+        "</dd>",
+        "</div>",
+        "</dl>"
+    ],
+    [
+        "/**",
+        "Use a better box model (opinionated).",
+        "*/",
+        "*,",
+        "*::before,",
+        "*::after {",
+        "box-sizing: border-box;",
+        "}"
+    ],
+    [
+        "<table>",
+        "<caption>Awesome caption</caption>",
+        "<colgroup span='4'></colgroup>",
+        "<thead>",
+        "<tr><th colspan='2'>",
+        "The table header</th>",
+        "</tr></thead>",
+        "<tbody>",
+        "<tr>",
+        "<td>The table body</td>",
+        "<td>with two columns</td>",
+        "</tr></tbody></table>"
+    ],
+    [
+        "<header>",
+        "<nav>",
+        "</nav>",
+        "</header>",
+        "<main>",
+        "<article>",
+        "</article>",
+        "</main>",
+        "<aside>",
+        "</aside>",
+        "<footer>",
+        "</footer>"
+    ],
+    [
+        '<label for="bully">How do you stack up?</label>',
+        '<select name="bully" multiple size="4">',
+        '<optgroup label="Order of Operations">',
+        '<option value="worst">First the worst</option>',
+        '<option value="best">Second the best</option>',
+        '<option value="nerd" disabled>Third the nerd</option>',
+        '</optgroup>',
+        '</select>'
     ]
 ]
