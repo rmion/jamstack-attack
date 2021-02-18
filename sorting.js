@@ -277,5 +277,42 @@ module.exports = [
         '<option value="nerd" disabled>Third the nerd</option>',
         '</optgroup>',
         '</select>'
+    ],
+    [
+        "function isPrime(n){",
+        "var divisor = 2;",
+        "while (n > divisor){",
+        "if(n % divisor == 0){",
+        "return false; ",
+        "} else {",
+        "divisor++; } ",
+        "}",
+        "return true; }"
+    ],
+    [
+        "function fibonacci(n){",
+        "if(n<=1)",
+        "return n;",
+        "else",
+        "return fibonacci(n-1) + fibonacci (n-2);",
+        "}",
+    ],
+    [
+        "function greatestCommonDivisor(a, b){",
+        "if(b == 0)",
+        "return a;",
+        "else ",
+        "return greatestCommonDivisor(b, a%b);",
+        "}",
+    ],
+    [
+        "function reverseInPlace(str){",
+        "return str.split(' ')",
+        ".reverse()",
+        ".join(' ')",
+        ".split('')",
+        ".reverse()",
+        ".join('');",
+        "}"
     ]
 ]
