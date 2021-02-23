@@ -60,6 +60,7 @@ $('#solve').on('click', function(e) {
                 $('#notification').text("It's valid! You win!")
                 $('#solve').attr('disabled', true)
                 document.getElementById('start').removeAttribute('disabled')
+                document.getElementById('random').classList.remove('is-hidden')
             } else {
                 $('#notification').text(`Sorry, that code has at least ${data.errors.length} error${data.errors.length > 1 ? "s" : ""}!`)
                 console.log(data.errors); // data.messages is an array
@@ -75,6 +76,7 @@ $('#solve').on('click', function(e) {
                 $('#notification').text("It's valid! You win!")
                 $('#solve').attr('disabled', true)
                 document.getElementById('start').removeAttribute('disabled')
+                document.getElementById('random').classList.remove('is-hidden')
             }
           } catch(error) {
             $('#notification').text(`Sorry, that code still has at least one error!`)
@@ -97,6 +99,7 @@ function validateHTMLOrCSS(formData) {
                 $('#notification').text("It's valid! Great job!")
                 $('#solve').attr('disabled', true)
                 document.getElementById('start').removeAttribute('disabled')
+                document.getElementById('random').classList.remove('is-hidden')
             } else {
                 $('#notification').text(`Sorry, that code still has at least ${data.messages.length} error${data.messages.length > 1 ? "s" : ""}!`)
             }

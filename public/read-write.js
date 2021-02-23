@@ -37,6 +37,7 @@ function compareAnswers(e) {
         document.getElementById('solution').textContent = solution
     }
     document.getElementById('start').removeAttribute('disabled')
+    document.getElementById('random').classList.remove('is-hidden')
 }
 
 document.getElementById('solve').addEventListener('click', compareAnswers)

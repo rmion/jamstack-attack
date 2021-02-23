@@ -47,6 +47,7 @@ document.getElementById('stuck').addEventListener('click', function(e) {
     e.target.setAttribute('disabled', true)
     document.getElementById('query-answer').setAttribute('disabled', true)
     document.getElementById('start').removeAttribute('disabled')
+    document.getElementById('random').classList.remove('is-hidden')
     stuckIter = 0;
   } else {
     document.getElementById('solution').textContent = "> obj" + answer.slice(0, stuckIter)
@@ -71,6 +72,7 @@ document.getElementById('stuck').addEventListener('click', function(e) {
               document.getElementById('solution').textContent = "> obj" + answer
               e.target.setAttribute('disabled', true)
               document.getElementById('start').removeAttribute('disabled')
+              document.getElementById('random').classList.remove('is-hidden')
           } else {
             document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 2)
           }

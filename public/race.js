@@ -32,6 +32,7 @@ function updateExercise() {
     document.getElementById('match').textContent = "Game over! You won!"
     document.getElementById('player-one-status').textContent = "You finished typing!"
     document.getElementById('start').removeAttribute('disabled')
+    document.getElementById('random').classList.remove('is-hidden')
     clearInterval(intervalId)
   } else {
     document.getElementById('match').textContent = exercises[counter];
@@ -83,6 +84,7 @@ function initializeGame() {
         document.getElementById('match').textContent = "Game over! You lost!"
         document.getElementById('player-two-status').textContent = "Your opponent finished typing first!"
         document.getElementById('start').removeAttribute('disabled')
+        document.getElementById('random').classList.remove('is-hidden')
         clearInterval(intervalId)
       } else if (input.value == exercises[opponentCounter]) {
         i = 0;

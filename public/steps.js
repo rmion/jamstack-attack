@@ -87,6 +87,7 @@
         currentLevel += 1
         if (currentLevel == levels.length) {
             document.getElementById('start').removeAttribute('disabled')
+            document.getElementById('random').classList.remove('is-hidden')
             level.textContent = "Level complete!";
             [...document.getElementById('declaration').children].forEach(i => {
               i.setAttribute('disabled', true)

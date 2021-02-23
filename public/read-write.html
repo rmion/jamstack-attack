@@ -25,6 +25,7 @@
       <p id="notification"></p>
     </div>
     <button id="start">Start a new game</button>
+    <button id="random" class="is-hidden">Play another mini-game</button>
   </main>
   <aside>
     <h2>What this game teaches you</h2>
@@ -59,5 +60,19 @@
   <script src="show-players.js"></script>
   <script src="read-write.js"></script>
   <script src="formspree.js"></script>
+  <script>
+    let urls = [
+      "debug.html",
+      "read-write.html",
+      "sorting.html",
+      "race.html",
+      "coding.html",
+      "query.html",
+      "steps.html",
+    ];
+    document.getElementById('random').addEventListener('click', function(e) {
+      window.location = urls[Math.floor(Math.random() * urls.length)]
+    })
+  </script>
 </body>
 </html>

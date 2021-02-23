@@ -20,6 +20,7 @@ $( function() {
       document.getElementById('check').setAttribute('disabled', true)
       document.getElementById('notification').textContent = "Great job!"
       document.getElementById('start').removeAttribute('disabled')
+      document.getElementById('random').classList.remove('is-hidden')
     } else {
       document.getElementById('notification').textContent = "Sorry, not quite. Keep trying!"
     }
