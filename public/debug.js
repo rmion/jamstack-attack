@@ -35,7 +35,7 @@ document.getElementById('check').addEventListener('click', function(e) {
         document.getElementById('challenge').classList.add('fixed')
         e.target.setAttribute('disabled', true)
         document.getElementById('next-hint').setAttribute('disabled', true)
-        // document.getElementById('start').removeAttribute('disabled')
+        document.getElementById('start').removeAttribute('disabled')
         document.getElementById('random').classList.remove('is-hidden')
     } else {
         document.getElementById('challenge').value = game.code
@@ -52,7 +52,7 @@ document.getElementById('next-hint').addEventListener('click', function(e) {
         document.getElementById('challenge').value = game.answer
         e.target.setAttribute('disabled', true)
         document.getElementById('check').setAttribute('disabled', true)
-        // document.getElementById('start').removeAttribute('disabled')
+        document.getElementById('start').removeAttribute('disabled')
         document.getElementById('random').classList.remove('is-hidden')
     }
 })
