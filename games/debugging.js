@@ -2,8 +2,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function double(n) {\n    return n  n;\n  }",
-        answer: "\n  function double(n) {\n    return n + n;\n  }",
+        code:   "function double(n) {\n  return n  n;\n}",
+        answer: "function double(n) {\n  return n + n;\n}",
         test:   "Expect double(1) to return 2",
         hints: [
             'Read between the n\'s',
@@ -14,8 +14,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function double() {\n    return n + n;\n  }",
-        answer: "\n  function double(n) {\n    return n + n;\n  }",
+        code:   "function double() {\n  return n + n;\n}",
+        answer: "function double(n) {\n  return n + n;\n}",
         test:   "Expect double(1) to return 2",
         hints: [
             'Where\'s it getting n from?',
@@ -26,8 +26,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function double(n) {\n    n + n;\n  }",
-        answer: "\n  function double(n) {\n    return n + n;\n  }",
+        code:   "function double(n) {\n  n + n;\n}",
+        answer: "function double(n) {\n  return n + n;\n}",
         test:   "Expect double(3) to return 6",
         hints: [
             'To come back',
@@ -38,8 +38,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  define double(n) {\n    return n + n;\n  }",
-        answer: "\n  function double(n) {\n    return n + n;\n  }",
+        code:   "define double(n) {\n  return n + n;\n}",
+        answer: "function double(n) {\n  return n + n;\n}",
         test:   "Expect double(4) to return 8",
         hints: [
             'What is double?',
@@ -50,8 +50,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function double(n) \n    return n + n;\n  }",
-        answer: "\n  function double(n) {\n    return n + n;\n  }",
+        code:   "function double(n) \n  return n + n;\n}",
+        answer: "function double(n) {\n  return n + n;\n}",
         test:   "Expect double(5) to return 10",
         hints: [
             'Where is the start?',
@@ -62,8 +62,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function today() {\n    return Date();\n  }",
-        answer: "\n  function today() {\n    return new Date();\n  }",
+        code:   "function today() {\n  return Date();\n}",
+        answer: "function today() {\n  return new Date();\n}",
         test:   "Expect today() to return Date object",
         hints: [
             "Shiny and...",
@@ -74,8 +74,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function today() {\n    return new Date;\n  }",
-        answer: "\n  function today() {\n    return new Date();\n  }",
+        code:   "function today() {\n  return new Date;\n}",
+        answer: "function today() {\n  return new Date();\n}",
         test:   "Expect today() to return Date object",
         hints: [
             "Calling all Dates!",
@@ -86,8 +86,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function today() {\n    return new date();\n  }",
-        answer: "\n  function today() {\n    return new Date();\n  }",
+        code:   "function today() {\n  return new date();\n}",
+        answer: "function today() {\n  return new Date();\n}",
         test:   "Expect today() to return Date object",
         hints: [
             "Case sensitive",
@@ -98,8 +98,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function 2day() {\n    return new Date();\n  }",
-        answer: "\n  function today() {\n    return new Date();\n  }",
+        code:   "function 2day() {\n  return new Date();\n}",
+        answer: "function today() {\n  return new Date();\n}",
         test:   "Expect today() to return Date object",
         hints: [
             "You kids and your hip language",
@@ -110,8 +110,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function today() {\n    returns new Date();\n  }",
-        answer: "\n  function today() {\n    return new Date();\n  }",
+        code:   "function today() {\n  returns new Date();\n}",
+        answer: "function today() {\n  return new Date();\n}",
         test:   "Expect today() to return Date object",
         hints: [
             "False pluralization",
@@ -122,8 +122,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function bigger(ab) {\n    return Math.max(a,b);\n  }",
-        answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
+        code:   "function bigger(ab) {\n  return Math.max(a,b);\n}",
+        answer: "function bigger(a,b) {\n  return Math.max(a,b);\n}",
         test:   "Expect bigger(1,2) to return 2",
         hints: [
             "Practice your A, B, C's",
@@ -134,8 +134,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function bigger(a,b) {\n    return Math.max(ab);\n  }",
-        answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
+        code:   "function bigger(a,b) {\n  return Math.max(ab);\n}",
+        answer: "function bigger(a,b) {\n  return Math.max(a,b);\n}",
         test:   "Expect bigger(2,4) to return 4",
         hints: [
             "Practice your A, B, C's",
@@ -146,8 +146,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function bigger(a,b) {\n    return Math.maximum(a,b);\n  }",
-        answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
+        code:   "function bigger(a,b) {\n  return Math.maximum(a,b);\n}",
+        answer: "function bigger(a,b) {\n  return Math.max(a,b);\n}",
         test:   "Expect bigger(5,3) to return 5",
         hints: [
             "Abbreviate it, instead",
@@ -158,8 +158,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function bigger(a,b) {\n    return math.max(a,b);\n  }",
-        answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
+        code:   "function bigger(a,b) {\n  return math.max(a,b);\n}",
+        answer: "function bigger(a,b) {\n  return Math.max(a,b);\n}",
         test:   "Expect bigger(5,8) to return 8",
         hints: [
             "It's kind of a Big Deal",
@@ -170,8 +170,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function bigger(a,b) {\n    Math.max(a,b);\n  }",
-        answer: "\n  function bigger(a,b) {\n    return Math.max(a,b);\n  }",
+        code:   "function bigger(a,b) {\n  Math.max(a,b);\n}",
+        answer: "function bigger(a,b) {\n  return Math.max(a,b);\n}",
         test:   "Expect bigger(2,12) to return 12",
         hints: [
             'To come back',
@@ -182,8 +182,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function sayHello() {\n    return \"Hello\';\n  }",
-        answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
+        code:   "function sayHello() {\n  return \"Hello\';\n}",
+        answer: "function sayHello() {\n  return \"Hello\";\n}",
         test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'The ending is always the same!',
@@ -194,8 +194,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function sayHello() {\n    return Hello\";\n  }",
-        answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
+        code:   "function sayHello() {\n  return Hello\";\n}",
+        answer: "function sayHello() {\n  return \"Hello\";\n}",
         test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'Someone famous once said...',
@@ -206,8 +206,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function sayHe11o() {\n    return \"Hello\";\n  }",
-        answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
+        code:   "function sayHe11o() {\n  return \"Hello\";\n}",
+        answer: "function sayHello() {\n  return \"Hello\";\n}",
         test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'H-E- double hockey stick',
@@ -218,8 +218,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function sayHello {\n    return \"Hello\";\n  }",
-        answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
+        code:   "function sayHello {\n  return \"Hello\";\n}",
+        answer: "function sayHello() {\n  return \"Hello\";\n}",
         test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'How would I call you?!',
@@ -230,8 +230,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  fnuction sayHello() {\n    return \"Hello\";\n  }",
-        answer: "\n  function sayHello() {\n    return \"Hello\";\n  }",
+        code:   "fnuction sayHello() {\n  return \"Hello\";\n}",
+        answer: "function sayHello() {\n  return \"Hello\";\n}",
         test:   "Expect sayHello() to return \"Hello\"",
         hints: [
             'Fun times...',
@@ -242,8 +242,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i))\n    }\n  }",
-        answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
+        code:   "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(list[i))\n  }\n}",
+        answer: "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
         test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'Mismatch detected',
@@ -254,8 +254,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function loopy(list) {\n    for (i==0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
+        code:   "function loopy(list) {\n  for (i==0; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
+        answer: "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
         test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'Under what condition?',
@@ -266,8 +266,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log([i])\n    }\n  }",
-        answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
+        code:   "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log([i])\n  }\n}",
+        answer: "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
         test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             '1, 2, 3...not [0][1][2]!',
@@ -278,8 +278,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(loopy[i])\n    }\n  }",
-        answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
+        code:   "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(loopy[i])\n  }\n}",
+        answer: "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
         test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'That\'s not an array!',
@@ -290,8 +290,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function loopy(list) {\n    for (i=1; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
-        answer: "\n  function loopy(list) {\n    for (i=0; i<list.length; i++) {\n        console.log(list[i])\n    }\n  }",
+        code:   "function loopy(list) {\n  for (i=1; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
+        answer: "function loopy(list) {\n  for (i=0; i<list.length; i++) {\n    console.log(list[i])\n  }\n}",
         test:   "Expect loopy([1,2,3]) to return 1 2 3",
         hints: [
             'No i left behind',
@@ -302,8 +302,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function sum(a,b,c) {\n    return a + b  c;\n  }",
-        answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
+        code:   "function sum(a,b,c) {\n  return a + b  c;\n}",
+        answer: "function sum(a,b,c) {\n  return a + b + c;\n}",
         test:   "Expect sum(1,1,1) to return 3",
         hints: [
             'Fill the gap',
@@ -314,8 +314,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function sum(a,b,c) {\n    return a + b + C;\n  }",
-        answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
+        code:   "function sum(a,b,c) {\n  return a + b + C;\n}",
+        answer: "function sum(a,b,c) {\n  return a + b + c;\n}",
         test:   "Expect sum(2,2,2) to return 6",
         hints: [
             'Can you C it?',
@@ -326,8 +326,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function sum(a,b,b) {\n    return a + b + c;\n  }",
-        answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
+        code:   "function sum(a,b,b) {\n  return a + b + c;\n}",
+        answer: "function sum(a,b,c) {\n  return a + b + c;\n}",
         test:   "Expect sum(1,2,3) to return 6",
         hints: [
             'Comes after b',
@@ -338,8 +338,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function sum(a,b,c) {\n    retrun a + b + c;\n  }",
-        answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
+        code:   "function sum(a,b,c) {\n  retrun a + b + c;\n}",
+        answer: "function sum(a,b,c) {\n  return a + b + c;\n}",
         test:   "Expect sum(3,1,1) to return 5",
         hints: [
             'rut-ro!',
@@ -350,8 +350,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function sum(a,b,c) {\n    return a + b + c;\n  ",
-        answer: "\n  function sum(a,b,c) {\n    return a + b + c;\n  }",
+        code:   "function sum(a,b,c) {\n  return a + b + c;\n  ",
+        answer: "function sum(a,b,c) {\n  return a + b + c;\n}",
         test:   "Expect sum(3,2,1) to return 6",
         hints: [
             'It never ends!',
@@ -362,8 +362,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function each(list) {\n    return list.forEach(i > i);\n  }",
-        answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
+        code:   "function each(list) {\n  return list.forEach(i > i);\n}",
+        answer: "function each(list) {\n  return list.forEach(i => i);\n}",
         test:   "Expect each(3,2,1) to return 3 2 1",
         hints: [
             'Where\'s the arrow?',
@@ -374,8 +374,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function each(list) {\n    return list.fourEach(i => i);\n  }",
-        answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
+        code:   "function each(list) {\n  return list.fourEach(i => i);\n}",
+        answer: "function each(list) {\n  return list.forEach(i => i);\n}",
         test:   "Expect each(1,2,3) to return 1 2 3",
         hints: [
             'Oh, you',
@@ -386,8 +386,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function each(list) {\n    return list.foreach(i => i);\n  }",
-        answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
+        code:   "function each(list) {\n  return list.foreach(i => i);\n}",
+        answer: "function each(list) {\n  return list.forEach(i => i);\n}",
         test:   "Expect each(2,4,6) to return 2 4 6",
         hints: [
             'Camel case',
@@ -398,8 +398,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function each(1ist) {\n    return list.forEach(i => i);\n  }",
-        answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
+        code:   "function each(1ist) {\n  return list.forEach(i => i);\n}",
+        answer: "function each(list) {\n  return list.forEach(i => i);\n}",
         test:   "Expect each(1,2,3) to return 1 2 3",
         hints: [
             'Sneaky one',
@@ -410,8 +410,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function each(list) {\n    return list.Each(i => i);\n  }",
-        answer: "\n  function each(list) {\n    return list.forEach(i => i);\n  }",
+        code:   "function each(list) {\n  return list.Each(i => i);\n}",
+        answer: "function each(list) {\n  return list.forEach(i => i);\n}",
         test:   "Expect each(4,4,4) to return 4 4 4",
         hints: [
             'Method, man',
@@ -422,8 +422,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function equals(num) {\n    return num === String(num);\n  }",
-        answer: "\n  function equals(num) {\n    return num == String(num);\n  }",
+        code:   "function equals(num) {\n  return num === String(num);\n}",
+        answer: "function equals(num) {\n  return num == String(num);\n}",
         test:   "Expect equals(3) to return true",
         hints: [
             'One too many',
@@ -434,8 +434,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function equals(num) {\n    return num == String(num);\n  }",
-        answer: "\n  function equals(num) {\n    return num === String(num);\n  }",
+        code:   "function equals(num) {\n  return num == String(num);\n}",
+        answer: "function equals(num) {\n  return num === String(num);\n}",
         test:   "Expect equals(4) to return false",
         hints: [
             'One too few',
@@ -446,8 +446,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function equals(num) {\n    return num == 'num;\n  }",
-        answer: "\n  function equals(num) {\n    return num == num;\n  }",
+        code:   "function equals(num) {\n  return num == 'num;\n}",
+        answer: "function equals(num) {\n  return num == num;\n}",
         test:   "Expect equals(5) to return true",
         hints: [
             'Both num should be naked',
@@ -458,8 +458,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function equals(num) {\n    return num === Sting(num);\n  }",
-        answer: "\n  function equals(num) {\n    return num === String(num);\n  }",
+        code:   "function equals(num) {\n  return num === Sting(num);\n}",
+        answer: "function equals(num) {\n  return num === String(num);\n}",
         test:   "Expect equals(6) to return true",
         hints: [
             'Call The Police',
@@ -470,8 +470,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function equals(num) {\n    return num = String(num);\n  }",
-        answer: "\n  function equals(num) {\n    return num == String(num);\n  }",
+        code:   "function equals(num) {\n  return num = String(num);\n}",
+        answer: "function equals(num) {\n  return num == String(num);\n}",
         test:   "Expect equals(7) to return true",
         hints: [
             'Wrong assignment',
@@ -482,8 +482,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function dataType(data) {\n    return typeof dada;\n  }",
-        answer: "\n  function dataType(data) {\n    return typeof data;\n  }",
+        code:   "function dataType(data) {\n  return typeof dada;\n}",
+        answer: "function dataType(data) {\n  return typeof data;\n}",
         test:   "Expect dataType({}) to return 'object'",
         hints: [
             'Art history',
@@ -494,8 +494,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function dataType(data) {\n    return typeof data\';\n  }",
-        answer: "\n  function dataType(data) {\n    return typeof data;\n  }",
+        code:   "function dataType(data) {\n  return typeof data\';\n}",
+        answer: "function dataType(data) {\n  return typeof data;\n}",
         test:   "Expect dataType({}) to return 'object'",
         hints: [
             'Stringing you along',
@@ -506,8 +506,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function dataType(data) {\n    return typeof data;\n  }",
-        answer: "\n  function dataType(data) {\n    return typeof +data;\n  }",
+        code:   "function dataType(data) {\n  return typeof data;\n}",
+        answer: "function dataType(data) {\n  return typeof +data;\n}",
         test:   "Expect dataType('5') to return 'number'",
         hints: [
             'One symbol to rule them all',
@@ -518,8 +518,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function dataType(data) {\n    return typeof data();\n  }",
-        answer: "\n  function dataType(data) {\n    return typeof new data();\n  }",
+        code:   "function dataType(data) {\n  return typeof data();\n}",
+        answer: "function dataType(data) {\n  return typeof new data();\n}",
         test:   "Expect dataType(Date) to return 'object'",
         hints: [
             'Something borrowed, blue, and...',
@@ -530,8 +530,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function dataType(data) {\n    return typ of data;\n  }",
-        answer: "\n  function dataType(data) {\n    return typeof data;\n  }",
+        code:   "function dataType(data) {\n  return typ of data;\n}",
+        answer: "function dataType(data) {\n  return typeof data;\n}",
         test:   "Expect dataType({}) to return 'object'",
         hints: [
             'Mind the gap',
@@ -542,8 +542,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function formalName(f,l) {\n    return `${f}, ${f}`;\n  }",
-        answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
+        code:   "function formalName(f,l) {\n  return `${f}, ${f}`;\n}",
+        answer: "function formalName(f,l) {\n  return `${l}, ${f}`;\n}",
         test:   "Expect formalName('Kanye','West') to return 'West, Kanye'",
         hints: [
             'Use all the pieces',
@@ -554,8 +554,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function formalName(f,l) {\n    return `${l}, $(f}`;\n  }",
-        answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
+        code:   "function formalName(f,l) {\n  return `${l}, $(f}`;\n}",
+        answer: "function formalName(f,l) {\n  return `${l}, ${f}`;\n}",
         test:   "Expect formalName('George','Bush') to return 'Bush, George'",
         hints: [
             'The wall of f',
@@ -566,8 +566,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function formalName(f,l) {\n    return `${l} ${f}`;\n  }",
-        answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
+        code:   "function formalName(f,l) {\n  return `${l} ${f}`;\n}",
+        answer: "function formalName(f,l) {\n  return `${l}, ${f}`;\n}",
         test:   "Expect formalName('Bob','Dole') to return 'Dole, Bob'",
         hints: [
             'Poor grammar',
@@ -578,8 +578,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function formalName(f,l) {\n    return '${l}, ${f}`;\n  }",
-        answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
+        code:   "function formalName(f,l) {\n  return '${l}, ${f}`;\n}",
+        answer: "function formalName(f,l) {\n  return `${l}, ${f}`;\n}",
         test:   "Expect formalName('Jack','Ryan') to return 'Ryan, Jack'",
         hints: [
             'Wrong tick',
@@ -590,8 +590,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function formalName(f,l) {\n    return `{l}, ${f}`;\n  }",
-        answer: "\n  function formalName(f,l) {\n    return `${l}, ${f}`;\n  }",
+        code:   "function formalName(f,l) {\n  return `{l}, ${f}`;\n}",
+        answer: "function formalName(f,l) {\n  return `${l}, ${f}`;\n}",
         test:   "Expect formalName('Robert','Mion') to return 'Mion, Robert'",
         hints: [
             'Money money money!',
@@ -602,8 +602,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function ternary(bool) {\n    return bowl ? 'this' : 'that';\n  }",
-        answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
+        code:   "function ternary(bool) {\n  return bowl ? 'this' : 'that';\n}",
+        answer: "function ternary(bool) {\n  return bool ? 'this' : 'that';\n}",
         test:   "Expect ternary(false) to return 'that'",
         hints: [
             'Don\'t strike out',
@@ -614,8 +614,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
-        answer: "\n  function ternary(bool) {\n    return bool ? this : 'that';\n  }",
+        code:   "function ternary(bool) {\n  return bool ? 'this' : 'that';\n}",
+        answer: "function ternary(bool) {\n  return bool ? this : 'that';\n}",
         test:   "Expect ternary(true) to return Window",
         hints: [
             'Magic keyword',
@@ -626,8 +626,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function ternary(bool) {\n    return bool ? 'this : 'that';\n  }",
-        answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
+        code:   "function ternary(bool) {\n  return bool ? 'this : 'that';\n}",
+        answer: "function ternary(bool) {\n  return bool ? 'this' : 'that';\n}",
         test:   "Expect ternary(true) to return 'this'",
         hints: [
             'this is the hint',
@@ -638,8 +638,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function ternary(bool) {\n    return bool ? 'this' ; 'that';\n  }",
-        answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
+        code:   "function ternary(bool) {\n  return bool ? 'this' ; 'that';\n}",
+        answer: "function ternary(bool) {\n  return bool ? 'this' : 'that';\n}",
         test:   "Expect ternary(false) to return 'that'",
         hints: [
             'Look: hint.',
@@ -650,8 +650,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function ternary(bool) {\n    return bool : 'this' : 'that';\n  }",
-        answer: "\n  function ternary(bool) {\n    return bool ? 'this' : 'that';\n  }",
+        code:   "function ternary(bool) {\n  return bool : 'this' : 'that';\n}",
+        answer: "function ternary(bool) {\n  return bool ? 'this' : 'that';\n}",
         test:   "Expect ternary(true) to return 'this'",
         hints: [
             'Question...everything',
@@ -662,8 +662,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c};\n  }",
-        answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
+        code:   "function makeArrayFrom(a,b,c) {\n  return [a,b,c};\n}",
+        answer: "function makeArrayFrom(a,b,c) {\n  return [a,b,c];\n}",
         test:   "Expect makeArrayFrom(1,2,3) to return [1,2,3]",
         hints: [
             'Not now, curly',
@@ -674,8 +674,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function makeArrayFrom(a,b,c) {\n    return (a,b,c);\n  }",
-        answer: "\n  function makeArrayFrom(a,b,c) {\n    return Array(a,b,c);\n  }",
+        code:   "function makeArrayFrom(a,b,c) {\n  return (a,b,c);\n}",
+        answer: "function makeArrayFrom(a,b,c) {\n  return Array(a,b,c);\n}",
         test:   "Expect makeArrayFrom(3,2,1) to return [3,2,1]",
         hints: [
             'Use a constructor function',
@@ -686,8 +686,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function newArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
-        answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
+        code:   "function newArrayFrom(a,b,c) {\n  return [a,b,c];\n}",
+        answer: "function makeArrayFrom(a,b,c) {\n  return [a,b,c];\n}",
         test:   "Expect makeArrayFrom(2,2,2) to return [2,2,2]",
         hints: [
             'Happens all the time',
@@ -698,8 +698,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function makeArrayFrom(a,b,c) {\n    return [a.b,c];\n  }",
-        answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
+        code:   "function makeArrayFrom(a,b,c) {\n  return [a.b,c];\n}",
+        answer: "function makeArrayFrom(a,b,c) {\n  return [a,b,c];\n}",
         test:   "Expect makeArrayFrom(1,3,5) to return [1,3,5]",
         hints: [
             'Grammatical error',
@@ -710,8 +710,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function makeArrayFrom(a,b,c) {\n    return; [a,b,c];\n  }",
-        answer: "\n  function makeArrayFrom(a,b,c) {\n    return [a,b,c];\n  }",
+        code:   "function makeArrayFrom(a,b,c) {\n  return; [a,b,c];\n}",
+        answer: "function makeArrayFrom(a,b,c) {\n  return [a,b,c];\n}",
         test:   "Expect makeArrayFrom(2,4,6) to return [2,4,6]",
         hints: [
             'Remove the hurdle',
@@ -722,8 +722,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function greet(name) {\n    return 'Hi, ${name}!`;\n  }",
-        answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
+        code:   "function greet(name) {\n  return 'Hi, ${name}!`;\n}",
+        answer: "function greet(name) {\n  return `Hi, ${name}!`;\n}",
         test:   "Expect greet('John') to return 'Hi, John!'",
         hints: [
             'Mismatch detected',
@@ -734,8 +734,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function greet(name) {\n    return `Hi, $(name}!`;\n  }",
-        answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
+        code:   "function greet(name) {\n  return `Hi, $(name}!`;\n}",
+        answer: "function greet(name) {\n  return `Hi, ${name}!`;\n}",
         test:   "Expect greet('Charles') to return 'Hi, Charles!'",
         hints: [
             'Mismatch',
@@ -746,8 +746,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function great(name) {\n    return `Hi, ${name}!`;\n  }",
-        answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
+        code:   "function great(name) {\n  return `Hi, ${name}!`;\n}",
+        answer: "function greet(name) {\n  return `Hi, ${name}!`;\n}",
         test:   "Expect greet('Jack') to return 'Hi, Jack!'",
         hints: [
             'Good. Swell. Fine!',
@@ -758,8 +758,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function greet(name) {\n    return `Hi, ${name}`;\n  }",
-        answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
+        code:   "function greet(name) {\n  return `Hi, ${name}`;\n}",
+        answer: "function greet(name) {\n  return `Hi, ${name}!`;\n}",
         test:   "Expect greet('Robert') to return 'Hi, Robert!'",
         hints: [
             'Not excited enough',
@@ -770,8 +770,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function greet() {\n    return `Hi, ${name}!`;\n  }",
-        answer: "\n  function greet(name) {\n    return `Hi, ${name}!`;\n  }",
+        code:   "function greet() {\n  return `Hi, ${name}!`;\n}",
+        answer: "function greet(name) {\n  return `Hi, ${name}!`;\n}",
         test:   "Expect greet('Kate') to return 'Hi, Kate!'",
         hints: [
             'Where\'s name coming from?',
@@ -782,8 +782,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function noteToSelf() {\n    / Some comment\n  }",
-        answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
+        code:   "function noteToSelf() {\n  / Some comment\n}",
+        answer: "function noteToSelf() {\n  // Some comment\n}",
         test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Divide by?',
@@ -794,8 +794,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function noteToSelf() {\n    \\\\ Some comment\n  }",
-        answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
+        code:   "function noteToSelf() {\n  \\\\ Some comment\n}",
+        answer: "function noteToSelf() {\n  // Some comment\n}",
         test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Wrong way',
@@ -806,8 +806,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function noteToSelf() {\n     Some comment\n  }",
-        answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
+        code:   "function noteToSelf() {\n   Some comment\n}",
+        answer: "function noteToSelf() {\n  // Some comment\n}",
         test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Forgetting something?',
@@ -818,8 +818,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function notetoSelf() {\n    // Some comment\n  }",
-        answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
+        code:   "function notetoSelf() {\n  // Some comment\n}",
+        answer: "function noteToSelf() {\n  // Some comment\n}",
         test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Middle child',
@@ -830,8 +830,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function noteToSelf() {\n    */ Some comment\n  }",
-        answer: "\n  function noteToSelf() {\n    // Some comment\n  }",
+        code:   "function noteToSelf() {\n  */ Some comment\n}",
+        answer: "function noteToSelf() {\n  // Some comment\n}",
         test:   "Expect noteToSelf() to return undefined",
         hints: [
             'Wish upon a star',
@@ -842,8 +842,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function parrot(number) {\n    return () > number;\n  }",
-        answer: "\n  function parrot(number) {\n    return () => number;\n  }",
+        code:   "function parrot(number) {\n  return () > number;\n}",
+        answer: "function parrot(number) {\n  return () => number;\n}",
         test:   "Expect parrot(1)() to return 1",
         hints: [
             'Greater than?',
@@ -854,8 +854,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function parrot(number) {\n    return {} => number;\n  }",
-        answer: "\n  function parrot(number) {\n    return () => number;\n  }",
+        code:   "function parrot(number) {\n  return {} => number;\n}",
+        answer: "function parrot(number) {\n  return () => number;\n}",
         test:   "Expect parrot(2)() to return 2",
         hints: [
             'Wrong container',
@@ -866,8 +866,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function parrot(number) {\n    return () <= number;\n  }",
-        answer: "\n  function parrot(number) {\n    return () => number;\n  }",
+        code:   "function parrot(number) {\n  return () <= number;\n}",
+        answer: "function parrot(number) {\n  return () => number;\n}",
         test:   "Expect parrot(3)() to return 3",
         hints: [
             'Wrong direction',
@@ -878,8 +878,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function parrot(number) {\n    return (number) => number;\n  }",
-        answer: "\n  function parrot(number) {\n    return () => number;\n  }",
+        code:   "function parrot(number) {\n  return (number) => number;\n}",
+        answer: "function parrot(number) {\n  return () => number;\n}",
         test:   "Expect parrot(4)() to return 4",
         hints: [
             'Closure, baby!',
@@ -890,8 +890,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function parrot(number) {\n    return  => number;\n  }",
-        answer: "\n  function parrot(number) {\n    return () => number;\n  }",
+        code:   "function parrot(number) {\n  return  => number;\n}",
+        answer: "function parrot(number) {\n  return () => number;\n}",
         test:   "Expect parrot(5)() to return 5",
         hints: [
             'Left of the arrow',
@@ -902,8 +902,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function IdPlease(id) {\n    return document.getElementByID(id);\n  }",
-        answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
+        code:   "function IdPlease(id) {\n  return document.getElementByID(id);\n}",
+        answer: "function IdPlease(id) {\n  return document.getElementById(id);\n}",
         test:   "Expect IdPlease('neo') to return HTMLElement",
         hints: [
             'Big D little d',
@@ -914,8 +914,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function IdPlease(id) {\n    return document.getElementsById(id);\n  }",
-        answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
+        code:   "function IdPlease(id) {\n  return document.getElementsById(id);\n}",
+        answer: "function IdPlease(id) {\n  return document.getElementById(id);\n}",
         test:   "Expect IdPlease('cher') to return HTMLElement",
         hints: [
             'More than we were expecting',
@@ -926,8 +926,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function IdPlease(id) {\n    return document.getElementById('id);\n  }",
-        answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
+        code:   "function IdPlease(id) {\n  return document.getElementById('id);\n}",
+        answer: "function IdPlease(id) {\n  return document.getElementById(id);\n}",
         test:   "Expect IdPlease('prince') to return HTMLElement",
         hints: [
             'Stringing you along',
@@ -938,8 +938,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function IdPlease(id) {\n    return document.getElementFromId(id);\n  }",
-        answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
+        code:   "function IdPlease(id) {\n  return document.getElementFromId(id);\n}",
+        answer: "function IdPlease(id) {\n  return document.getElementById(id);\n}",
         test:   "Expect IdPlease('bono') to return HTMLElement",
         hints: [
             'Opposite of Hello',
@@ -950,8 +950,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function IdPlease(id) {\n    return window.getElementById(id);\n  }",
-        answer: "\n  function IdPlease(id) {\n    return document.getElementById(id);\n  }",
+        code:   "function IdPlease(id) {\n  return window.getElementById(id);\n}",
+        answer: "function IdPlease(id) {\n  return document.getElementById(id);\n}",
         test:   "Expect IdPlease('sting') to return HTMLElement",
         hints: [
             'Look deeper into the window',
@@ -962,8 +962,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function newTail(list,item) {\n    return list.pass(item);\n  }",
-        answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
+        code:   "function newTail(list,item) {\n  return list.pass(item);\n}",
+        answer: "function newTail(list,item) {\n  return list.push(item);\n}",
         test:   "Expect newTail([1,2],3) to return 3",
         hints: [
             'Bad pass',
@@ -974,8 +974,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function newTail(list,item) {\n    retun list.push(item);\n  }",
-        answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
+        code:   "function newTail(list,item) {\n  retun list.push(item);\n}",
+        answer: "function newTail(list,item) {\n  return list.push(item);\n}",
         test:   "Expect newTail([2,4],6) to return 3",
         hints: [
             'That\'s not a word, silly',
@@ -986,8 +986,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function newTail(list,item) {\n    return list.tail(item);\n  }",
-        answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
+        code:   "function newTail(list,item) {\n  return list.tail(item);\n}",
+        answer: "function newTail(list,item) {\n  return list.push(item);\n}",
         test:   "Expect newTail([3,4],5) to return 3",
         hints: [
             'Use your head',
@@ -998,8 +998,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function newTail(list,item) {\n    return list.push(item]);\n  }",
-        answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
+        code:   "function newTail(list,item) {\n  return list.push(item]);\n}",
+        answer: "function newTail(list,item) {\n  return list.push(item);\n}",
         test:   "Expect newTail([3,5],7) to return 3",
         hints: [
             'Hard right wall',
@@ -1010,8 +1010,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function newTai(list,item) {\n    return list.push(item);\n  }",
-        answer: "\n  function newTail(list,item) {\n    return list.push(item);\n  }",
+        code:   "function newTai(list,item) {\n  return list.push(item);\n}",
+        answer: "function newTail(list,item) {\n  return list.push(item);\n}",
         test:   "Expect newTail([3,2],1) to return 3",
         hints: [
             'Use your head',
@@ -1022,8 +1022,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function chopTail(list) {\n    return list.poop();\n  }",
-        answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
+        code:   "function chopTail(list) {\n  return list.poop();\n}",
+        answer: "function chopTail(list) {\n  return list.pop();\n}",
         test:   "Expect chopTail([1,2,3]) to return 3",
         hints: [
             'Toilet humor',
@@ -1034,8 +1034,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function chopTail(list) {\n    return list.pop;\n  }",
-        answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
+        code:   "function chopTail(list) {\n  return list.pop;\n}",
+        answer: "function chopTail(list) {\n  return list.pop();\n}",
         test:   "Expect chopTail([3,2,1]) to return 1",
         hints: [
             'Don\'t return the function',
@@ -1046,8 +1046,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function chopTail(list) {\n    return list,pop();\n  }",
-        answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
+        code:   "function chopTail(list) {\n  return list,pop();\n}",
+        answer: "function chopTail(list) {\n  return list.pop();\n}",
         test:   "Expect chopTail([2,4,6]) to return 6",
         hints: [
             'list and pop?',
@@ -1058,8 +1058,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function chopTail() {\n    return list.pop();\n  }",
-        answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
+        code:   "function chopTail() {\n  return list.pop();\n}",
+        answer: "function chopTail(list) {\n  return list.pop();\n}",
         test:   "Expect chopTail([6,6,6]) to return 6",
         hints: [
             'Beware the void',
@@ -1070,8 +1070,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function chopTail(list) {\n    return list.pop(1);\n  }",
-        answer: "\n  function chopTail(list) {\n    return list.pop();\n  }",
+        code:   "function chopTail(list) {\n  return list.pop(1);\n}",
+        answer: "function chopTail(list) {\n  return list.pop();\n}",
         test:   "Expect chopTail([9,1,1]) to return 1",
         hints: [
             'Does it need the argument?',
@@ -1082,8 +1082,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function chopHead(list) {\n    return list.shift(1);\n  }",
-        answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
+        code:   "function chopHead(list) {\n  return list.shift(1);\n}",
+        answer: "function chopHead(list) {\n  return list.shift();\n}",
         test:   "Expect chopHead([1,2,3]) to return 1",
         hints: [
             'Does it need the argument?',
@@ -1094,8 +1094,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function chopHead(list) {\n    return list.shit();\n  }",
-        answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
+        code:   "function chopHead(list) {\n  return list.shit();\n}",
+        answer: "function chopHead(list) {\n  return list.shift();\n}",
         test:   "Expect chopHead([2,2,2]) to return 2",
         hints: [
             'Toilet humor',
@@ -1106,8 +1106,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function chopHead(list) {\n    return list.pop();\n  }",
-        answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
+        code:   "function chopHead(list) {\n  return list.pop();\n}",
+        answer: "function chopHead(list) {\n  return list.shift();\n}",
         test:   "Expect chopHead([2,3,4]) to return 2",
         hints: [
             'Other end',
@@ -1118,8 +1118,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function chopHead(list) {\n    return list.unshift();\n  }",
-        answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
+        code:   "function chopHead(list) {\n  return list.unshift();\n}",
+        answer: "function chopHead(list) {\n  return list.shift();\n}",
         test:   "Expect chopHead([3,2,1]) to return 3",
         hints: [
             'Other end',
@@ -1130,8 +1130,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function chopHead(list) {\n    return list.shift;\n  }",
-        answer: "\n  function chopHead(list) {\n    return list.shift();\n  }",
+        code:   "function chopHead(list) {\n  return list.shift;\n}",
+        answer: "function chopHead(list) {\n  return list.shift();\n}",
         test:   "Expect chopHead([9,1,1]) to return 9",
         hints: [
             'Why won\'t you call?',
@@ -1142,8 +1142,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function newHead(list,item) {\n    return list.unshift();\n  }",
-        answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
+        code:   "function newHead(list,item) {\n  return list.unshift();\n}",
+        answer: "function newHead(list,item) {\n  return list.unshift(item);\n}",
         test:   "Expect newHead([1,2],3) to return 3",
         hints: [
             'Fill the void',
@@ -1154,8 +1154,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function newHead(list,item) {\n    return list.unshift(list);\n  }",
-        answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
+        code:   "function newHead(list,item) {\n  return list.unshift(list);\n}",
+        answer: "function newHead(list,item) {\n  return list.unshift(item);\n}",
         test:   "Expect newHead([3,2],1) to return 3",
         hints: [
             'Add list to list?',
@@ -1166,8 +1166,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function newHead(list,item) {\n    return list.shift(item);\n  }",
-        answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
+        code:   "function newHead(list,item) {\n  return list.shift(item);\n}",
+        answer: "function newHead(list,item) {\n  return list.unshift(item);\n}",
         test:   "Expect newHead([7,3],7) to return 3",
         hints: [
             'Shift, left',
@@ -1178,8 +1178,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function newHead(list,item) {\n    return lift.unshift(item);\n  }",
-        answer: "\n  function newHead(list,item) {\n    return list.unshift(item);\n  }",
+        code:   "function newHead(list,item) {\n  return lift.unshift(item);\n}",
+        answer: "function newHead(list,item) {\n  return list.unshift(item);\n}",
         test:   "Expect newHead([4,1],4) to return 3",
         hints: [
             'Minor spelling error',
@@ -1190,8 +1190,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function manMade(sex) {\n    return {\n      gender= sex\n    }\n  }",
-        answer: "\n  function manMade(sex) {\n    return {\n      gender: sex\n    }\n  }",
+        code:   "function manMade(sex) {\n  return {\n    gender= sex\n  }\n}",
+        answer: "function manMade(sex) {\n  return {\n    gender: sex\n  }\n}",
         test:   "Expect manMade('male') to return Object",
         hints: [
             'Wrong assignment',
@@ -1202,8 +1202,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function coercion(bool) {\n    return bool;\n  }",
-        answer: "\n  function coercion(bool) {\n    return +bool;\n  }",
+        code:   "function coercion(bool) {\n  return bool;\n}",
+        answer: "function coercion(bool) {\n  return +bool;\n}",
         test:   "Expect coercion(true) to return 1",
         hints: [
             'Unary, baby!',
@@ -1214,8 +1214,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function coercion(name) {\n    return name;\n  }",
-        answer: "\n  function coercion(name) {\n    return !name;\n  }",
+        code:   "function coercion(name) {\n  return name;\n}",
+        answer: "function coercion(name) {\n  return !name;\n}",
         test:   "Expect coercion('Robert') to return false",
         hints: [
             'Bang bang!',
@@ -1226,8 +1226,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function blockScope(num) {\n    for (var i = 0; i < num; i++) {\n      setTimeout(() => console.log(i), 1);\n    }\n  }",
-        answer: "\n  function blockScope(num) {\n    for (let i = 0; i < num; i++) {\n      setTimeout(() => console.log(i), 1);\n    }\n  }",
+        code:   "function blockScope(num) {\n  for (var i = 0; i < num; i++) {\n    setTimeout(() => console.log(i), 1);\n  }\n}",
+        answer: "function blockScope(num) {\n  for (let i = 0; i < num; i++) {\n    setTimeout(() => console.log(i), 1);\n  }\n}",
         test:   "Expect blockScope(3) to return 0 1 2",
         hints: [
             'Right now it logs 3 3 3',
@@ -1238,8 +1238,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function prefix(num) {\n    return ++num++;\n  }",
-        answer: "\n  function prefix(num) {\n    return ++num;\n  }",
+        code:   "function prefix(num) {\n  return ++num++;\n}",
+        answer: "function prefix(num) {\n  return ++num;\n}",
         test:   "Expect prefix(3) to return 4",
         hints: [
             'Asymmetry',
@@ -1250,8 +1250,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function postfix(num) {\n    return ++num++;\n  }",
-        answer: "\n  function postfix(num) {\n    return num++;\n  }",
+        code:   "function postfix(num) {\n  return ++num++;\n}",
+        answer: "function postfix(num) {\n  return num++;\n}",
         test:   "Expect postfix(5) to return 5",
         hints: [
             'Asymmetry',
@@ -1262,8 +1262,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function rest(args) {\n    return typeof args;\n  }",
-        answer: "\n  function rest(...args) {\n    return typeof args;\n  }",
+        code:   "function rest(args) {\n  return typeof args;\n}",
+        answer: "function rest(...args) {\n  return typeof args;\n}",
         test:   "Expect rest(1,2,3) to return 'object'",
         hints: [
             '...',
@@ -1274,8 +1274,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function tooSoon(max) {\n    for (let i=0;i<max;i++) {\n      if (i === 3) break;\n      console.log(i);\n    }\n  }",
-        answer: "\n  function tooSoon(max) {\n    for (let i=0;i<max;i++) {\n      if (i === 3) continue;\n      console.log(i);\n    }\n  }",
+        code:   "function tooSoon(max) {\n  for (let i=0;i<max;i++) {\n    if (i === 3) break;\n    console.log(i);\n  }\n}",
+        answer: "function tooSoon(max) {\n  for (let i=0;i<max;i++) {\n    if (i === 3) continue;\n    console.log(i);\n  }\n}",
         test:   "Expect tooSoon(5) to return 1 2 4",
         hints: [
             'Don\'t exit, skip',
@@ -1286,8 +1286,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function iife(num) {\n    return (() => num));\n  }",
-        answer: "\n  function iife(num) {\n    return (() => num)();\n  }",
+        code:   "function iife(num) {\n  return (() => num));\n}",
+        answer: "function iife(num) {\n  return (() => num)();\n}",
         test:   "Expect iife(5) to return 'number'",
         hints: [
             'Feeling iffy?',
@@ -1298,8 +1298,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function spread(name) {\n    return [name];\n  }",
-        answer: "\n  function spread(name) {\n    return [...name];\n  }",
+        code:   "function spread(name) {\n  return [name];\n}",
+        answer: "function spread(name) {\n  return [...name];\n}",
         test:   "Expect spread('Robert') to return ['R','o','b','e','r','t']",
         hints: [
             '...',
@@ -1310,8 +1310,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x + 1);\n  }",
-        answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
+        code:   "function factorial(x) {\n  return x <= 0 ? 1 : x * factorial(x + 1);\n}",
+        answer: "function factorial(x) {\n  return x <= 0 ? 1 : x * factorial(x - 1);\n}",
         test:   "Expect factorial(5) to return 120",
         hints: [
             'Memory leak detected',
@@ -1322,8 +1322,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function factorial(x) {\n    return x <= 0 ? 0 : x * factorial(x - 1);\n  }",
-        answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
+        code:   "function factorial(x) {\n  return x <= 0 ? 0 : x * factorial(x - 1);\n}",
+        answer: "function factorial(x) {\n  return x <= 0 ? 1 : x * factorial(x - 1);\n}",
         test:   "Expect factorial(4) to return 24",
         hints: [
             'Check the condition',
@@ -1334,8 +1334,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function factorial(x) {\n    return x <= 0 ? 1 : x + factorial(x - 1);\n  }",
-        answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
+        code:   "function factorial(x) {\n  return x <= 0 ? 1 : x + factorial(x - 1);\n}",
+        answer: "function factorial(x) {\n  return x <= 0 ? 1 : x * factorial(x - 1);\n}",
         test:   "Expect factorial(6) to return 720",
         hints: [
             'Wrong operator',
@@ -1346,8 +1346,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'normal',
-        code:   "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * function(x - 1);\n  }",
-        answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
+        code:   "function factorial(x) {\n  return x <= 0 ? 1 : x * function(x - 1);\n}",
+        answer: "function factorial(x) {\n  return x <= 0 ? 1 : x * factorial(x - 1);\n}",
         test:   "Expect factorial(3) to return 6",
         hints: [
             'Check the label',
@@ -1358,8 +1358,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function factorial(x) {\n    return x < 0 ? 1 : x * factorial(x - 1);\n  }",
-        answer: "\n  function factorial(x) {\n    return x <= 0 ? 1 : x * factorial(x - 1);\n  }",
+        code:   "function factorial(x) {\n  return x < 0 ? 1 : x * factorial(x - 1);\n}",
+        answer: "function factorial(x) {\n  return x <= 0 ? 1 : x * factorial(x - 1);\n}",
         test:   "Expect factorial(3) to return 6",
         hints: [
             'The smallest detail',
@@ -1370,8 +1370,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function doubleNegative(value) {\n    return !value;\n  }",
-        answer: "\n  function doubleNegative(value) {\n    return !!value;\n  }",
+        code:   "function doubleNegative(value) {\n  return !value;\n}",
+        answer: "function doubleNegative(value) {\n  return !!value;\n}",
         test:   "Expect doubleNegative('Robert') to return true",
         hints: [
             'True or false',
@@ -1382,8 +1382,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'easy',
-        code:   "\n  function charAt(str, index) {\n    return str index];\n  }",
-        answer: "\n  function charAt(str, index) {\n    return str[index];\n  }",
+        code:   "function charAt(str, index) {\n  return str index];\n}",
+        answer: "function charAt(str, index) {\n  return str[index];\n}",
         test:   "Expect charAt('Bus',1) to return 'u'",
         hints: [
             'Fill the gap',
@@ -1394,8 +1394,8 @@ module.exports = [
     {
         language: 'js',
         difficulty: 'hard',
-        code:   "\n  function charAt(str, index) {\n    return str[];\n  }",
-        answer: "\n  function charAt(str, index) {\n    return str[index];\n  }",
+        code:   "function charAt(str, index) {\n  return str[];\n}",
+        answer: "function charAt(str, index) {\n  return str[index];\n}",
         test:   "Expect charAt('Car',1) to return 'a'",
         hints: [
             'Fill the cage',
@@ -1406,8 +1406,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <p>Hello, world!<p>",
-        answer: "\n  <p>Hello, world!</p>",
+        code:   "<p>Hello, world!<p>",
+        answer: "<p>Hello, world!</p>",
         test:   "One paragraph element",
         hints: [
             'Closing time',
@@ -1418,8 +1418,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <h1>Hello, world!</p>",
-        answer: "\n  <h1>Hello, world!</h1>",
+        code:   "<h1>Hello, world!</p>",
+        answer: "<h1>Hello, world!</h1>",
         test:   "One level-1 heading element",
         hints: [
             'Closing time',
@@ -1430,8 +1430,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <p>Hello, world!/p>",
-        answer: "\n  <p>Hello, world!</p>",
+        code:   "<p>Hello, world!/p>",
+        answer: "<p>Hello, world!</p>",
         test:   "One paragraph element",
         hints: [
             'Less than',
@@ -1442,8 +1442,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <p<Hello, world!</p>",
-        answer: "\n  <p>Hello, world!</p>",
+        code:   "<p<Hello, world!</p>",
+        answer: "<p>Hello, world!</p>",
         test:   "One paragraph element",
         hints: [
             'Wonky error',
@@ -1454,8 +1454,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  </p>Hello, world!</p>",
-        answer: "\n  <p>Hello, world!</p>",
+        code:   "</p>Hello, world!</p>",
+        answer: "<p>Hello, world!</p>",
         test:   "One paragraph element",
         hints: [
             'One slash is enough',
@@ -1466,8 +1466,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <img src='fun.jpg' alt='' >",
-        answer: "\n  <img src='fun.jpg' alt='' />",
+        code:   "<img src='fun.jpg' alt='' >",
+        answer: "<img src='fun.jpg' alt='' />",
         test:   "Valid image element",
         hints: [
             'Self-closing tag',
@@ -1478,8 +1478,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <img src='horse.jpg' title='Horse' >",
-        answer: "\n  <img src='horse.jpg' alt='Horse' />",
+        code:   "<img src='horse.jpg' title='Horse' >",
+        answer: "<img src='horse.jpg' alt='Horse' />",
         test:   "Valid image element with alternative text",
         hints: [
             'Second attribute name',
@@ -1490,8 +1490,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <p><copy>Copyright 2020</small></p>",
-        answer: "\n  <p><small>Copyright 2020</small></p>",
+        code:   "<p><copy>Copyright 2020</small></p>",
+        answer: "<p><small>Copyright 2020</small></p>",
         test:   "Paragraph with valid legal copy markup",
         hints: [
             'The small things in life',
@@ -1502,8 +1502,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <ul>\n    <li>List item<il\\>\n  </ul>",
-        answer: "\n  <ul>\n    <li>List item</li>\n  </ul>",
+        code:   "<ul>\n  <li>List item<il\\>\n</ul>",
+        answer: "<ul>\n  <li>List item</li>\n</ul>",
         test:   "Unordered list with one list item",
         hints: [
             'Wrong way, partner',
@@ -1514,8 +1514,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <ul>\n    <li>List item</li>\n  </ol>",
-        answer: "\n  <ul>\n    <li>List item</li>\n  </ul>",
+        code:   "<ul>\n  <li>List item</li>\n</ol>",
+        answer: "<ul>\n  <li>List item</li>\n</ul>",
         test:   "Unordered list with one list item",
         hints: [
             'A E I O or U',
@@ -1526,8 +1526,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <dl>\n    <dt>Term</dt>\n    <dd>Description</dt>\n  </dl>",
-        answer: "\n  <dl>\n    <dt>Term</dt>\n    <dd>Description</dd>\n  </dl>",
+        code:   "<dl>\n  <dt>Term</dt>\n  <dd>Description</dt>\n</dl>",
+        answer: "<dl>\n  <dt>Term</dt>\n  <dd>Description</dd>\n</dl>",
         test:   "Definition list with one Term-Description pair",
         hints: [
             'Inspect the d\'s',
@@ -1538,8 +1538,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <dl>\n    <dt/>Term</dt>\n    <dd>Description</dd>\n  </dl>",
-        answer: "\n  <dl>\n    <dt>Term</dt>\n    <dd>Description</dt>\n  </dl>",
+        code:   "<dl>\n  <dt/>Term</dt>\n  <dd>Description</dd>\n</dl>",
+        answer: "<dl>\n  <dt>Term</dt>\n  <dd>Description</dt>\n</dl>",
         test:   "Definition list with one Term-Description pair",
         hints: [
             'Inspect the d\'s',
@@ -1550,8 +1550,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <h1>\n    Heading text here\n  </hl>",
-        answer: "\n  <h1>\n    Heading text here\n  </h1>",
+        code:   "<h1>\n  Heading text here\n</hl>",
+        answer: "<h1>\n  Heading text here\n</h1>",
         test:   "Level-1 heading",
         hints: [
             'That\'s not a list',
@@ -1562,8 +1562,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <img src='fun.jpg' alt='decoration' />",
-        answer: "\n  <img src='fun.jpg' alt='' />",
+        code:   "<img src='fun.jpg' alt='decoration' />",
+        answer: "<img src='fun.jpg' alt='' />",
         test:   "Valid decorative image element",
         hints: [
             'This one is about accessibility',
@@ -1574,8 +1574,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <a link='http://google.com'>Google</a>",
-        answer: "\n  <a href='http://google.com'>Google</a>",
+        code:   "<a link='http://google.com'>Google</a>",
+        answer: "<a href='http://google.com'>Google</a>",
         test:   "Hyperlink to Google",
         hints: [
             'Missing link',
@@ -1586,8 +1586,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <img src='fun.jpg' with='200' />",
-        answer: "\n  <img src='fun.jpg' width='200' />",
+        code:   "<img src='fun.jpg' with='200' />",
+        answer: "<img src='fun.jpg' width='200' />",
         test:   "200 pixel wide image",
         hints: [
             'Misspelling',
@@ -1598,8 +1598,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <a href='about'>About us</a>\n  ...\n  <h2 id='about'>About us</h2>",
-        answer: "\n  <a href='#about'>About us</a>\n  ...\n  <h2 id='about'>About us</h2>",
+        code:   "<a href='about'>About us</a>\n  ...\n<h2 id='about'>About us</h2>",
+        answer: "<a href='#about'>About us</a>\n  ...\n<h2 id='about'>About us</h2>",
         test:   "Link to same-page element",
         hints: [
             'Think ID in CSS',
@@ -1610,8 +1610,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <input kind='text' />",
-        answer: "\n  <input type='text' />",
+        code:   "<input kind='text' />",
+        answer: "<input type='text' />",
         test:   "Text input field",
         hints: [
             'Need thesaurus',
@@ -1622,8 +1622,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <label for='name'>Name</label>\n  <input name='name' />",
-        answer: "\n  <label for='name'>Name</label>\n  <input id='name' />",
+        code:   "<label for='name'>Name</label>\n<input name='name' />",
+        answer: "<label for='name'>Name</label>\n<input id='name' />",
         test:   "Label and it\'s associated input",
         hints: [
             '3 of 4',
@@ -1634,8 +1634,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <button id='primary'>Refresh</button>",
-        answer: "\n  <button class='primary'>Refresh</button>",
+        code:   "<button id='primary'>Refresh</button>",
+        answer: "<button class='primary'>Refresh</button>",
         test:   "One of several primary buttons",
         hints: [
             'Hmm...one of several?',
@@ -1646,8 +1646,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <head>\n    <title>Fix a function!</title>\n  </body>",
-        answer: "\n  <head>\n    <title>Fix a function!</title>\n  </head>",
+        code:   "<head>\n  <title>Fix a function!</title>\n</body>",
+        answer: "<head>\n  <title>Fix a function!</title>\n</head>",
         test:   "Add a title to the document",
         hints: [
             'Start and stop',
@@ -1658,8 +1658,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <br/>",
-        answer: "\n  <hr/>",
+        code:   "<br/>",
+        answer: "<hr/>",
         test:   "Add a thematic break between paragraph-level elements.",
         hints: [
             'A.k.a. horizontal rule',
@@ -1670,8 +1670,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <span lang='en'>\n    Hello, world!\n  </swan>",
-        answer: "\n  <span lang='en'>\n    Hello, world!\n  </span>",
+        code:   "<span lang='en'>\n  Hello, world!\n</swan>",
+        answer: "<span lang='en'>\n  Hello, world!\n</span>",
         test:   "Add a generic inline container for phrasing content",
         hints: [
             'Swan song',
@@ -1682,8 +1682,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <p>\n    E=MC<sup>2</sub>\n  </p>",
-        answer: "\n  <p>\n    E=MC<sup>2</sup>\n  </p>",
+        code:   "<p>\n  E=MC<sup>2</sub>\n</p>",
+        answer: "<p>\n  E=MC<sup>2</sup>\n</p>",
         test:   "Specify inline text which is to be displayed as superscript",
         hints: [
             'Sub, dogg?',
@@ -1694,8 +1694,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <h1>Hello<h1>",
-        answer: "\n  <h1>Hello</h1>",
+        code:   "<h1>Hello<h1>",
+        answer: "<h1>Hello</h1>",
         test:   "Level-1 heading element with text, Hello",
         hints: [
             'Slash',
@@ -1706,8 +1706,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <h2>Section title</h1>",
-        answer: "\n  <h2>Section title</h2>",
+        code:   "<h2>Section title</h1>",
+        answer: "<h2>Section title</h2>",
         test:   "Level-2 heading element",
         hints: [
             'Mismatch detected',
@@ -1718,8 +1718,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <para>Informative text</p>",
-        answer: "\n  <p>Informative text</p>",
+        code:   "<para>Informative text</p>",
+        answer: "<p>Informative text</p>",
         test:   "Paragraph element with text",
         hints: [
             'Mismatch detected',
@@ -1730,8 +1730,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <|--\n    <p>Won't appear</p>\n  -->",
-        answer: "\n  <!--\n    <p>Won't appear</p>\n  -->",
+        code:   "<|--\n  <p>Won't appear</p>\n-->",
+        answer: "<!--\n  <p>Won't appear</p>\n-->",
         test:   "Commented code",
         hints: [
             'Misplaced pipe',
@@ -1742,8 +1742,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <div>\n    <h1>Page title</h1>\n    <p>Informative text</p>\n  </main>",
-        answer: "\n  <main>\n    <h1>Page title</h1>\n    <p>Informative text</p>\n  </main>",
+        code:   "<div>\n  <h1>Page title</h1>\n  <p>Informative text</p>\n</main>",
+        answer: "<main>\n  <h1>Page title</h1>\n  <p>Informative text</p>\n</main>",
         test:   "An h1 and p inside a semantic structuring element: main",
         hints: [
             'No generic tags allowed',
@@ -1754,8 +1754,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <img href='cat.jpg' alt='cat' />",
-        answer: "\n  <img src='cat.jpg' alt='cat' />",
+        code:   "<img href='cat.jpg' alt='cat' />",
+        answer: "<img src='cat.jpg' alt='cat' />",
         test:   "A photo of a cat",
         hints: [
             'That attribute is for links, silly',
@@ -1766,8 +1766,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <a href='#about'>About us</a>\n  ...\n  <h2 title='about'>About us</h2>",
-        answer: "\n  <a href='#about'>About us</a>\n  ...\n  <h2 id='about'>About us</h2>",
+        code:   "<a href='#about'>About us</a>\n  ...\n<h2 title='about'>About us</h2>",
+        answer: "<a href='#about'>About us</a>\n  ...\n<h2 id='about'>About us</h2>",
         test:   "Link to same-page element",
         hints: [
             'Incorrect attribute',
@@ -1778,8 +1778,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <p>\n    <a target='blank' href='https://rmion.com'>Portfolio</a>\n  </p>",
-        answer: "\n  <p>\n    <a target='_blank' href='https://rmion.com'>Portfolio</a>\n  </p>",
+        code:   "<p>\n  <a target='blank' href='https://rmion.com'>Portfolio</a>\n</p>",
+        answer: "<p>\n  <a target='_blank' href='https://rmion.com'>Portfolio</a>\n</p>",
         test:   "Link opens in new tab",
         hints: [
             'blank check',
@@ -1790,8 +1790,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <ol>\n    <li>milk</li>\n    <li>cheese</li>\n  </ul>",
-        answer: "\n  <ul>\n    <li>milk</li>\n    <li>cheese</li>\n  </ul>",
+        code:   "<ol>\n  <li>milk</li>\n  <li>cheese</li>\n</ul>",
+        answer: "<ul>\n  <li>milk</li>\n  <li>cheese</li>\n</ul>",
         test:   "Bullet-point style list of groceries",
         hints: [
             'What kind of list?',
@@ -1802,8 +1802,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <ol>\n    <li>Do this first</li>\n    <li>And this second</li>\n  </ohl>",
-        answer: "\n  <ol>\n    <li>Do this first</li>\n    <li>And this second</li>\n  </ol>",
+        code:   "<ol>\n  <li>Do this first</li>\n  <li>And this second</li>\n</ohl>",
+        answer: "<ol>\n  <li>Do this first</li>\n  <li>And this second</li>\n</ol>",
         test:   "Numbered list of instructions",
         hints: [
             'What kind of list?',
@@ -1814,8 +1814,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <input type='text' >",
-        answer: "\n  <input type='text' />",
+        code:   "<input type='text' >",
+        answer: "<input type='text' />",
         test:   "Text input field",
         hints: [
             'These are self-closing',
@@ -1826,8 +1826,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <imput type='text' />",
-        answer: "\n  <input type='text' />",
+        code:   "<imput type='text' />",
+        answer: "<input type='text' />",
         test:   "Text input field",
         hints: [
             'That\'s not a valid tag, silly',
@@ -1838,8 +1838,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <form submit='/process.php'>\n    <input type='text'/>\n  </form>",
-        answer: "\n  <form action='/process.php'>\n    <input type='text'/>\n  </form>",
+        code:   "<form submit='/process.php'>\n  <input type='text'/>\n</form>",
+        answer: "<form action='/process.php'>\n  <input type='text'/>\n</form>",
         test:   "Form element that submits data",
         hints: [
             'Think Hollywood',
@@ -1850,8 +1850,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <form action='/process.php'>\n    <input type='text'/>\n    <button type='button'>Submit</button>\n  </form>",
-        answer: "\n  <form action='/process.php'>\n    <input type='text'/>\n    <button type='submit'>Submit</button>\n  </form>",
+        code:   "<form action='/process.php'>\n  <input type='text'/>\n  <button type='button'>Submit</button>\n</form>",
+        answer: "<form action='/process.php'>\n  <input type='text'/>\n  <button type='submit'>Submit</button>\n</form>",
         test:   "Form element with button that submits data",
         hints: [
             'Wrong type',
@@ -1862,8 +1862,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <input type='email' retired />",
-        answer: "\n  <input type='email' required />",
+        code:   "<input type='email' retired />",
+        answer: "<input type='email' required />",
         test:   "Required form field of type email",
         hints: [
             'Seems odd for a form field to be retired',
@@ -1874,8 +1874,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <label for='red'>\n    <input type='radio' id='red' title='color'>Red\n  </label>",
-        answer: "\n  <label for='red'>\n    <input type='radio' id='red' name='color'>Red\n  </label>",
+        code:   "<label for='red'>\n  <input type='radio' id='red' title='color'>Red\n</label>",
+        answer: "<label for='red'>\n  <input type='radio' id='red' name='color'>Red\n</label>",
         test:   "Radio button that's part of related color group",
         hints: [
             'Fourth of four attribute names',
@@ -1886,8 +1886,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <label for='yes'>\n    <input type='radio' id='yes' name='on-or-off'>Yes\n  </label>",
-        answer: "\n  <label for='yes'>\n    <input type='checkbox' id='yes' name='on-or-off'>Yes\n  </label>",
+        code:   "<label for='yes'>\n  <input type='radio' id='yes' name='on-or-off'>Yes\n</label>",
+        answer: "<label for='yes'>\n  <input type='checkbox' id='yes' name='on-or-off'>Yes\n</label>",
         test:   "Checkbox that's part of related choose group",
         hints: [
             'Wrong type',
@@ -1898,8 +1898,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <input type='radio' id='happy' name='mood' clicked />",
-        answer: "\n  <input type='radio' id='happy' name='mood' checked />",
+        code:   "<input type='radio' id='happy' name='mood' clicked />",
+        answer: "<input type='radio' id='happy' name='mood' checked />",
         test:   "Radio button that is checked by default",
         hints: [
             '...lick...heck...',
@@ -1910,8 +1910,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'easy',
-        code:   "\n  <|doctype html>\n  <html>\n    <h1>This page is valid!</h1>\n  </html>",
-        answer: "\n  <!doctype html>\n  <html>\n    <h1>This page is valid!</h1>\n  </html>",
+        code:   "<|doctype html>\n  <html>\n  <h1>This page is valid!</h1>\n</html>",
+        answer: "<!doctype html>\n  <html>\n  <h1>This page is valid!</h1>\n</html>",
         test:   "Valid HTML5 document",
         hints: [
             'Plumber called: lose the pipe',
@@ -1922,8 +1922,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <link href='https://fonts.googleapis.com/css2?family-Roboto' rel='stylesheet'>",
-        answer: "\n  <link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
+        code:   "<link href='https://fonts.googleapis.com/css2?family-Roboto' rel='stylesheet'>",
+        answer: "<link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
         test:   "Import Google Font family Roboto",
         hints: [
             'Ditch the dash',
@@ -1934,8 +1934,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'hard',
-        code:   "\n  <link href='https://fonts.googleapis.com/css2/family=Roboto' rel='stylesheet'>",
-        answer: "\n  <link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
+        code:   "<link href='https://fonts.googleapis.com/css2/family=Roboto' rel='stylesheet'>",
+        answer: "<link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
         test:   "Import Google Font family Roboto",
         hints: [
             'Question everything',
@@ -1946,8 +1946,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <meta href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
-        answer: "\n  <link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
+        code:   "<meta href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
+        answer: "<link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
         test:   "Import Google Font family Roboto",
         hints: [
             'Missing link',
@@ -1958,8 +1958,8 @@ module.exports = [
     {
         language: 'html',
         difficulty: 'normal',
-        code:   "\n  <link src='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
-        answer: "\n  <link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
+        code:   "<link src='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
+        answer: "<link href='https://fonts.googleapis.com/css2?family=Roboto' rel='stylesheet'>",
         test:   "Import Google Font family Roboto",
         hints: [
             'Not at image, but a link',
@@ -1970,8 +1970,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  p {\n    font-size: 1em;\n  }",
-        answer: "\n  p {\n    font-size: 2em;\n  }",
+        code:   "p {\n  font-size: 1em;\n}",
+        answer: "p {\n  font-size: 2em;\n}",
         test:   "Make all paragraphs two times the size of the current font",
         hints: [
             'Double it!',
@@ -1982,8 +1982,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  img {\n    max-width: 100vh;\n  }",
-        answer: "\n  img {\n    max-width: 100vw;\n  }",
+        code:   "img {\n  max-width: 100vh;\n}",
+        answer: "img {\n  max-width: 100vw;\n}",
         test:   "All images cannot exceed 100% of the viewport width",
         hints: [
             'Wrong unit',
@@ -1994,8 +1994,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  h1 > p {\n    color: black;\n  }",
-        answer: "\n  h1 + p {\n    color: black;\n  }",
+        code:   "h1 > p {\n  color: black;\n}",
+        answer: "h1 + p {\n  color: black;\n}",
         test:   "Make all paragraphs placed immediately after a level-1 heading black",
         hints: [
             'Greater than?',
@@ -2006,8 +2006,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .unique {\n    color: #987789;\n  }",
-        answer: "\n  #unique {\n    color: #987789;\n  }",
+        code:   ".unique {\n  color: #987789;\n}",
+        answer: "#unique {\n  color: #987789;\n}",
         test:   "Make the element with id 'unique' warm gray",
         hints: [
             'No class',
@@ -2018,8 +2018,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  h2 {\n    font-weight: normal;\n  }",
-        answer: "\n  h3 {\n    font-weight: normal;\n  }",
+        code:   "h2 {\n  font-weight: normal;\n}",
+        answer: "h3 {\n  font-weight: normal;\n}",
         test:   "Make all level-3 headings normal font weight",
         hints: [
             'Find the number',
@@ -2030,8 +2030,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  ul  {\n    margin-left: 0;\n  }",
-        answer: "\n  ul li {\n    margin-left: 0;\n  }",
+        code:   "ul  {\n  margin-left: 0;\n}",
+        answer: "ul li {\n  margin-left: 0;\n}",
         test:   "Remove left margin from all list items inside all unordered lists",
         hints: [
             'Currently selecting the parent',
@@ -2042,8 +2042,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  dt  {\n    margin-left: 0;\n  }",
-        answer: "\n  dd {\n    margin-left: 0;\n  }",
+        code:   "dt  {\n  margin-left: 0;\n}",
+        answer: "dd {\n  margin-left: 0;\n}",
         test:   "Remove left margin from all definition descriptors",
         hints: [
             'Wrong selector',
@@ -2054,8 +2054,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  a[href^='.pdf']::after {\n    content: '[PDF]';\n  }",
-        answer: "\n  a[href$='.pdf']::after {\n    content: '[PDF]';\n  }",
+        code:   "a[href^='.pdf']::after {\n  content: '[PDF]';\n}",
+        answer: "a[href$='.pdf']::after {\n  content: '[PDF]';\n}",
         test:   "Insert content after every link that ends with .pdf",
         hints: [
             'Look inside the first brackets',
@@ -2066,8 +2066,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  p + ul {\n    border-top: 2px solid black;\n  }",
-        answer: "\n  p ~ ul {\n    border-top: 2px solid black;\n  }",
+        code:   "p + ul {\n  border-top: 2px solid black;\n}",
+        answer: "p ~ ul {\n  border-top: 2px solid black;\n}",
         test:   "Give each unordered list preceded by a paragraph a thin black border",
         hints: [
             'Wrong selector',
@@ -2078,8 +2078,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  div p {\n    margin-top: 10px;\n  }",
-        answer: "\n  div,p {\n    margin-top: 10px;\n  }",
+        code:   "div p {\n  margin-top: 10px;\n}",
+        answer: "div,p {\n  margin-top: 10px;\n}",
         test:   "Add 10px margin to the top of all div and paragraph elements",
         hints: [
             'Wrong selector',
@@ -2090,8 +2090,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  p,intro {\n    margin-top: 10px;\n  }",
-        answer: "\n  p.intro {\n    margin-top: 10px;\n  }",
+        code:   "p,intro {\n  margin-top: 10px;\n}",
+        answer: "p.intro {\n  margin-top: 10px;\n}",
         test:   "Add 10px margin to the top of all paragraph elements with class intro",
         hints: [
             'Select one type of thing, not two',
@@ -2102,8 +2102,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  h3 {\n    margin-bottom: 10px;\n  }",
-        answer: "\n  h3 {\n    margin-top: 10px;\n  }",
+        code:   "h3 {\n  margin-bottom: 10px;\n}",
+        answer: "h3 {\n  margin-top: 10px;\n}",
         test:   "Add 10px margin to the top of level-3 headings",
         hints: [
             'margin-what?',
@@ -2114,8 +2114,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  p:last-child {\n    margin-top: 10px;\n  }",
-        answer: "\n  p:first-child {\n    margin-top: 10px;\n  }",
+        code:   "p:last-child {\n  margin-top: 10px;\n}",
+        answer: "p:first-child {\n  margin-top: 10px;\n}",
         test:   "Add 10px margin to the top of every paragraph that is the first child of its parent",
         hints: [
             'Oh sweet child',
@@ -2126,8 +2126,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  a:active {\n    color: purple;\n  }",
-        answer: "\n  a:visited {\n    color: purple;\n  }",
+        code:   "a:active {\n  color: purple;\n}",
+        answer: "a:visited {\n  color: purple;\n}",
         test:   "Set the color of all visited links to purple",
         hints: [
             'Wrong pseudo-selector',
@@ -2138,8 +2138,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  a {\n    color: 0000ff;\n  }",
-        answer: "\n  a {\n    color: #0000ff;\n  }",
+        code:   "a {\n  color: 0000ff;\n}",
+        answer: "a {\n  color: #0000ff;\n}",
         test:   "Set the color of all links to blue",
         hints: [
             'Think twitter',
@@ -2150,8 +2150,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  a {\n    color: rbga(0,0,255,1);\n  }",
-        answer: "\n  a {\n    color: rgba(0,0,255,1);\n  }",
+        code:   "a {\n  color: rbga(0,0,255,1);\n}",
+        answer: "a {\n  color: rgba(0,0,255,1);\n}",
         test:   "Set the color of all links to opaque blue",
         hints: [
             'Between the bookends',
@@ -2162,8 +2162,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  a {\n    color: hsl(120, 100, 50%);\n  }",
-        answer: "\n  a {\n    color: hsl(120, 100%, 50%);\n  }",
+        code:   "a {\n  color: hsl(120, 100, 50%);\n}",
+        answer: "a {\n  color: hsl(120, 100%, 50%);\n}",
         test:   "Set the color of all links to green",
         hints: [
             'Incorrectly unitless',
@@ -2174,8 +2174,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  a {\n    color: rad;\n  }",
-        answer: "\n  a {\n    color: red;\n  }",
+        code:   "a {\n  color: rad;\n}",
+        answer: "a {\n  color: red;\n}",
         test:   "Set the color of all links to red",
         hints: [
             'Killer, broh',
@@ -2186,8 +2186,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .lego {\n    display: black;\n  }",
-        answer: "\n  .lego {\n    display: block;\n  }",
+        code:   ".lego {\n  display: black;\n}",
+        answer: ".lego {\n  display: block;\n}",
         test:   "Each element with class lego should start on a new line and take up the whole width",
         hints: [
             'That\'s a color, silly',
@@ -2198,8 +2198,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .two-dimensional {\n    display: flex;\n  }",
-        answer: "\n  .two-dimensional {\n    display: grid;\n  }",
+        code:   ".two-dimensional {\n  display: flex;\n}",
+        answer: ".two-dimensional {\n  display: grid;\n}",
         test:   "Each element with class two-dimensional should be a block-level grid container",
         hints: [
             'Think perpendicular lines',
@@ -2210,8 +2210,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .heavier {\n    font-wait: bold;\n  }",
-        answer: "\n  .heavier {\n    font-weight: bold;\n  }",
+        code:   ".heavier {\n  font-wait: bold;\n}",
+        answer: ".heavier {\n  font-weight: bold;\n}",
         test:   "Each element with class heavier should have bold text",
         hints: [
             'Wait right there!',
@@ -2222,8 +2222,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .push-down {\n    margin-up: 10px;\n  }",
-        answer: "\n  .push-down {\n    margin-top: 10px;\n  }",
+        code:   ".push-down {\n  margin-up: 10px;\n}",
+        answer: ".push-down {\n  margin-top: 10px;\n}",
         test:   "Each element with class push-down should have 10px margin above it",
         hints: [
             'What\'s up?',
@@ -2234,8 +2234,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  li < a {\n    text-decoration: none;\n  }",
-        answer: "\n  li > a {\n    text-decoration: none;\n  }",
+        code:   "li < a {\n  text-decoration: none;\n}",
+        answer: "li > a {\n  text-decoration: none;\n}",
         test:   "Each link whose parent is a list item should have no underline",
         hints: [
             'Use its reflection',
@@ -2246,8 +2246,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  a[href$='.pdf'].after {\n    content: \"[PDF]\"\n  }",
-        answer: "\n  a[href$='.pdf']:after {\n    content: \"[PDF]\"\n  }",
+        code:   "a[href$='.pdf'].after {\n  content: \"[PDF]\"\n}",
+        answer: "a[href$='.pdf']:after {\n  content: \"[PDF]\"\n}",
         test:   "Insert the text [PDF] after each link that opens a PDF",
         hints: [
             'One dot two dot',
@@ -2258,8 +2258,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  p:first-of-kind {\n    border-left: 2px solid black;\n  }",
-        answer: "\n  p:first-of-type {\n    border-left: 2px solid black;\n  }",
+        code:   "p:first-of-kind {\n  border-left: 2px solid black;\n}",
+        answer: "p:first-of-type {\n  border-left: 2px solid black;\n}",
         test:   "Add a left-hand border to every paragraph that is the first one of its parent",
         hints: [
             'You\'re too kind',
@@ -2270,8 +2270,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  input:valid {\n    border: 2px solid red;\n  }",
-        answer: "\n  input:invalid {\n    border: 2px solid red;\n  }",
+        code:   "input:valid {\n  border: 2px solid red;\n}",
+        answer: "input:invalid {\n  border: 2px solid red;\n}",
         test:   "Add a border to every input that is not valid",
         hints: [
             'Do you validate?',
@@ -2282,8 +2282,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  img.see-through {\n    opacity: 0.5%;\n  }",
-        answer: "\n  img.see-through {\n    opacity: 0.5;\n  }",
+        code:   "img.see-through {\n  opacity: 0.5%;\n}",
+        answer: "img.see-through {\n  opacity: 0.5;\n}",
         test:   "Make all images with class see-through 50% transparent",
         hints: [
             'Are you 100% sure?',
@@ -2294,8 +2294,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  * {\n    box-sizing: content-box;\n  }",
-        answer: "\n  * {\n    box-sizing: border-box;\n  }",
+        code:   "* {\n  box-sizing: content-box;\n}",
+        answer: "* {\n  box-sizing: border-box;\n}",
         test:   "The width and height properties of all elements should include content, padding and border",
         hints: [
             'Live on the edge',
@@ -2306,8 +2306,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  * {\n    box-size: border-box;\n  }",
-        answer: "\n  * {\n    box-sizing: border-box;\n  }",
+        code:   "* {\n  box-size: border-box;\n}",
+        answer: "* {\n  box-sizing: border-box;\n}",
         test:   "The width and height properties of all elements should include content, padding and border",
         hints: [
             'Seeing is believing',
@@ -2318,8 +2318,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  @ {\n    box-sizing: border-box;\n  }",
-        answer: "\n  * {\n    box-sizing: border-box;\n  }",
+        code:   "@ {\n  box-sizing: border-box;\n}",
+        answer: "* {\n  box-sizing: border-box;\n}",
         test:   "The width and height properties of all elements should include content, padding and border",
         hints: [
             'Wildcard!',
@@ -2330,8 +2330,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .placeholder {\n    background-image: href('fpo.jpg');\n  }",
-        answer: "\n  .placeholder {\n    background-image: url('fpo.jpg');\n  }",
+        code:   ".placeholder {\n  background-image: href('fpo.jpg');\n}",
+        answer: ".placeholder {\n  background-image: url('fpo.jpg');\n}",
         test:   "Set the background image for elements with class placeholder as fpo.jpg",
         hints: [
             'Four letter word',
@@ -2342,8 +2342,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  .all-in-view {\n    background-size: cover;\n  }",
-        answer: "\n  .all-in-view {\n    background-size: contain;\n  }",
+        code:   ".all-in-view {\n  background-size: cover;\n}",
+        answer: ".all-in-view {\n  background-size: contain;\n}",
         test:   "Resize the background image to make sure the image is fully visible",
         hints: [
             'Cover your eyes',
@@ -2354,8 +2354,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  h2 {\n    colour: #333;\n  }",
-        answer: "\n  h2 {\n    color: #333;\n  }",
+        code:   "h2 {\n  colour: #333;\n}",
+        answer: "h2 {\n  color: #333;\n}",
         test:   "Make all level-2 headings dark gray",
         hints: [
             'CSS uses United States spelling',
@@ -2366,8 +2366,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  p {\n    text-size: 1em;\n  }",
-        answer: "\n  p {\n    text-size: 1em;\n  }",
+        code:   "p {\n  text-size: 1em;\n}",
+        answer: "p {\n  text-size: 1em;\n}",
         test:   "Make all paragraphs the same size as the current font",
         hints: [
             'What?-size',
@@ -2378,8 +2378,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  body {\n    font-family: sans serif;\n  }",
-        answer: "\n  body {\n    font-family: sans-serif;\n  }",
+        code:   "body {\n  font-family: sans serif;\n}",
+        answer: "body {\n  font-family: sans-serif;\n}",
         test:   "Make all text on the page sans serif",
         hints: [
             'Short horizontal bar',
@@ -2390,8 +2390,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  body {\n    font family: sans-serif;\n  }",
-        answer: "\n  body {\n    font-family: sans-serif;\n  }",
+        code:   "body {\n  font family: sans-serif;\n}",
+        answer: "body {\n  font-family: sans-serif;\n}",
         test:   "Make all text on the page sans serif",
         hints: [
             'Short horizontal bar',
@@ -2402,8 +2402,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  body {\n    font-family: Verdana sans-serif;\n  }",
-        answer: "\n  body {\n    font-family: Verdana, sans-serif;\n  }",
+        code:   "body {\n  font-family: Verdana sans-serif;\n}",
+        answer: "body {\n  font-family: Verdana, sans-serif;\n}",
         test:   "Make all text on the page Verdana. Fallback to sans serif.",
         hints: [
             'A space ain\'t enough',
@@ -2414,8 +2414,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  body {\n    font-family: Open Sans', sans-serif;\n  }",
-        answer: "\n  body {\n    font-family: 'Open Sans', sans-serif;\n  }",
+        code:   "body {\n  font-family: Open Sans', sans-serif;\n}",
+        answer: "body {\n  font-family: 'Open Sans', sans-serif;\n}",
         test:   "Make all text on the page Open Sans. Fallback to sans serif.",
         hints: [
             'Mismatch detected',
@@ -2426,8 +2426,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .thin-red-border {\n    border: 1px red liquid;\n  }",
-        answer: "\n  .thin-red-border {\n    border: 1px red solid;\n  }",
+        code:   ".thin-red-border {\n  border: 1px red liquid;\n}",
+        answer: ".thin-red-border {\n  border: 1px red solid;\n}",
         test:   "Add a 1px red line around elements with class thin-red-border",
         hints: [
             'Use your chemistry',
@@ -2438,8 +2438,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  .thick-red-border {\n    border-color: red;\n    border-weight: 5px;\n    border-style: solid;\n  }",
-        answer: "\n  .thick-red-border {\n    border-color: red;\n    border-width: 5px;\n    border-style: solid;\n  }",
+        code:   ".thick-red-border {\n  border-color: red;\n  border-weight: 5px;\n  border-style: solid;\n}",
+        answer: ".thick-red-border {\n  border-color: red;\n  border-width: 5px;\n  border-style: solid;\n}",
         test:   "Add a 5px red line around elements with class thick-red-border",
         hints: [
             'Watch your calories',
@@ -2450,8 +2450,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  .rounded {\n    corner-radius: 10px;\n  }",
-        answer: "\n  .rounded {\n    border-radius: 10px;\n  }",
+        code:   ".rounded {\n  corner-radius: 10px;\n}",
+        answer: ".rounded {\n  border-radius: 10px;\n}",
         test:   "Round the corners of elements with class rounded",
         hints: [
             'Wrong radius',
@@ -2462,8 +2462,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .circular {\n    border-radius: 50;\n  }",
-        answer: "\n  .circular {\n    border-radius: 50%;\n  }",
+        code:   ".circular {\n  border-radius: 50;\n}",
+        answer: ".circular {\n  border-radius: 50%;\n}",
         test:   "Make elements with class circular look like circles",
         hints: [
             'Unitless: bad',
@@ -2474,8 +2474,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .red-bg {\n    background color: red;\n  }",
-        answer: "\n  .red-bg {\n    background-color: red;\n  }",
+        code:   ".red-bg {\n  background color: red;\n}",
+        answer: ".red-bg {\n  background-color: red;\n}",
         test:   "Give elements with class red-bg a red background",
         hints: [
             'One too many spaces',
@@ -2486,8 +2486,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .fluffy {\n    pudding: 10px;\n  }",
-        answer: "\n  .fluffy {\n    padding: 10px;\n  }",
+        code:   ".fluffy {\n  pudding: 10px;\n}",
+        answer: ".fluffy {\n  padding: 10px;\n}",
         test:   "Give elements with class fluffy extra space around the content",
         hints: [
             'CSS shouldn\'t be this delicious',
@@ -2498,8 +2498,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .marginal {\n    margin: 20px, 40px;\n  }",
-        answer: "\n  .marginal {\n    margin: 20px 40px;\n  }",
+        code:   ".marginal {\n  margin: 20px, 40px;\n}",
+        answer: ".marginal {\n  margin: 20px 40px;\n}",
         test:   "Give elements with class marginal 20px margin top and bottom, 40px margin left and right",
         hints: [
             'Space is enough',
@@ -2510,8 +2510,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .clockwise {\n    margin: 5px 15px 25px 35px;\n  }",
-        answer: "\n  .clockwise {\n    margin: 5px 15px 5px 35px;\n  }",
+        code:   ".clockwise {\n  margin: 5px 15px 25px 35px;\n}",
+        answer: ".clockwise {\n  margin: 5px 15px 5px 35px;\n}",
         test:   "Give elements with class clockwise 5px bottom margin",
         hints: [
             'How to remember: TROUBLE',
@@ -2522,8 +2522,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  [type='test'] {\n    border: 1px solid #333;\n  }",
-        answer: "\n  [type='text'] {\n    border: 1px solid #333;\n  }",
+        code:   "[type='test'] {\n  border: 1px solid #333;\n}",
+        answer: "[type='text'] {\n  border: 1px solid #333;\n}",
         test:   "Set the border for all text input fields",
         hints: [
             'This is only a test',
@@ -2534,8 +2534,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  a {\n    color: #000;\n  }",
-        answer: "\n  a {\n    color: #00F;\n  }",
+        code:   "a {\n  color: #000;\n}",
+        answer: "a {\n  color: #00F;\n}",
         test:   "All links should be blue",
         hints: [
             'Seek a Failing grade',
@@ -2546,8 +2546,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  li {\n    color: #BADASS;\n  }",
-        answer: "\n  li {\n    color: #BADA55;\n  }",
+        code:   "li {\n  color: #BADASS;\n}",
+        answer: "li {\n  color: #BADA55;\n}",
         test:   "All list items should be lime green",
         hints: [
             'S is not valid Hex character',
@@ -2558,8 +2558,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  li {\n    margin: var(-extra-space);\n  }",
-        answer: "\n  li {\n    margin: var(--extra-space);\n  }",
+        code:   "li {\n  margin: var(-extra-space);\n}",
+        answer: "li {\n  margin: var(--extra-space);\n}",
         test:   "All list items should have margin set to custom variable extra-space",
         hints: [
             'Needs another dash',
@@ -2570,8 +2570,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  root {\n    --special-color: purple;\n  }",
-        answer: "\n  :root {\n    --special-color: purple;\n  }",
+        code:   "root {\n  --special-color: purple;\n}",
+        answer: ":root {\n  --special-color: purple;\n}",
         test:   "Create global custom variable special-color",
         hints: [
             'Find the root cause',
@@ -2582,8 +2582,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  :root {\n    dead-center: 50%;\n  }",
-        answer: "\n  :root {\n    --dead-center: 50%;\n  }",
+        code:   ":root {\n  dead-center: 50%;\n}",
+        answer: ":root {\n  --dead-center: 50%;\n}",
         test:   "Create global custom variable dead-center",
         hints: [
             'Double-dose o\' dashes',
@@ -2594,8 +2594,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  a {\n    color: var(--important-link blue);\n  }",
-        answer: "\n  a {\n    color: var(--important-link, blue);\n  }",
+        code:   "a {\n  color: var(--important-link blue);\n}",
+        answer: "a {\n  color: var(--important-link, blue);\n}",
         test:   "All links should have color set to custom variable extra-space or fallback to blue",
         hints: [
             'It separates two parts of a sentence',
@@ -2606,8 +2606,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  @media just screen and (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
-        answer: "\n  @media only screen and (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
+        code:   "@media just screen and (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
+        answer: "@media only screen and (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
         test:   "At screen sizes wider than 768px, horizontally-center elements with class wrapper",
         hints: [
             'Consult a thesaurus',
@@ -2618,8 +2618,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  media (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
-        answer: "\n  @media (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
+        code:   "media (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
+        answer: "@media (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
         test:   "At screen sizes wider than 768px, horizontally-center elements with class wrapper",
         hints: [
             'Think email addresses',
@@ -2630,8 +2630,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  @media (min-width=768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
-        answer: "\n  @media (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
+        code:   "@media (min-width=768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
+        answer: "@media (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
         test:   "At screen sizes wider than 768px, horizontally-center elements with class wrapper",
         hints: [
             'Wrong syntax in query',
@@ -2642,8 +2642,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  @media screen (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
-        answer: "\n  @media screen and (min-width: 768px) {\n    .wrapper {\n      margin: 0 auto;\n    }\n  }",
+        code:   "@media screen (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
+        answer: "@media screen and (min-width: 768px) {\n  .wrapper {\n    margin: 0 auto;\n  }\n}",
         test:   "At screen sizes wider than 768px, horizontally-center elements with class wrapper",
         hints: [
             'Word that joins two parts of a sentence',
@@ -2654,8 +2654,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  p {\n    text-aline: center;\n  }",
-        answer: "\n  p {\n    text-align: center;\n  }",
+        code:   "p {\n  text-aline: center;\n}",
+        answer: "p {\n  text-align: center;\n}",
         test:   "All paragraphs should have their text aligment centered",
         hints: [
             'Too literal',
@@ -2666,8 +2666,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  p {\n    text-align: right;\n  }",
-        answer: "\n  p {\n    text-align: left;\n  }",
+        code:   "p {\n  text-align: right;\n}",
+        answer: "p {\n  text-align: left;\n}",
         test:   "All paragraphs should have their text aligned left",
         hints: [
             'Wrong direction',
@@ -2678,8 +2678,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  p {\n    type-align: left;\n  }",
-        answer: "\n  p {\n    text-align: left;\n  }",
+        code:   "p {\n  type-align: left;\n}",
+        answer: "p {\n  text-align: left;\n}",
         test:   "All paragraphs should have their text aligned left",
         hints: [
             'Not your type',
@@ -2690,8 +2690,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  strong {\n    font-weight: boulder;\n  }",
-        answer: "\n  strong {\n    font-weight: bolder;\n  }",
+        code:   "strong {\n  font-weight: boulder;\n}",
+        answer: "strong {\n  font-weight: bolder;\n}",
         test:   "All strong elements should be thicker than all other surrounding text",
         hints: [
             'u rock',
@@ -2702,8 +2702,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  h1 {\n    font-wait: bold;\n  }",
-        answer: "\n  h1 {\n    font-weight: bold;\n  }",
+        code:   "h1 {\n  font-wait: bold;\n}",
+        answer: "h1 {\n  font-weight: bold;\n}",
         test:   "All level-1 headings should be bold",
         hints: [
             'Too literal',
@@ -2714,8 +2714,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  em {\n    font-style: italics;\n  }",
-        answer: "\n  em {\n    font-style: italic;\n  }",
+        code:   "em {\n  font-style: italics;\n}",
+        answer: "em {\n  font-style: italic;\n}",
         test:   "All em elements should feature properly slanted text",
         hints: [
             'Start at the end',
@@ -2726,8 +2726,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  nav {\n    background-color: rgba(255,-255,255,0.8);\n  }",
-        answer: "\n  nav {\n    background-color: rgba(255,255,255,0.8);\n  }",
+        code:   "nav {\n  background-color: rgba(255,-255,255,0.8);\n}",
+        answer: "nav {\n  background-color: rgba(255,255,255,0.8);\n}",
         test:   "All nav elements should have a slightly transparent white background",
         hints: [
             'Color can\'t be negative',
@@ -2738,8 +2738,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'hard',
-        code:   "\n  .card {\n    box-shadow: 0 10px 10px  10px rgba(0,0,0,0.5);\n  }",
-        answer: "\n  .card {\n    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);\n  }",
+        code:   ".card {\n  box-shadow: 0 10px 10px  10px rgba(0,0,0,0.5);\n}",
+        answer: ".card {\n  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);\n}",
         test:   "Elements with class card should have a shadow that spreads 10px inward",
         hints: [
             'One number should be negative',
@@ -2750,8 +2750,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .card {\n    box-shadow: 0 10px 10px gray 0 20px 10px blue;\n  }",
-        answer: "\n  .card {\n    box-shadow: 0 10px 10px gray, 0 20px 10px blue;\n  }",
+        code:   ".card {\n  box-shadow: 0 10px 10px gray 0 20px 10px blue;\n}",
+        answer: ".card {\n  box-shadow: 0 10px 10px gray, 0 20px 10px blue;\n}",
         test:   "Elements with class card should have two shadows: one gray, the other blue",
         hints: [
             'A single puzzle piece is missing',
@@ -2762,8 +2762,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  .see-thru {\n    opacity: 1;\n  }",
-        answer: "\n  .see-thru {\n    opacity: 0;\n  }",
+        code:   ".see-thru {\n  opacity: 1;\n}",
+        answer: ".see-thru {\n  opacity: 0;\n}",
         test:   "Elements with class see-thru should be fully transparent",
         hints: [
             'Fully transparent means lacking in...?',
@@ -2774,8 +2774,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .all-caps {\n    text-transform: lowercase;\n  }",
-        answer: "\n  .all-caps {\n    text-transform: uppercase;\n  }",
+        code:   ".all-caps {\n  text-transform: lowercase;\n}",
+        answer: ".all-caps {\n  text-transform: uppercase;\n}",
         test:   "Elements with class all-caps should be all capital letters",
         hints: [
             'Wrong case',
@@ -2786,8 +2786,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .title-case {\n    text-transform: capitalies;\n  }",
-        answer: "\n  .title-case {\n    text-transform: capitalize;\n  }",
+        code:   ".title-case {\n  text-transform: capitalies;\n}",
+        answer: ".title-case {\n  text-transform: capitalize;\n}",
         test:   "Elements with class title-case should be Title Cased",
         hints: [
             'Misspelling',
@@ -2798,8 +2798,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'normal',
-        code:   "\n  .small-letters {\n    text-transformers: lowercase;\n  }",
-        answer: "\n  .small-letters {\n    text-transform: lowercase;\n  }",
+        code:   ".small-letters {\n  text-transformers: lowercase;\n}",
+        answer: ".small-letters {\n  text-transform: lowercase;\n}",
         test:   "Elements with class small-letters should be lowercase",
         hints: [
             'Verb, not franchise',
@@ -2810,8 +2810,8 @@ module.exports = [
     {
         language: 'css',
         difficulty: 'easy',
-        code:   "\n  p {\n    lime-height: 24px;\n  }",
-        answer: "\n  p {\n    line-height: 24px;\n  }",
+        code:   "p {\n  lime-height: 24px;\n}",
+        answer: "p {\n  line-height: 24px;\n}",
         test:   "Each line in all paragraphs should be 24px tall",
         hints: [
             'Wait...limes?',
