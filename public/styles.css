@@ -183,7 +183,7 @@ footer li {
     flex: 1;
     font-family: 'VT323', monospace;
     font-size: 2.5rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     border: 3px solid currentColor;
     transition: all 0.3s;
