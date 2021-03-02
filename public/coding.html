@@ -15,11 +15,14 @@
         <h1>Make it valid!</h1>
       </header>
       <main id="game">
-        <h2>To win: Fix the code to make it valid <span class="mode"></span>!</h2>
+        <h2>To win: Fix the code to make it valid!</h2>
         <div id="player-1" class="is-hidden">
+          <h3>Fix this invalid <span class="mode"></span></h3>
           <textarea name="submission" id="submission" rows="10"></textarea>
-          <button id="solve">Check if this <span class="mode"></span> code is valid!</button>
-          <p id="notification"></p>
+          <p>
+            <button id="solve">Check</button>
+            <span id="notification"></span>  
+          </p>
         </div>
         <button id="start">Start a new game</button>
         <button id="random" class="is-hidden">Play another mini-game</button>

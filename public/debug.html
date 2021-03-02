@@ -16,13 +16,13 @@
       <main id="game">
         <h2>To win: Edit 1 thing so the test passes!</h2>
         <div id="player-1" class="is-hidden">
-          <h3 id="test">Pass this <strong id="difficulty"></strong> <strong id="language"></strong> test:<br /><span id="expectation"></span></h3>
+          <h3 id="test"><span id="difficulty"></span> <span id="language"></span> test:<br /><span id="expectation"></span></h3>
           <textarea name="challenge" id="challenge" rows="8"></textarea>
           <p>
             <button id="check">Check</button>
             <button id="next-hint">Stuck?</button>
+            <span id="notification"></span>
           </p>
-          <p id="notification"></p>
         </div>
         <button id="start">Start a new game</button>
         <button id="random" class="is-hidden">Play another mini-game</button>

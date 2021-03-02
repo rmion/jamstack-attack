@@ -26,13 +26,12 @@ function fetchGame(e) {
               })  
             }
             document.getElementById('challenge').textContent = "const obj = " + itemAsString
-            document.getElementById('result').textContent = ""
+            document.getElementById('result').textContent = "// This will update as you type"
             document.getElementById('expectation').textContent = item
-            document.getElementById('notification').textContent = ""
+            // document.getElementById('notification').textContent = ""
             document.getElementById('solution').textContent = ""
             document.getElementById('query-answer').removeAttribute('disabled')
             document.getElementById('query-answer').value = ""
-            document.getElementById('result').textContent = ""
         })
 }
 
@@ -42,7 +41,7 @@ document.getElementById('stuck').addEventListener('click', function(e) {
   stuckIter += 1;
   if (stuckIter == answer.length) {
     document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 2)
-    document.getElementById('notification').textContent = "It's ok! Feeling stuck is natural!"
+    // document.getElementById('notification').textContent = "It's ok! Feeling stuck is natural!"
     document.getElementById('solution').textContent = "> obj" + answer
     e.target.setAttribute('disabled', true)
     document.getElementById('query-answer').setAttribute('disabled', true)
@@ -55,7 +54,7 @@ document.getElementById('stuck').addEventListener('click', function(e) {
 })
   
   document.getElementById('query-answer').addEventListener('input', function(e)  {
-    document.getElementById('notification').textContent = ""
+    // document.getElementById('notification').textContent = ""
     if (clues.length) {
       clues.forEach(clue => {
         if (e.target.value.indexOf(clue) > 0) {
@@ -68,7 +67,7 @@ document.getElementById('stuck').addEventListener('click', function(e) {
       try {
         if (eval('obj' + e.target.value) == item) {
               document.getElementById('result').textContent = JSON.stringify(Function('"use strict";return (obj' + e.target.value + ')')(), null, 2)
-              document.getElementById('notification').textContent = "Great job! Let's compare answers!"
+              // document.getElementById('notification').textContent = "Great job! Let's compare answers!"
               document.getElementById('solution').textContent = "> obj" + answer
               e.target.setAttribute('disabled', true)
               document.getElementById('start').removeAttribute('disabled')

@@ -30,11 +30,11 @@ function compareAnswers(e) {
     if (player.value.trim().replace(/\s/g,'') == solution.trim().replace(/\s/g,'')) {
         player.classList.add('fixed')
         document.getElementById('notification').textContent = "You won!"
-        document.getElementById('solution').textContent = solution
+        document.getElementById('solution').textContent = "Solution: " + solution
     } else {
         player.classList.add('wrong')
         document.getElementById('notification').textContent = "Sorry, you lost."
-        document.getElementById('solution').textContent = solution
+        document.getElementById('solution').textContent = "Solution: " + solution
     }
     document.getElementById('start').removeAttribute('disabled')
     document.getElementById('random').classList.remove('is-hidden')
