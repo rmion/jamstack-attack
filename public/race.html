@@ -14,14 +14,15 @@
         <h1>Type faster!</h1>
       </header>
       <main id="game">
-        <h2>To win: Type code faster than your opponent!</h2>
+        <h2>To win: Type the code faster than your opponent!</h2>
         <div id="player-1" class="is-hidden">
+          <h3>Type the line of code shown below!</h3>
           <div id="highlight"></div>
           <pre><code id="match"></code></pre>
-          <label for="hard-mode"><input type="checkbox" id="hard-mode" /> Turn on Hard Mode: each mistake clears what you typed</label>
           <!-- <label id="player-one-status" for="player-one-test">Start typing!</label> -->
-          <input type="text" id="player-one-test" />
+          <input type="text" autocomplete="off" id="player-one-test" />
           <h3 id="misses">0 mis-types</h3>
+          <label for="hard-mode"><input type="checkbox" id="hard-mode" /> Turn on Hard Mode: each mistake clears what you typed</label>
         </div>
         <div id="player-2" class="is-hidden">
           <!-- <label id="player-two-status" for="player-two-test"></label> -->
